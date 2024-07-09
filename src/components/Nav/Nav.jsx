@@ -1,14 +1,18 @@
-import "./Nav.scss"
+import "./Nav.scss";
 
 function Nav() {
-
-
-    return (
-      <div>
-        <img src="" alt="" />
+  return (
+    <div className="nav">
+      <div className="nav__img-container">
+        <img className="nav__img" src="" alt="LOGO" />
       </div>
-    )
-  }
-  
-  export default Nav
-  
+      <ul className="nav__link-container">
+        <li className="nav__link">About</li>
+        <li className="nav__link">Projects</li>
+        <li className="nav__link nav__link--contact">Contact</li>
+      </ul>
+    </div>
+  );
+}
+
+export default Nav;
