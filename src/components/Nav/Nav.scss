@@ -2,13 +2,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(20, 101, 149, 1);
+   
   
-    // &__img-container {
+    &__img-container {
+        height: 20vh;
+    }
     
-    // }
-    
-    // &__img {
-    // }
+    &__img {
+        height: 100%;
+    }
   
     &__link-container {
       display: flex;
@@ -16,7 +19,8 @@
     
     &__link {
       list-style: none;
-      padding: 1rem 1rem;
+      padding: 0rem 1rem;
+      color: RGB(255, 191, 0);
       
       &--contact {
         padding-right: 2rem;
