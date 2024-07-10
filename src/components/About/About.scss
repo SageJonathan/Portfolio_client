@@ -7,17 +7,32 @@
 //Change fonts
 //Modify class to classnames and rearange scss tree
 .test{
-    display: flex;
     background: $logoblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+       @include tablet{
+          flex-direction: row;
+    }
 }
 .name__container {
-  width: 50%;
+  width: 100vw;
   height: 70vh;
 //   background: $logoblue;
-  margin-left: 1rem;
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
-//   align-items: center;
+  // align-items: center;
+    @include tablet{
+      width: 50%;
+      height: 70vh;
+    //   background: $logoblue;
+      margin-left: 1rem;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+    }
 
   .name__box {
     width: 250px;
@@ -119,7 +134,33 @@
 }
 
 
+//Text Side: 
 
+.text__container{
+  border: 1px solid $gold;
+  height: 20vh;
+  width: 80%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+    @include tablet{
+      height: 50vh;
+      width: 60%;
+      margin-right: 2rem;
+    }
+}
+.text__text{
+  font-size: 1.4rem;
+  color: $snow;
+  padding: 1rem;
+}
+
+
+
+
+
+
+//Name Keyframes
 @keyframes mainBlock {
   0% {
     width: 0%;
