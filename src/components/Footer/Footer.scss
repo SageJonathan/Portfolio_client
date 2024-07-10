@@ -28,6 +28,13 @@
             padding-left: 0.3rem;
         }
     }
+    &__contact-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__contact-img{
+        height: 1.8rem;   
+    }
     &__email{
         text-decoration: none;
         color: inherit;

@@ -1,13 +1,17 @@
 import "./Footer.scss"
 import Github from "../../assets/logos/github.svg"
 import Linkedin from "../../assets/logos/linkedin.svg"
+import Email from "../../assets/images/e-mail.svg"
 function Footer() {
 
     return (
      <div className="footer">
       <div className="footer__left">
          <h4 className="footer__header">Contact</h4>
+         <div className="footer__contact-wrapper">
+          <img className="footer__contact-img" src={Email} alt="email" />
          <p className="footer__email">Write to me</p>
+         </div>
       </div>
       <div className="footer__middle">
       <p className="footer__rights"> &copy; Sage Codes</p>
