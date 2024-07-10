@@ -141,12 +141,13 @@
 
 .text__container{
   width: 80%;
+  animation: slideInTop 1.5s forwards; 
     @include tablet{
       height: 40vh;
       width: 60%;
       margin-right: 2rem;
       margin-top: -6rem;
-  
+      animation: slideInRight 1.5s forwards;
     @include desktop{
       position: relative;
       &::after, &::before {
@@ -161,6 +162,7 @@
         width: 2px; 
         bottom: 0;
         right: 0;
+        animation: slideInRight 1.5s forwards;
       }
       
       &::before {
@@ -169,6 +171,7 @@
         width: 40px;
         bottom: 0;
         right: 0;
+        animation: slideInRight 1.5s forwards;
       }
     }
     }
@@ -179,6 +182,29 @@
   padding: 1rem 1.5rem;
 }
 
+//Text Keyframes
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 
 
