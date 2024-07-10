@@ -1,9 +1,10 @@
 import "./About.scss"
+import Author from "../../assets/images/author.jpg"
 
 function About() {
 
     return (
-     <div>
+     <div className="test">
        <div class="name__container">
            <div class="name__box">
               <div class="name__title">
@@ -14,7 +15,13 @@ function About() {
               <div class="name__block"></div>
               <p>Fullstack Developer</p>
               </div>
+              <div className="name__img-container">
+              <img className="name__img" src={Author} alt="" />
+              </div>
             </div>
+          </div>
+          <div>
+            <p>Helllo</p>
           </div>
      </div>
     )

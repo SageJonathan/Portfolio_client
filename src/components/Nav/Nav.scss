@@ -6,13 +6,7 @@
     align-items: center;
     background-color: $logoblue;
     justify-content: space-between;
-      // @include tablet{
-        
-      // }
-      // @include dektop{
-            
-      // }
-   
+    border-bottom: solid 1px $gold;
     &__img-container {
         height: 18vh;
           @include tablet{

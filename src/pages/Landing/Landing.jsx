@@ -7,7 +7,8 @@ function Landing () {
 
     return (
      <>
-     <About></About> 
+   
+     <About></About>
      <Projects></Projects>
      <Contact></Contact>
      </>
