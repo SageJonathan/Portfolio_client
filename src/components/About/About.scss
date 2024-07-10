@@ -15,23 +15,25 @@
        @include tablet{
           flex-direction: row;
     }
+      @include desktop{
+        justify-content: space-evenly;
+      }
 }
 .name__container {
   width: 100vw;
-  height: 70vh;
-//   background: $logoblue;
+  height: 50vh;
   padding-top: 1rem;
   display: flex;
   justify-content: center;
-  // align-items: center;
     @include tablet{
       width: 50%;
       height: 70vh;
-    //   background: $logoblue;
       margin-left: 1rem;
       display: flex;
       justify-content: center;
-      // align-items: center;
+    }
+    @include desktop{
+      width: 30%;
     }
 
   .name__box {
@@ -39,7 +41,6 @@
     height: 250px;
     position: relative;
     display: flex;
-    // justify-content: center;
     flex-direction: column;
 
     .name__title {
@@ -127,35 +128,56 @@
 }
 .name__img{
     height: 100%;
+    border: 2px solid $gold;
 }
 .name__img-container{
     height: 35vh;
     width: auto;
+    border: 3px solid $snow;
 }
 
 
 //Text Side: 
 
 .text__container{
-  border: 1px solid $gold;
-  height: 20vh;
   width: 80%;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
     @include tablet{
-      height: 50vh;
+      height: 40vh;
       width: 60%;
       margin-right: 2rem;
+      margin-top: -6rem;
+  
+    @include desktop{
+      position: relative;
+      &::after, &::before {
+        content: "";
+        position: absolute;
+        background-color: $gold; 
+      }
+      
+      &::after {
+        // Vertical part of the L
+        height: 40px; 
+        width: 2px; 
+        bottom: 0;
+        right: 0;
+      }
+      
+      &::before {
+        // Horizontal part of the L
+        height: 2px; 
+        width: 40px;
+        bottom: 0;
+        right: 0;
+      }
+    }
     }
 }
 .text__text{
   font-size: 1.4rem;
   color: $snow;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
-
-
 
 
 

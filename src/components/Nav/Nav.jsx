@@ -3,6 +3,7 @@ import sagecodes from "../../assets/logos/sagecodes.png"
 
 function Nav() {
   return (
+  
     <div className="nav">
       <div className="nav__img-container">
         <img className="nav__img" src={sagecodes} alt="LOGO" />
