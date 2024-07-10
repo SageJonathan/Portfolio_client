@@ -1,2 +1,54 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    color: $charcoal;
+    background-color: $snow;
+    padding: 1rem 0rem;
+        @include tablet{
+            justify-content: space-between;
+            padding: 1rem 4rem;
+        }
+    &__left{
+        display: flex;
+        flex-direction: column;
+    }
+    &__middle{
+        padding-top: 2rem;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+    }
+    &__header{
+        color: black;
+        &--social{
+            padding-left: 0.3rem;
+        }
+    }
+    &__email{
+        text-decoration: none;
+        color: inherit;
+    }
+    &__rights{
+        font-weight: 700;
+    }
+    &__social-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__social-text{
+        &--github {
+            padding-left: 0.2rem;
+          }
+    }
+    &__social-icon{
+        height: 2rem;   
+        &--github {
+            height: 1.5rem;
+            padding-left: 0.2rem;
+          }
+    }
+}
