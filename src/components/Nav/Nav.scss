@@ -1,12 +1,23 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
 .nav {
     display: flex;
     align-items: center;
+    background-color: $logoblue;
     justify-content: space-between;
-    background-color: rgba(20, 101, 149, 1);
+      // @include tablet{
+        
+      // }
+      // @include dektop{
+            
+      // }
    
-  
     &__img-container {
-        height: 20vh;
+        height: 18vh;
+          @include tablet{
+            height: 22vh;
+          }
     }
     
     &__img {
@@ -19,12 +30,28 @@
     
     &__link {
       list-style: none;
-      padding: 0rem 1rem;
-      color: RGB(255, 191, 0);
+      padding: 1.5rem 0.5rem 0rem 0.5rem;
+      color:$gold;
+         @include tablet{
+            font-size: 1.5rem;
+      }
+      //    @include desktop{
+      //       font-size: 2rem;
+      // }
+
       
       &--contact {
-        padding-right: 2rem;
+        padding-right: 1rem;
+          @include tablet{
+            padding-right: 2rem;
+          }
+          @include desktop{
+            padding-right: 3rem;
+          }
       }
+    }
+    &__link-dash{
+      color: $snow;
     }
   }
   

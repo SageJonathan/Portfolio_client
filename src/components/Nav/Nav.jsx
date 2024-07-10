@@ -8,9 +8,9 @@ function Nav() {
         <img className="nav__img" src={sagecodes} alt="LOGO" />
       </div>
       <ul className="nav__link-container">
-        <li className="nav__link">About</li>
-        <li className="nav__link">Projects</li>
-        <li className="nav__link nav__link--contact">Contact</li>
+        <li className="nav__link">About <span className="nav__link-dash">|</span></li>
+        <li className="nav__link">Projects <span className="nav__link-dash">|</span></li>
+        <li className="nav__link nav__link--contact">Contact <span className="nav__link-dash">|</span></li>
       </ul>
     </div>
   );
