@@ -143,6 +143,8 @@
 .text__container{
   width: 80%;
   animation: slideInTop 1.5s forwards; 
+  display: flex;
+  flex-direction: column;
     @include tablet{
       height: 40vh;
       width: 60%;
@@ -182,6 +184,7 @@
   color: $snow;
   padding: 1rem 1.5rem;
 }
+
 
 //Text Keyframes
 

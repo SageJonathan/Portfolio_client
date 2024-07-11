@@ -21,9 +21,10 @@ function About() {
             </div>
           </div>
           <div className="text__container">
-              <p className="text__text">As a Full Stack Engineer, I believe in robust, clean, and scalable code.</p>
+              
+              {/* <p className="text__text">As a Full Stack Engineer, I believe in robust, clean, and scalable code.</p>
               <p className="text__text">I prioritize modularity and thorough documentation as essential elements for creating complex, well-integrated codebases that deliver optimal performance for all stakeholders.</p>
-              <p className="text__text"> My commitment is to ensure that every project I undertake is built with a foundation of quality and maintainability, fostering innovation and efficiency in every aspect of development.</p>
+              <p className="text__text"> My commitment is to ensure that every project I undertake is built with a foundation of quality and maintainability, fostering innovation and efficiency in every aspect of development.</p> */}
           </div>
         
      </div>
