@@ -1,12 +1,73 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
+.section__header{
+    background-color: $logoblue;
+    color: $snow;
+    text-align: center;
+    font-weight:500;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px; // Height of the gold bars
+      background-color: $gold;
+      width: calc(50% - 2rem); // Each bar covers half of the header width minus 2 rems on each side
+    }
+  
+    &::before {
+      left: 2rem; // Start 2 rems from the left for the top bar
+      bottom: -0.5rem; // Align the top bar with the bottom bar
+      animation: slideInFromLeft 2s forwards; // Animation to slide in from the left
+    }
+  
+    &::after {
+      right: 2rem; // Start 2 rems from the right for the bottom bar
+      bottom: -0.5rem; // Place the bar at the bottom
+      animation: slideInFromRight 2s forwards; // Animation to slide in from the right
+    }
+}
+
 .project{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
     background-color: $logoblue;
+        @include desktop{
+            flex-direction: row;
+        }
     &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            @include tablet{
+              padding: 0rem 1rem;
+              flex-direction: row;
+            }
+            @include desktop{
+                flex-direction: column;
+            }
+            &--1{
+                @include tablet{
+                    justify-content: flex-start;      
+                }
+            }
+            &--2{
+                @include tablet{
+                    justify-content: flex-end;
+                }
+              
+
+            }
+            &--3{
+                @include tablet{
+                    justify-content: flex-start;
+                }
+            }
     }
 }
 .video__container{
@@ -16,3 +77,22 @@
 .skills__container{
 
 }
+
+
+@keyframes slideInFromLeft {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 50%;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 50%;
+    }
+  }

@@ -7,7 +7,7 @@ function Projects() {
       <>
       <h2 className="section__header">Projects</h2>
      <div className="project">
-      <div className="project__container">
+      <div className="project__container project__container--1">
           <div className="video__container">
             <img src={thumbnail} alt="" />
           </div>
@@ -15,7 +15,7 @@ function Projects() {
             <h3 className="skills__header">Avalanche AI</h3>
           </div>
       </div>
-      <div className="project__container">
+      <div className="project__container project__container--2">
          <div className="video__container">
          <img src={thumbnail} alt="" />
          </div>
@@ -23,7 +23,7 @@ function Projects() {
             <h3 className="skills__header">Warehouse Tracker</h3>
          </div>
       </div>
-      <div className="project__container">
+      <div className="project__container project__container--3">
         <div className="video__container">
         <img src={thumbnail} alt="" />
         </div>
