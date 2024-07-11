@@ -1,9 +1,7 @@
+@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-
-
-// @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
 
 //Change fonts
 //Modify class to classnames and rearange scss tree
@@ -46,6 +44,7 @@
     flex-direction: column;
 
     .name__title {
+      padding-bottom: 0.5rem;
       width: 100%;
       position: relative;
       display: flex;
@@ -62,8 +61,6 @@
       }
 
       h1 {
-        // font-family: 'OpenSans';
-        // font-weight: 400;
         color: $snow;
         font-size: 32px;
         -webkit-animation: mainFadeIn 2s forwards;
@@ -120,7 +117,6 @@
         animation-delay: 3.2s;
         opacity: 0;
          font-weight: 400;
-        font-family: 'Lato';
         color: #ffffff;
         font-size: 12px;
         text-transform: uppercase;
@@ -147,20 +143,20 @@
   animation: slideInTop 1.5s forwards; 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
     @include tablet{
       height: 40vh;
-      width: 60%;
+      width: 30%;
       margin-right: 2rem;
       margin-top: -6rem;
       animation: slideInRight 1.5s forwards;
-    @include desktop{
       position: relative;
       &::after, &::before {
         content: "";
         position: absolute;
         background-color: $gold; 
       }
-      
       &::after {
         // Vertical part of the L
         height: 40px; 
@@ -177,15 +173,23 @@
         bottom: 0;
         right: 0;
         animation: slideInRight 3s forwards;
-      }
     }
     }
 }
-.text__text{
-  font-size: 1.4rem;
-  color: $snow;
-  padding: 1rem 1.5rem;
+.text__header{
+  color: $snow;  
+  font-weight: 400;
+  padding-left: 0.7rem;
 }
+.text__subheader{
+  color: $gold;
+  font-weight: 200;
+}
+// .text__text{
+//   font-size: 1.4rem;
+//   color: $snow;
+//   padding: 1rem 1.5rem;
+// }
 
 
 //Text Keyframes
