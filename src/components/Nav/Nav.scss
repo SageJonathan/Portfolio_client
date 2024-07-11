@@ -1,5 +1,6 @@
-@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 .nav {
     display: flex;
@@ -23,6 +24,7 @@
     }
     
     &__link {
+      font-weight: 200;
       list-style: none;
       padding: 0rem 0.5rem 0rem 0.5rem;
       color:$gold;

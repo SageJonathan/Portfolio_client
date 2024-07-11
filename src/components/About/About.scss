@@ -1,8 +1,9 @@
-@use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
+// @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
 
 //Change fonts
 //Modify class to classnames and rearange scss tree
@@ -61,7 +62,8 @@
       }
 
       h1 {
-        font-family: 'Poppins';
+        // font-family: 'OpenSans';
+        // font-weight: 400;
         color: $snow;
         font-size: 32px;
         -webkit-animation: mainFadeIn 2s forwards;
