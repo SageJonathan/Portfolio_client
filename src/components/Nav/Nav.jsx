@@ -1,5 +1,5 @@
 import "./Nav.scss";
-import sagecodes from "../../assets/logos/sagecodes.png"
+import sagecodes from "../../assets/logos/sagecodes.svg"
 
 function Nav() {
   return (
