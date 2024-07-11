@@ -7,7 +7,7 @@
     align-items: center;
     background-color: $logoblue;
     justify-content: space-between;
-    border-bottom: solid 1px $gold;
+    // border-bottom: solid 1px $gold;
     &__img-container {
         height: 12vh;
           @include tablet{
@@ -29,7 +29,7 @@
       padding: 0rem 0.5rem 0rem 0.5rem;
       color:$gold;
          @include tablet{
-            font-size: 1.5rem;
+            font-size: 1.3rem;
       }
       
       &--contact {

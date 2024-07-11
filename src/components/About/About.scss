@@ -6,8 +6,8 @@
 //Change fonts
 //Modify class to classnames and rearange scss tree
 .test{
-    // background: $logoblue;
-    background: $palelogoblue;
+    margin-top: -2rem;
+    background: $logoblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@
           flex-direction: row;
     }
       @include desktop{
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
       }
 }
 .name__container {
