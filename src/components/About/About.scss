@@ -5,8 +5,9 @@
 
 //Change fonts
 //Modify class to classnames and rearange scss tree
-.test{
+.hero{
     margin-top: -2rem;
+    // margin-bottom: -2rem;
     background: $logoblue;
     display: flex;
     flex-direction: column;
@@ -14,12 +15,11 @@
     align-items: center;
        @include tablet{
           flex-direction: row;
+          margin-bottom: -4rem;
     }
-      @include desktop{
-        // justify-content: space-evenly;
-      }
 }
-.name__container {
+//Person side
+.person {
   width: 100vw;
   height: 50vh;
   padding-top: 1rem;
@@ -36,14 +36,14 @@
       width: 30%;
     }
 
-  .name__box {
+  .person__box {
     width: 250px;
     height: 250px;
     position: relative;
     display: flex;
     flex-direction: column;
 
-    .name__title {
+    .person__title {
       padding-bottom: 0.5rem;
       width: 100%;
       position: relative;
@@ -51,7 +51,7 @@
       align-items: center;
       height: 50px;
 
-      .name__block {
+      .person__block {
         width: 0%;
         height: inherit;
         background: $gold;
@@ -93,7 +93,7 @@
       }
     }
 
-    .name__role {
+    .person__role {
       width: 100%;
       position: relative;
       display: flex;
@@ -102,7 +102,7 @@
     //   margin-top: -10px;
       margin-bottom: 1rem;
 
-      .name__block {
+      .person__block {
         width: 0%;
         height: inherit;
         background: #e91e63;
@@ -125,11 +125,11 @@
     }
   }
 }
-.name__img{
+.person__img{
     height: 100%;
     border: 2px solid $gold;
 }
-.name__img-container{
+.person__img-container{
     height: 35vh;
     width: auto;
     border: 3px solid $snow;
@@ -137,8 +137,7 @@
 
 
 //Text Side: 
-
-.text__container{
+.text{
   width: 80%;
   animation: slideInTop 1.5s forwards; 
   display: flex;
@@ -146,14 +145,28 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 2rem;
+
+  &__text{
+    font-size: 1.4rem;
+    color: $snow;
+    padding: 1rem 1.5rem;
+  }
+  &__header{
+    color: $snow;  
+    font-weight: 400;
+    padding-left: 0.7rem;
+  }
+  &__subheader{
+    color: $gold;
+    font-weight: 200;
+  }
     @include tablet{
       padding-bottom: 0;
-      // height: 40vh;
       width: 30%;
       margin-right: 2rem;
-      // margin-top: -6rem;
       animation: slideInRight 1.5s forwards;
       position: relative;
+
       &::after, &::before {
         content: "";
         position: absolute;
@@ -178,21 +191,22 @@
     }
     }
 }
-.text__header{
-  color: $snow;  
-  font-weight: 400;
-  padding-left: 0.7rem;
-  
+
+//Bottom side
+.about {
+  display: flex;
+  flex-direction: column;
+  background: $logoblue;
+  padding: 0rem 2rem 2rem 2rem; 
+
+  &__text {
+    font-size: 1.4rem;
+    color: $snow;
+    padding: 1rem 1.5rem;
+    line-height: 1.6; 
+  }
 }
-.text__subheader{
-  color: $gold;
-  font-weight: 200;
-}
-// .text__text{
-//   font-size: 1.4rem;
-//   color: $snow;
-//   padding: 1rem 1.5rem;
-// }
+
 
 
 //Text Keyframes
