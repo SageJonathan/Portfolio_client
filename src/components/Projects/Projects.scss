@@ -54,8 +54,10 @@
     }
 }
 .video__container{
-    border: 2px solid $gold;
-    outline: 2px solid $snow;
+  &__thumbail{
+    width: 100%;   
+    height: auto; 
+  }
 }
 .description__container{
   display: flex;
@@ -63,13 +65,14 @@
   padding:  1rem 2rem 2rem 2rem;
   align-items: center;
  &__header{
-
+  padding-bottom: 0.5rem;
  }
  &__text{
-
+  
  }
 }
 
+//Animations for project underline
 @keyframes slideInFromLeft {
     0% {
       width: 0;

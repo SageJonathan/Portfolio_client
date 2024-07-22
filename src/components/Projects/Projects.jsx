@@ -1,5 +1,6 @@
 import "./Projects.scss"
 import thumbnail from "../../assets/images/thumbnail.png"
+// import AvAI from "../../assets/images/avai.png"
 
 function Projects() {
 
@@ -9,7 +10,7 @@ function Projects() {
      <div className="project">
       <div className="project__container project__container--1">
           <div className="video__container">
-            <img src={thumbnail} alt="" />
+            <img  className="video__thumbnail" src={thumbnail} alt="" />
           </div>
           <div className="description__container">
             <h3 className="description__header">Avalanche AI</h3>
@@ -18,7 +19,7 @@ function Projects() {
       </div>
       <div className="project__container project__container--2">
          <div className="video__container">
-         <img src={thumbnail} alt="" />
+         <img className="video__thumbnail" src={thumbnail} alt="" />
          </div>
          <div className="description__container">
             <h3 className="description__header">Warehouse Tracker</h3>
@@ -27,7 +28,7 @@ function Projects() {
       </div>
       <div className="project__container project__container--3">
         <div className="video__container">
-        <img src={thumbnail} alt="" />
+        <img className="video__thumbnail" src={thumbnail} alt="" />
         </div>
         <div className="description__container">
             <h3 className="description__header">Microsoft Hackaton</h3>
