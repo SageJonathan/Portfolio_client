@@ -2,10 +2,10 @@
 @use '../../styles/partials/variables' as *;
 
 .section__header{
-    background-color: $logoblue;
-    color: $snow;
+    background-color: $snow;
+    color: $charcoal;
     text-align: center;
-    font-weight:500;
+    font-weight:600;
     position: relative;
 
     &::before,
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 2rem 0rem;
-    background-color: $logoblue;
+    background-color: $snow;
         @include desktop{
             flex-direction: row;
         }
@@ -51,33 +51,24 @@
             @include desktop{
                 flex-direction: column;
             }
-            &--1{
-                @include tablet{
-                    justify-content: flex-start;      
-                }
-            }
-            &--2{
-                @include tablet{
-                    justify-content: flex-end;
-                }
-              
-
-            }
-            &--3{
-                @include tablet{
-                    justify-content: flex-start;
-                }
-            }
     }
 }
 .video__container{
     border: 2px solid $gold;
     outline: 2px solid $snow;
 }
-.skills__container{
+.description__container{
+  display: flex;
+  flex-direction: column;
+  padding:  1rem 2rem 2rem 2rem;
+  align-items: center;
+ &__header{
 
+ }
+ &__text{
+
+ }
 }
-
 
 @keyframes slideInFromLeft {
     0% {
