@@ -1,0 +1,35 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.skills{
+    // &__header{
+    //     text-align: center;
+    // }
+    &__images-container{
+        display: none;
+            @include tablet{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                outline: 2px solid $gold;
+            }
+    }
+    &__images-contianer__mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+            @include tablet{
+                display: none;
+            }
+    }
+    &__icons{
+        width: 10%;
+        height: auto;
+            @include tablet{
+                width: 8%;
+            }
+            @include desktop{
+                width: 6%;
+            }
+    }
+}
