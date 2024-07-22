@@ -54,10 +54,18 @@
     }
 }
 .video__container{
-  &__thumbail{
-    width: 100%;   
-    height: auto; 
-  }
+  width: 80%;
+  height: auto;
+    @include tablet{
+      width: 100%;
+    }
+    @include desktop{
+      width: 80%;
+    }
+}
+.video__thumbnail{
+  width: 100%;
+  height: auto;
 }
 .description__container{
   display: flex;
