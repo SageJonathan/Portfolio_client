@@ -5,17 +5,17 @@
 
 //Change fonts
 //Modify class to classnames and rearange scss tree
+
 .hero{
     margin-top: -2rem;
-    // margin-bottom: -2rem;
+    padding-bottom: 4rem;
     background: $logoblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-       @include tablet{
+       @include desktop{
           flex-direction: row;
-          margin-bottom: -4rem;
     }
 }
 //Person side
@@ -84,7 +84,6 @@
           animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
           animation-delay: 2s;
           margin-left: 5px;
-        //   margin-top: -10px;
           position: absolute;
           bottom: 13px;
           right: -12px;
@@ -99,7 +98,6 @@
       display: flex;
       align-items: center;
       height: 30px;
-    //   margin-top: -10px;
       margin-bottom: 1rem;
 
       .person__block {
@@ -144,12 +142,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
+    @include tablet{
+      margin-top: -5rem;
+    }
+    @include desktop{
+      padding-left: 1rem;
+      margin-top: 0rem;
+    }
 
   &__text{
     font-size: 1.4rem;
     color: $snow;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 0rem 0.5rem 1rem
   }
   &__header{
     color: $snow;  
@@ -160,7 +164,7 @@
     color: $gold;
     font-weight: 200;
   }
-    @include tablet{
+    @include desktop{
       padding-bottom: 0;
       width: 30%;
       margin-right: 2rem;
@@ -210,7 +214,6 @@
 
 
 //Text Keyframes
-
 @keyframes slideInTop {
   from {
     transform: translateY(-100%);
@@ -235,7 +238,7 @@
 
 
 
-//Name Keyframes
+//Person Keyframes
 @keyframes mainBlock {
   0% {
     width: 0%;
