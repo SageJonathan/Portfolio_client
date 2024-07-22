@@ -64,11 +64,12 @@
   flex-direction: column;
   padding:  1rem 2rem 2rem 2rem;
   align-items: center;
+
  &__header{
   padding-bottom: 0.5rem;
  }
  &__text{
-  
+  color: $snow;
  }
 }
 
