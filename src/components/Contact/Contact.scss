@@ -1,2 +1,76 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+
+.contact {
+  background-image: url("../../assets/images/whiteout.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row; // Ensure items are side by side
+  
+  &__profile {
+    width: 30vw;
+    margin: 1rem;
+    outline: 2px solid $gold;
+    border: 2px solid $snow;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    margin: 1rem;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0; // Start with zero width for the animation
+      height: 2px;
+      background-color: $gold;
+      position: absolute;
+      bottom: -2px; // Adjust to place underline right below text
+      left: 5.5rem;
+      animation: slideInLeft 2s forwards; // Animation to slide in from the left
+    }
+    @include tablet{
+        margin-left: 2rem;
+    }
+    @include desktop{
+        margin-left: 5rem;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      display: flex;
+      align-items: center; 
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      img {
+        margin-right: 0.5rem;
+            @include tablet{
+                margin-left: 2rem;
+            }
+            @include desktop{
+                margin-left: 5rem;
+            }
+      }
+    }
+  }
+}
+
+@keyframes slideInLeft{
+    to {
+      width: calc(100% - 5rem); // Make the underline wider by reducing the left offset less
+    }
+  }

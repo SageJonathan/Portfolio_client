@@ -1,6 +1,6 @@
 import "./Hero.scss"
 import Author from "../../assets/images/author.jpg"
-import Author2 from "../../assets/images/authour2.jpg"
+import Author2 from "../../assets/images/author2.jpg"
 
 function Hero () {
 
