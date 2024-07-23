@@ -14,8 +14,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-       @include desktop{
+       @include tablet{
           flex-direction: row;
+          padding-bottom: 1rem;
     }
 }
 //Person side
@@ -164,7 +165,7 @@
     color: $gold;
     font-weight: 200;
   }
-    @include desktop{
+    @include tablet{
       padding-bottom: 0;
       width: 30%;
       margin-right: 2rem;
