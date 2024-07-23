@@ -6,7 +6,6 @@
   background-position: center;
   background-size: cover;
   display: flex;
-  flex-direction: row; // Ensure items are side by side
   
   &__profile {
     width: 30vw;
@@ -31,13 +30,13 @@
     &::after {
       content: '';
       display: block;
-      width: 0; // Start with zero width for the animation
+      width: 0; 
       height: 2px;
       background-color: $gold;
       position: absolute;
-      bottom: -2px; // Adjust to place underline right below text
+      bottom: -2px; 
       left: 5.5rem;
-      animation: slideInLeft 2s forwards; // Animation to slide in from the left
+      animation: slideInLeft 2s forwards; 
     }
     @include tablet{
         margin-left: 2rem;
@@ -71,6 +70,6 @@
 
 @keyframes slideInLeft{
     to {
-      width: calc(100% - 5rem); // Make the underline wider by reducing the left offset less
+      width: calc(100% - 5rem); 
     }
   }
