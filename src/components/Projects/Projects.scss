@@ -2,8 +2,9 @@
 @use '../../styles/partials/variables' as *;
 
 .section__header{
+    padding-top: 1rem;
     background-color: $snow;
-    color: $charcoal;
+    color: black;
     font-size: 2rem;
     text-align: center;
     font-weight:600;
@@ -73,13 +74,13 @@
   flex-direction: column;
   padding:  1rem 2rem 2rem 2rem;
   align-items: center;
-
- &__header{
-  padding-bottom: 0.5rem;
- }
- &__text{
-  color: $snow;
- }
+}
+.description__header{
+  font-size: 1.5rem;
+}
+.description__text{
+  color: $charcoal;
+  font-size: 1.2rem;
 }
 
 //Animations for project underline

@@ -3,10 +3,11 @@
 
 
 .about{
-    background-image: url(../../assets/images/whiteout.jpg);
-    background-size: cover; // Ensures the image covers the element
-    background-position: center; // Centers the image within the element
-    background-repeat: no-repeat; 
+    // background-image: url(../../assets/images/whiteout.jpg);
+    // background-size: cover; // Ensures the image covers the element
+    // background-position: center; // Centers the image within the element
+    // background-repeat: no-repeat; 
+    background-color: $logoblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,10 +16,12 @@
     border: none;
         @include tablet{
             padding: 1rem 2rem;
+            margin-top: -4rem;
         }
    
     &__header{
-        color: $charcoal;
+        // color: $charcoal;
+        color: $snow;
         font-size: 2rem;
         font-weight: 700;
         position: relative;
@@ -46,8 +49,9 @@
     }
     &__text{
         font-size: 1.4rem;
-        color: black;
+        // color: black;
+        color: $snow;
         padding: 1rem 1.5rem;
-        font-weight: 600;
+        // font-weight: 600;
     }
 }

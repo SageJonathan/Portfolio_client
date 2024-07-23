@@ -34,8 +34,7 @@ function Projects() {
         </div>
         <div className="description__container">
             <h3 className="description__header">Microsoft Hackaton</h3>
-            <p className="description__text">
-            At a 24-hour Microsoft hackathon, our cross-collaborative team developed solutions to accelerate AI adoption in Canada. We built an application that enables users to learn and experiment with AI in their workflows, providing hands-on experience. Additionally, we proposed learning incentives and in-house trained Small Language Models (SLMs) to address privacy concerns and enhance trust in Microsoft's AI tools.</p>
+            <p className="description__text">At a 24-hour Microsoft hackathon, our cross-collaborative team developed solutions to accelerate AI adoption in Canada. We built an application that enables users to learn and experiment with AI in their workflows, providing hands-on experience. Additionally, we proposed learning incentives and in-house trained Small Language Models (SLMs) to address privacy concerns and enhance trust in Microsoft's AI tools.</p>
         </div>
       </div>
      </div>
