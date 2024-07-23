@@ -7,9 +7,8 @@
 //Modify class to classnames and rearange scss tree
 
 .hero{
-    margin-top: -2rem;
-    padding-bottom: 4rem;
-    background: $logoblue;
+    padding-bottom: 2rem;
+    background: $palelogoblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,20 +197,6 @@
 }
 
 //Bottom side
-.about {
-  display: flex;
-  flex-direction: column;
-  background: $logoblue;
-  padding: 0rem 2rem 2rem 2rem; 
-
-  &__text {
-    font-size: 1.4rem;
-    color: $snow;
-    padding: 1rem 1.5rem;
-    line-height: 1.6; 
-  }
-}
-
 
 
 //Text Keyframes

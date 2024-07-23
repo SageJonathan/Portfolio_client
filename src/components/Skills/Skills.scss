@@ -3,9 +3,7 @@
 
 .skills{
     background-color: $snow;
-    // &__header{
-    //     text-align: center;
-    // }
+    padding-bottom: 1rem;
     &__images-container{
         display: none;
             @include tablet{
