@@ -7,7 +7,7 @@ function Footer() {
     return (
      <div className="footer">
       <div className="footer__left">
-         <h4 className="footer__header">Contact</h4>
+         <h4 className="footer__header footer__header--contact">Contact</h4>
          <div className="footer__contact-wrapper">
           <img className="footer__contact-img" src={Email} alt="email" />
          <p className="footer__email">Write to me</p>

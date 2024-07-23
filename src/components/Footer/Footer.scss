@@ -24,6 +24,9 @@
     }
     &__header{
         color: black;
+        &--contact{
+            padding-bottom:1rem;
+        }
         &--social{
             padding-left: 0.3rem;
         }
