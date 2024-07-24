@@ -3,6 +3,7 @@ import Author2 from "../../assets/images/author2.jpg";
 import Github from "../../assets/logos/github.svg";
 import Linkedin from "../../assets/logos/linkedin.svg";
 import Email from "../../assets/images/e-mail.svg";
+import Instagram from "../../assets/logos/instagram.svg"
 
 function Contact() {
   return (
@@ -16,6 +17,22 @@ function Contact() {
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
               <img className="footer__contact-img" src={Email} alt="email" />
               Email
+            </a>
+          </li>
+          <li>
+            {" "}
+            <a
+              className="contact__link"
+              href="https://github.com/SageJonathan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="footer__social-icon footer__social-icon--github"
+                src={Github}
+                alt="GitHub"
+              />
+              GitHub
             </a>
           </li>
           <li>
@@ -38,16 +55,16 @@ function Contact() {
             {" "}
             <a
               className="contact__link"
-              href="https://github.com/SageJonathan"
+              href="https://www.instagram.com/wandering_mapachito/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
                 className="footer__social-icon footer__social-icon--github"
-                src={Github}
-                alt="GitHub"
+                src={Instagram}
+                alt="Instagram"
               />
-              GitHub
+              Instagram
             </a>
           </li>
         </ul>
