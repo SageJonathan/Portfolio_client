@@ -14,21 +14,21 @@
     &::after {
       content: "";
       position: absolute;
-      height: 2px; // Height of the gold bars
+      height: 2px; 
       background-color: $gold;
-      width: calc(50% - 2rem); // Each bar covers half of the header width minus 2 rems on each side
+      width: calc(50% - 2rem); 
     }
   
     &::before {
-      left: 2rem; // Start 2 rems from the left for the top bar
-      bottom: -0.5rem; // Align the top bar with the bottom bar
-      animation: slideInFromLeft 2s forwards; // Animation to slide in from the left
+      left: 2rem; 
+      bottom: -0.5rem; 
+      animation: slideInFromLeft 2s forwards; 
     }
   
     &::after {
-      right: 2rem; // Start 2 rems from the right for the bottom bar
-      bottom: -0.5rem; // Place the bar at the bottom
-      animation: slideInFromRight 2s forwards; // Animation to slide in from the right
+      right: 2rem; 
+      bottom: -0.5rem; 
+      animation: slideInFromRight 2s forwards; 
     }
 }
 
@@ -101,3 +101,4 @@
       width: 50%;
     }
   }
+

@@ -3,11 +3,8 @@
 
 
 .about{
-    // background-image: url(../../assets/images/whiteout.jpg);
-    // background-size: cover; // Ensures the image covers the element
-    // background-position: center; // Centers the image within the element
-    // background-repeat: no-repeat; 
     background-color: $logoblue;
+    // background-color: $snow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +17,7 @@
         }
    
     &__header{
-        // color: $charcoal;
+        // color: black;
         color: $snow;
         font-size: 2rem;
         font-weight: 700;
@@ -30,28 +27,27 @@
         &::after {
           content: "";
           position: absolute;
-          height: 2px; // Height of the gold bars
+          height: 2px; 
           background-color: $gold;
-          width: calc(50% - 2rem); // Each bar covers half of the header width minus 2 rems on each side
+          width: calc(50% - 2rem); 
         }
       
         &::before {
-          left: 1rem; // Start 2 rems from the left for the top bar
-          bottom: -0.5rem; // Align the top bar with the bottom bar
-          animation: slideInFromLeft 2s forwards; // Animation to slide in from the left
+          left: 1rem;
+          bottom: -0.5rem; 
+          animation: slideInFromLeft 2s forwards; 
         }
       
         &::after {
-          right: 1rem; // Start 2 rems from the right for the bottom bar
-          bottom: -0.5rem; // Place the bar at the bottom
-          animation: slideInFromRight 2s forwards; // Animation to slide in from the right
+          right: 1rem; 
+          bottom: -0.5rem; 
+          animation: slideInFromRight 2s forwards; 
         }
     }
     &__text{
         font-size: 1.4rem;
-        // color: black;
+        // color: $charcoal;
         color: $snow;
         padding: 1rem 1.5rem;
-        // font-weight: 600;
     }
 }

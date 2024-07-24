@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1rem;
-    position: relative; // Ensure relative positioning for child elements
+    position: relative; 
 
     @include tablet {
         padding: 1rem 2rem;
@@ -17,27 +17,27 @@
     &__header {
         color: black;
         font-size: 2rem;
-        position: relative; // Needed for absolute positioning of pseudo-elements
+        position: relative; 
 
         &::before,
         &::after {
             content: "";
             position: absolute;
-            height: 2px; // Height of the gold bars
+            height: 2px; 
             background-color: $gold;
-            width: calc(50% - 2rem); // Each bar covers half of the header width minus 2 rems on each side
+            width: calc(50% - 2rem); 
         }
 
         &::before {
-            left: 1rem; // Start 2 rems from the left for the top bar
-            bottom: -0.5rem; // Align the top bar with the bottom bar
-            animation: slideInFromLeft 2s forwards; // Animation to slide in from the left
+            left: 1rem; 
+            bottom: -0.5rem; 
+            animation: slideInFromLeft 2s forwards; 
         }
 
         &::after {
-            right: 1rem; // Start 2 rems from the right for the bottom bar
-            bottom: -0.5rem; // Place the bar at the bottom
-            animation: slideInFromRight 2s forwards; // Animation to slide in from the right
+            right: 1rem; 
+            bottom: -0.5rem; 
+            animation: slideInFromRight 2s forwards; 
         }
     }
 
