@@ -29,19 +29,19 @@
           position: absolute;
           height: 2px; 
           background-color: $gold;
-          width: calc(50% - 2rem); 
+          width: calc(50% - 1rem); 
         }
       
         &::before {
           left: 1rem;
           bottom: -0.5rem; 
-          animation: slideInFromLeft 2s forwards; 
+          animation: slideInFromLeftAbout 2s forwards; 
         }
       
         &::after {
           right: 1rem; 
           bottom: -0.5rem; 
-          animation: slideInFromRight 2s forwards; 
+          animation: slideInFromRightAbout 2s forwards; 
         }
     }
     &__text{
@@ -50,4 +50,26 @@
         color: $snow;
         padding: 1rem 1.5rem;
     }
+}
+
+@keyframes slideInFromLeftAbout {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRightAbout {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

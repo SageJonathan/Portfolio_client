@@ -22,13 +22,13 @@
     &::before {
         left: 2rem;
         bottom: -0.5rem;
-        animation: slideInFromLeft 2s forwards;
+        animation: slideInFromLeftProj 2s forwards;
     }
 
     &::after {
         right: 2rem;
         bottom: -0.5rem;
-        animation: slideInFromRight 2s forwards;
+        animation: slideInFromRightProj 2s forwards;
     }
 }
 
@@ -160,12 +160,25 @@
 }
 
 // Animations for project underline
-@keyframes slideInFromLeft {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: calc(50% - 2rem);
-    }
+@keyframes slideInFromLeftProj {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRightProj {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
