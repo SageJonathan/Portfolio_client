@@ -48,6 +48,10 @@
   &__contact-img,
   &__social-icon {
     height: 1.8rem;   
+    &--linkedin{
+      height: 2.5rem;
+      margin-left: -0.30rem;
+    }
   }
 
   &__email,

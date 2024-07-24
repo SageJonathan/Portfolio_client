@@ -20,18 +20,21 @@ function Footer() {
         <div className="footer__contact-wrapper">
           <a
             className="footer__link"
-            href="https://www.linkedin.com/in/sagejonathan/"
+            href="https://github.com/SageJonathan"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="footer__contact-img"
-              src={Linkedin}
-              alt="LinkedIn"
+              className="footer__social-icon"
+              src={Github}
+              alt="GitHub"
             />
-            <p className="footer__social">LinkedIn</p>
+            <p className="footer__social-text">
+              GitHub
+            </p>
           </a>
         </div>
+        
       </div>
       <div className="footer__middle">
         <p className="footer__rights"> &copy; Sage Codes</p>
@@ -41,18 +44,16 @@ function Footer() {
         <div className="footer__social-wrapper">
           <a
             className="footer__link"
-            href="https://github.com/SageJonathan"
+            href="https://www.linkedin.com/in/sagejonathan/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="footer__social-icon footer__social-icon--github"
-              src={Github}
-              alt="GitHub"
+              className="footer__social-icon footer__social-icon--linkedin"
+              src={Linkedin}
+              alt="LinkedIn"
             />
-            <p className="footer__social-text footer__social-text--github">
-              GitHub
-            </p>
+            <p className="footer__social">LinkedIn</p>
           </a>
         </div>
         <div className="footer__social-wrapper">
