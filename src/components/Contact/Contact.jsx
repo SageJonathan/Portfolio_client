@@ -15,7 +15,7 @@ function Contact() {
           <li className="contact__link">
             {" "}
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
-              <img className="footer__contact-img" src={Email} alt="email" />
+              <img className="contact__icons" src={Email} alt="email" />
               Email
             </a>
           </li>
@@ -28,7 +28,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <img
-                className="footer__social-icon footer__social-icon--github"
+                className="contact__icons"
                 src={Github}
                 alt="GitHub"
               />
@@ -44,7 +44,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <img
-                className="footer__social-icon"
+                className="contact__icons"
                 src={Linkedin}
                 alt="LinkedIn"
               />
@@ -60,7 +60,7 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <img
-                className="footer__social-icon footer__social-icon--github"
+                className="contact__icons"
                 src={Instagram}
                 alt="Instagram"
               />

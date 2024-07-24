@@ -1,12 +1,91 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+// @use '../../styles/partials/mixins' as *;
+// @use '../../styles/partials/variables' as *;
+
+// .contact {
+//   background-image: url("../../assets/images/whiteout.jpg");
+//   background-position: center;
+//   background-size: cover;
+//   display: flex;
+
+//   &__profile {
+//     width: 30vw;
+//     margin: 1rem;
+//     outline: 2px solid $gold;
+//     border: 2px solid $snow;
+//   }
+
+//   &__info {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: flex-start;
+//     margin: 1rem;
+//   }
+
+//   &__header {
+//     margin-bottom: 1rem;
+//     font-size: 2rem;
+//     position: relative;
+
+//     &::after {
+//       content: '';
+//       display: block;
+//       width: 0;
+//       height: 2px;
+//       background-color: $gold;
+//       position: absolute;
+//       bottom: -2px;
+//       left: 5.5rem;
+//       animation: slideInLeft 2s forwards;
+//     }
+//     @include tablet{
+//         margin-left: 2rem;
+//     }
+//     @include desktop{
+//         margin-left: 5rem;
+//     }
+//   }
+
+//   &__links {
+//     list-style: none;
+//     padding: 0;
+
+//     li {
+//       display: flex;
+//       align-items: center;
+//       margin-bottom: 0.5rem;
+//       font-size: 1.5rem;
+//       img {
+//         margin-right: 0.5rem;
+//             @include tablet{
+//                 margin-left: 2rem;
+//             }
+//             @include desktop{
+//                 margin-left: 5rem;
+//             }
+//       }
+//     }
+//   }
+//   &__link{
+//     text-decoration: none;
+//     color: inherit;
+//   }
+// }
+
+// @keyframes slideInLeft{
+//     to {
+//       width: calc(100% - 5rem);
+//     }
+//   }
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .contact {
   background-image: url("../../assets/images/whiteout.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
-  
+
   &__profile {
     width: 30vw;
     margin: 1rem;
@@ -18,7 +97,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start;
     margin: 1rem;
   }
 
@@ -28,52 +107,58 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
-      width: 0; 
+      width: 0;
       height: 2px;
       background-color: $gold;
       position: absolute;
-      bottom: -2px; 
+      bottom: -2px;
       left: 5.5rem;
-      animation: slideInLeft 2s forwards; 
+      animation: slideInLeft 2s forwards;
     }
-    @include tablet{
-        margin-left: 2rem;
+    @include tablet {
+      margin-left: 2rem;
     }
-    @include desktop{
-        margin-left: 5rem;
+    @include desktop {
+      margin-left: 5rem;
     }
   }
 
   &__links {
     list-style: none;
     padding: 0;
-    
+
     li {
       display: flex;
-      align-items: center; 
+      align-items: center;
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
-      img {
+      img.contact__icons {
         margin-right: 0.5rem;
-            @include tablet{
-                margin-left: 2rem;
-            }
-            @include desktop{
-                margin-left: 5rem;
-            }
+        height: 1.5rem;
+
+        @include tablet {
+          margin-left: 2rem;
+        }
+        @include desktop {
+          margin-left: 5rem;
+        }
+      }
+      p {
+        margin: 0;
       }
     }
   }
-  &__link{
+
+  &__link {
     text-decoration: none;
     color: inherit;
   }
 }
 
-@keyframes slideInLeft{
-    to {
-      width: calc(100% - 5rem); 
-    }
+@keyframes slideInLeft {
+  to {
+    width: calc(100% - 5rem);
   }
+}
