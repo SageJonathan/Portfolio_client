@@ -6,11 +6,15 @@ function About() {
       <h2 className="about__header"> About Me</h2>
       <p className="about__text">
         {" "}
-        Welcome! I'm Jonathan Sage, a dynamic professional and adventurer. My
-        global travels have involved teaching languages and making significant
-        contributions to community development, from volunteering in remote
-        villages to supporting local initiatives. These experiences allowed me
-        to immerse myself deeply in new cultures and languages.
+        Welcome! I'm Jonathan Sage, a dynamic professional and
+        adventurer.
+        </p>
+        <p className="about__text">Following college, my love for languages and the human
+        experience led me to years of global travel. During this time, I taught
+        languages and made significant contributions to community development,
+        from volunteering in remote villages to supporting local initiatives.
+        These experiences allowed me to immerse myself deeply in new cultures
+        and languages.
       </p>
       <p className="about__text">
         It was during my time in Peru that I discovered a profound passion for
