@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
 import "./Nav.scss";
 import sagecodes from "../../assets/logos/hummingbird.ico";
 
 function Nav() {
-  const navigate = useNavigate();
   return (
     <div className="nav">
-      <div className="nav__img-container" onClick={() => navigate("/")}>
-        <img className="nav__img" src={sagecodes} alt="LOGO" />
+      <div className="nav__img-container">
+        <Link to="hero" smooth={true} duration={500}>
+          <img className="nav__img" src={sagecodes} alt="LOGO" />
+        </Link>
       </div>
       <ul className="nav__link-container">
         <li className="nav__link">
