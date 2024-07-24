@@ -14,7 +14,7 @@ function Footer() {
         <div className="footer__contact-wrapper">
           <a className="footer__link" href="mailto:dev@sagecodes.tech">
             <img className="footer__contact-img" src={Email} alt="email" />
-            <p className="footer__email">Write to me</p>
+            <p className="footer__contact--text">Email</p>
           </a>
         </div>
         <div className="footer__contact-wrapper">
@@ -68,7 +68,7 @@ function Footer() {
               src={Instagram}
               alt="Instagram"
             />
-            <p className="footer__social">Instagram</p>
+            <p className="footer__social-text footer__social-text--instagram">Instagram</p>
           </a>
         </div>
       </div>

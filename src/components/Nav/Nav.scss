@@ -12,9 +12,10 @@
     padding-left: 1rem;
   }
 
-  &__img {
+  &__logo {
     height: 100%;
-    box-shadow: 0 4px 8px $gold,
+    box-shadow: 0 4px 8px $gold;
+    cursor: pointer;
   }
 
   &__link-container {
@@ -26,6 +27,7 @@
     list-style: none;
     padding: 0rem 0.5rem 0rem 0.5rem;
     color: $gold;
+    cursor: pointer;
     @include tablet {
       font-size: 1.3rem;
     }

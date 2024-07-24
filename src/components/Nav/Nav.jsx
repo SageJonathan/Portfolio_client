@@ -8,7 +8,7 @@ function Nav() {
     <div className="nav">
       <div className="nav__img-container">
         <Link to="hero" smooth={true} duration={500}>
-          <img className="nav__img" src={sagecodes} alt="LOGO" />
+          <img className="nav__logo" src={sagecodes} alt="LOGO" />
         </Link>
       </div>
       <ul className="nav__link-container">
