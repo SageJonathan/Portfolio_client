@@ -1,7 +1,7 @@
 import "./Footer.scss";
 import Github from "../../assets/logos/github.svg";
 import Linkedin from "../../assets/logos/linkedin.svg";
-import Email from "../../assets/images/e-mail.svg";
+import Email from "../../assets/logos/e-mail.svg";
 import Instagram from "../../assets/logos/instagram.svg";
 
 function Footer() {
