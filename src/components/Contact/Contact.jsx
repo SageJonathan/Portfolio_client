@@ -3,7 +3,7 @@ import Author2 from "../../assets/images/author2.jpg";
 import Github from "../../assets/logos/github.svg";
 import Linkedin from "../../assets/logos/linkedin.svg";
 import Email from "../../assets/images/e-mail.svg";
-import Instagram from "../../assets/logos/instagram.svg"
+import Instagram from "../../assets/logos/instagram.svg";
 
 function Contact() {
   return (
@@ -12,14 +12,14 @@ function Contact() {
       <div className="contact__info">
         <h2 className="contact__header">Let's connect</h2>
         <ul className="contact__links">
-          <li className="contact__link">
+          <li className="contact__item">
             {" "}
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
               <img className="contact__icons" src={Email} alt="email" />
               Email
             </a>
           </li>
-          <li>
+          <li className="contact__item">
             {" "}
             <a
               className="contact__link"
@@ -27,15 +27,11 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="contact__icons"
-                src={Github}
-                alt="GitHub"
-              />
+              <img className="contact__icons" src={Github} alt="GitHub" />
               GitHub
             </a>
           </li>
-          <li>
+          <li className="contact__item">
             {" "}
             <a
               className="contact__link"
@@ -44,14 +40,14 @@ function Contact() {
               rel="noopener noreferrer"
             >
               <img
-                className="contact__icons"
+                className="contact__icons contact__icons--linkedin"
                 src={Linkedin}
                 alt="LinkedIn"
               />
               Linkedin
             </a>
           </li>
-          <li>
+          <li className="contact__item">
             {" "}
             <a
               className="contact__link"
@@ -59,11 +55,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="contact__icons"
-                src={Instagram}
-                alt="Instagram"
-              />
+              <img className="contact__icons" src={Instagram} alt="Instagram" />
               Instagram
             </a>
           </li>

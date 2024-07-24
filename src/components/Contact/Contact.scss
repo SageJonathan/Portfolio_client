@@ -1,82 +1,3 @@
-// @use '../../styles/partials/mixins' as *;
-// @use '../../styles/partials/variables' as *;
-
-// .contact {
-//   background-image: url("../../assets/images/whiteout.jpg");
-//   background-position: center;
-//   background-size: cover;
-//   display: flex;
-
-//   &__profile {
-//     width: 30vw;
-//     margin: 1rem;
-//     outline: 2px solid $gold;
-//     border: 2px solid $snow;
-//   }
-
-//   &__info {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: flex-start;
-//     margin: 1rem;
-//   }
-
-//   &__header {
-//     margin-bottom: 1rem;
-//     font-size: 2rem;
-//     position: relative;
-
-//     &::after {
-//       content: '';
-//       display: block;
-//       width: 0;
-//       height: 2px;
-//       background-color: $gold;
-//       position: absolute;
-//       bottom: -2px;
-//       left: 5.5rem;
-//       animation: slideInLeft 2s forwards;
-//     }
-//     @include tablet{
-//         margin-left: 2rem;
-//     }
-//     @include desktop{
-//         margin-left: 5rem;
-//     }
-//   }
-
-//   &__links {
-//     list-style: none;
-//     padding: 0;
-
-//     li {
-//       display: flex;
-//       align-items: center;
-//       margin-bottom: 0.5rem;
-//       font-size: 1.5rem;
-//       img {
-//         margin-right: 0.5rem;
-//             @include tablet{
-//                 margin-left: 2rem;
-//             }
-//             @include desktop{
-//                 margin-left: 5rem;
-//             }
-//       }
-//     }
-//   }
-//   &__link{
-//     text-decoration: none;
-//     color: inherit;
-//   }
-// }
-
-// @keyframes slideInLeft{
-//     to {
-//       width: calc(100% - 5rem);
-//     }
-//   }
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
@@ -97,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     margin: 1rem;
   }
 
@@ -121,39 +41,48 @@
       margin-left: 2rem;
     }
     @include desktop {
-      margin-left: 5rem;
+      margin-left: 7rem;
     }
   }
 
   &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style: none;
     padding: 0;
+  }
 
-    li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
-      img.contact__icons {
-        margin-right: 0.5rem;
-        height: 1.5rem;
-
-        @include tablet {
-          margin-left: 2rem;
-        }
-        @include desktop {
-          margin-left: 5rem;
-        }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+      @include tablet{
+        margin-bottom: 0.7rem;
       }
-      p {
-        margin: 0;
+      @include desktop{
+        margin-bottom: 1.5rem;
       }
-    }
   }
 
   &__link {
     text-decoration: none;
     color: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icons {
+    margin-right: 0.5rem;
+    height: 2rem; 
+
+    @include tablet {
+      margin-left: 2rem;
+    }
+    @include desktop {
+      margin-left: 7rem;
+    }
   }
 }
 
