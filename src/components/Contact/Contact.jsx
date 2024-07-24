@@ -11,9 +11,9 @@ function Contact() {
       <div className="contact__info">
         <h2 className="contact__header">Let's connect</h2>
         <ul className="contact__links">
-          <li> <img className="footer__contact-img" src={Email} alt="email" />Email</li>
-          <li> <img className="footer__social-icon" src={Linkedin} alt="LinkedIn" /> Linkedin</li>
-          <li> <img className="footer__social-icon footer__social-icon--github" src={Github} alt="GitHub" /> GitHub</li>
+          <li className="contact__link"> <a className="contact__link" href="mailto:dev@sagecodes.tech"><img className="footer__contact-img" src={Email} alt="email"/>Email</a></li>
+          <li> <a className="contact__link" href="https://www.linkedin.com/in/sagejonathan/" target="_blank" rel="noopener noreferrer"><img className="footer__social-icon" src={Linkedin} alt="LinkedIn" />Linkedin</a></li>
+          <li> <a className="contact__link" href="https://github.com/SageJonathan" target="_blank" rel="noopener noreferrer"><img className="footer__social-icon footer__social-icon--github" src={Github} alt="GitHub"/>GitHub</a></li>
         </ul>
       </div>
     </div>
