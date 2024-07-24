@@ -1,47 +1,49 @@
-@use '../../styles/partials/fonts' as *;
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .nav {
+  display: flex;
+  align-items: center;
+  background-color: $logoblue;
+  justify-content: space-between;
+  &__img-container {
+    height: 12vh;
+    padding-left: 1rem;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__link-container {
     display: flex;
-    align-items: center;
-    background-color: $logoblue;
-    justify-content: space-between;
-    // border-bottom: solid 1px $gold;
-    &__img-container {
-        height: 12vh;
-        padding-left: 1rem;
+  }
+
+  &__link {
+    font-weight: 200;
+    list-style: none;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    color: $gold;
+    @include tablet {
+      font-size: 1.3rem;
     }
-    
-    &__img {
-        height: 100%;
-    }
-  
-    &__link-container {
-      display: flex;
-    }
-    
-    &__link {
-      font-weight: 200;
-      list-style: none;
-      padding: 0rem 0.5rem 0rem 0.5rem;
-      color:$gold;
-         @include tablet{
-            font-size: 1.3rem;
+    &--writing {
+      padding-right: 1rem;
+      @include tablet {
+        padding-right: 2rem;
       }
-      
-      &--contact {
-        padding-right: 1rem;
-          @include tablet{
-            padding-right: 2rem;
-          }
-          @include desktop{
-            padding-right: 3rem;
-          }
+      @include desktop {
+        padding-right: 3rem;
       }
-    }
-    &__link-dash{
-      color: $snow;
     }
   }
-  
+  &__link-dash {
+    color: $snow;
+  }
+}
+
+.blog {
+  text-decoration: none;
+  color: inherit;
+}

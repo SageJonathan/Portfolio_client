@@ -30,6 +30,15 @@ function Nav() {
           </Link>
           <span className="nav__link-dash">|</span>
         </li>
+        <li className="nav__link nav__link--writing">
+          <a className="blog" 
+          href="https://www.storiesfromthefringe.net/" 
+          target="_blank"
+            rel="noopener noreferrer">
+            Writing
+          <span className="nav__link-dash">|</span>
+          </a>
+        </li>
       </ul>
     </div>
   );
