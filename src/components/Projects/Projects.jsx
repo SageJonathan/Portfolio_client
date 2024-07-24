@@ -1,16 +1,83 @@
+
 import "./Projects.scss";
 import AvAI from "../../assets/images/avai.png";
+import AvAI1 from "../../assets/images/author.jpg";
+import AvAI2 from "../../assets/images/hood2.jpg";
+import AvAI3 from "../../assets/images/avai.png";
 import Instock from "../../assets/images/instock.png";
-import microsoft from "../../assets/images/microsoft.png";
+import Instock1 from "../../assets/images/hood2.jpg";
+import Instock2 from "../../assets/images/instock.png";
+import Instock3 from "../../assets/images/instock.png";
+import Microsoft from "../../assets/images/microsoft.png";
+import Microsoft1 from "../../assets/images/microsoft.png";
+import Microsoft2 from "../../assets/images/microsoft.png";
+import Microsoft3 from "../../assets/images/microsoft.png";
+import React, { useState } from "react";
+
+const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
+  <div className="gallery">
+    <img
+      className="gallery__image"
+      src={images[currentIndex]}
+      alt={`${altPrefix} ${currentIndex + 1}`}
+    />
+    <div className="gallery__controls">
+      <button
+        className="gallery__control gallery__control--prev"
+        onClick={onPrev}
+        aria-label="Previous Image"
+      >
+        &lt;
+      </button>
+      <button
+        className="gallery__control gallery__control--next"
+        onClick={onNext}
+        aria-label="Next Image"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+);
 
 function Projects() {
+  const [currentImageIndexAvAI, setCurrentImageIndexAvAI] = useState(0);
+  const [currentImageIndexInstock, setCurrentImageIndexInstock] = useState(0);
+  const [currentImageIndexMicrosoft, setCurrentImageIndexMicrosoft] = useState(0);
+
+  const galleries = {
+    AvAI: [AvAI1, AvAI2, AvAI3],
+    Instock: [Instock1, Instock2, Instock3],
+    Microsoft: [Microsoft1, Microsoft2, Microsoft3],
+  };
+
+  const handleNext = (setCurrentIndex, images) => () => {
+    setCurrentIndex(prevIndex =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrev = (setCurrentIndex, images) => () => {
+    setCurrentIndex(prevIndex =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <>
       <h2 className="section__header">Projects</h2>
       <div className="project">
+        {/* Avalanche AI */}
         <div className="project__container project__container--1">
           <div className="video__container">
-            <img className="video__thumbnail" src={AvAI} alt="" />
+            <img className="video__thumbnail" src={AvAI} alt="Avalanche AI" />
+            <Gallery
+              images={galleries.AvAI}
+              currentIndex={currentImageIndexAvAI}
+              onPrev={handlePrev(setCurrentImageIndexAvAI, galleries.AvAI)}
+              onNext={handleNext(setCurrentImageIndexAvAI, galleries.AvAI)}
+              altPrefix="Avalanche AI"
+            />
           </div>
           <div className="description__container">
             <h3 className="description__header">Avalanche AI</h3>
@@ -20,13 +87,22 @@ function Projects() {
               field observation data, organizing avalanche operations, and
               accessing weather and snowpack history. The platform supports both
               professional avalanche forecasters and recreational users,
-              featuring team collaboration tools and an AI assistant.{" "}
+              featuring team collaboration tools and an AI assistant.
             </p>
           </div>
         </div>
+        
+        {/* Warehouse Tracker */}
         <div className="project__container project__container--2">
           <div className="video__container">
-            <img className="video__thumbnail" src={Instock} alt="" />
+            <img className="video__thumbnail" src={Instock} alt="Warehouse Tracker" />
+            <Gallery
+              images={galleries.Instock}
+              currentIndex={currentImageIndexInstock}
+              onPrev={handlePrev(setCurrentImageIndexInstock, galleries.Instock)}
+              onNext={handleNext(setCurrentImageIndexInstock, galleries.Instock)}
+              altPrefix="Warehouse Tracker"
+            />
           </div>
           <div className="description__container">
             <h3 className="description__header">Warehouse Tracker</h3>
@@ -41,12 +117,21 @@ function Projects() {
             </p>
           </div>
         </div>
+        
+        {/* Microsoft Hackathon */}
         <div className="project__container project__container--3">
           <div className="video__container">
-            <img className="video__thumbnail" src={microsoft} alt="" />
+            <img className="video__thumbnail" src={Microsoft} alt="Microsoft Hackathon" />
+            <Gallery
+              images={galleries.Microsoft}
+              currentIndex={currentImageIndexMicrosoft}
+              onPrev={handlePrev(setCurrentImageIndexMicrosoft, galleries.Microsoft)}
+              onNext={handleNext(setCurrentImageIndexMicrosoft, galleries.Microsoft)}
+              altPrefix="Microsoft Hackathon"
+            />
           </div>
           <div className="description__container">
-            <h3 className="description__header">Microsoft Hackaton</h3>
+            <h3 className="description__header">Microsoft Hackathon</h3>
             <p className="description__text">
               At a 24-hour Microsoft hackathon, our cross-collaborative team
               developed solutions to accelerate AI adoption in Canada. We built
