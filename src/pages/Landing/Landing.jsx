@@ -1,5 +1,5 @@
-import React from 'react';
-import { Element } from 'react-scroll';
+import React from "react";
+import { Element } from "react-scroll";
 import "./Landing.scss";
 import Hero from "../../components/Hero/Hero";
 import Projects from "../../components/Projects/Projects";
@@ -34,5 +34,3 @@ function Landing() {
 }
 
 export default Landing;
-
-  
