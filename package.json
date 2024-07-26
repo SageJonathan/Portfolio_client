@@ -1,9 +1,9 @@
 {
+  "homepage": "https://SageJonathan.github.io/Portfolio_client/",
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "http://SageJonathan.github.io/Portfolio_client",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
