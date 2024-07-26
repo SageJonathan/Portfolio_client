@@ -2,6 +2,7 @@ import "./About.scss";
 
 function About() {
   return (
+    <div className="about__meta">
     <div className="about">
       <h2 className="about__header"> About Me</h2>
       <p className="about__text">
@@ -28,6 +29,7 @@ function About() {
         engineering, where my enthusiasm for problem-solving and continuous
         learning continues to drive me.
       </p>
+    </div>
     </div>
   );
 }
