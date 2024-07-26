@@ -1,0 +1,75 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+
+.about{
+    background-color: $logoblue;
+    // background-color: $snow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: none;
+        @include tablet{
+            padding: 1rem 2rem 2rem 2rem;
+            margin-top: -4rem;
+        }
+   
+    &__header{
+        // color: black;
+        color: $snow;
+        font-size: 2rem;
+        font-weight: 700;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px; 
+          background-color: $gold;
+          width: calc(50% - 1rem); 
+        }
+      
+        &::before {
+          left: 1rem;
+          bottom: -0.5rem; 
+          animation: slideInFromLeftAbout 2s forwards; 
+        }
+      
+        &::after {
+          right: 1rem; 
+          bottom: -0.5rem; 
+          animation: slideInFromRightAbout 2s forwards; 
+        }
+    }
+    &__text{
+        font-size: 1.4rem;
+        // color: $charcoal;
+        color: $snow;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@keyframes slideInFromLeftAbout {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRightAbout {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

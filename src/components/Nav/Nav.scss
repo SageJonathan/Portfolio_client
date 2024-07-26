@@ -1,26 +1,55 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .nav {
+  display: flex;
+  align-items: center;
+  background-color: $logoblue;
+  justify-content: space-between;
+  &__img-container {
+    height: 12vh;
+    padding-left: 1rem;
+  }
+
+  &__logo {
+    height: 100%;
+    box-shadow: 0 4px 8px $gold;
+    cursor: pointer;
+  }
+
+  &__link-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-    // &__img-container {
-    
-    // }
-    
-    // &__img {
-    // }
-  
-    &__link-container {
-      display: flex;
+  }
+
+  &__link {
+    font-weight: 200;
+    list-style: none;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    color: $gold;
+    cursor: pointer;
+    @include tablet {
+      font-size: 1.3rem;
     }
-    
-    &__link {
-      list-style: none;
-      padding: 1rem 1rem;
-      
-      &--contact {
+    &--writing {
+      padding-right: 1rem;
+      @include tablet {
         padding-right: 2rem;
       }
+      @include desktop {
+        padding-right: 3rem;
+      }
+    }
+    &:hover{
+      text-decoration: underline;
     }
   }
-  
+  &__link-dash {
+    color: $snow;
+  }
+}
+
+.blog {
+  text-decoration: none;
+  color: inherit;
+}

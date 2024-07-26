@@ -1,0 +1,70 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  color: $charcoal;
+  background-color: $snow;
+  padding: 1rem 0rem;
+  
+  @include tablet {
+    justify-content: space-between;
+    padding: 1rem 4rem;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__middle {
+    padding-top: 2rem;
+  }
+
+  &__header {
+    color: black;
+
+    &--social {
+      padding-left: 0.3rem;
+     
+    }
+  }
+
+  &__contact-wrapper,
+  &__social-wrapper {
+    display: flex;
+    align-items: center;
+    &:hover{
+      text-decoration: underline;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__contact-img,
+  &__social-icon {
+    height: 1.8rem;   
+    &--linkedin{
+      height: 2.5rem;
+      margin-left: -0.30rem;
+    }
+  }
+
+  &__contact--text,
+  &__social-text {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 0.5rem; 
+  }
+
+  &__rights {
+    font-weight: 700;
+  }
+}
