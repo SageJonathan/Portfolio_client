@@ -7,7 +7,7 @@ import Landing from "./pages/Landing/Landing";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Nav />
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
