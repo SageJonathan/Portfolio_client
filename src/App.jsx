@@ -7,7 +7,7 @@ import Landing from "./pages/Landing/Landing";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<Landing />} />
