@@ -18,7 +18,7 @@ import React, { useState } from "react";
 const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
   <div className="gallery">
     <img
-      className="gallery__image"
+      className="video__thumbnail"
       src={images[currentIndex]}
       alt={`${altPrefix} ${currentIndex + 1}`}
     />

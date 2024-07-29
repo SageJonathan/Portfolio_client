@@ -14,8 +14,8 @@ function Landing() {
       <Element name="hero">
         <Hero />
       </Element>
-      <Element name="about">
-        <About />
+      <Element name="mission">
+        <Mission />
       </Element>
       <Element name="projects">
         <Projects />
@@ -23,8 +23,8 @@ function Landing() {
       <Element name="skills">
         <Skills />
       </Element>
-      <Element name="mission">
-        <Mission />
+      <Element name="about">
+        <About />
       </Element>
       <Element name="contact">
         <Contact />

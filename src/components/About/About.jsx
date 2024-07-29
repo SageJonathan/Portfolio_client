@@ -15,14 +15,14 @@ function About() {
         languages and made significant contributions to community development,
         from volunteering in remote villages to supporting local initiatives.
         These experiences allowed me to immerse myself deeply in new cultures
-        and languages.
+        and languages. It was during my time in Peru that I discovered a profound passion for
+        climbing, which led to notable ascents in both the Peruvian Andes and
+        Canadian Rockies.
       </p>
       <p className="about__text">
-        It was during my time in Peru that I discovered a profound passion for
-        climbing, which led to notable ascents in both the Peruvian Andes and
-        Canadian Rockies. Upon returning to Canada, I tackled operations
-        management in prestigious equestrian venues, applying my skills to new
-        challenges.
+        Upon returning to Canada, I tackled operations
+        management in prestigious equestrian venues such as <a  className="about__link" href="https://www.sprucemeadows.com/" target="_blank" rel="noopener noreferrer" >Spruce Meadows,</a> <a  className="about__link" href="https://tbird.ca/" target="_blank" rel="noopener noreferrer">Tbird </a>and  <a className="about__link" href="https://www.royalfair.org/royalhorseshow/" target="_blank" rel="noopener noreferrer">The Royals,</a>
+        where I was able to deepen my leadership skills in high-pace environments, effectively managing teams, and coordinating complex operations under tight deadlines.
       </p>
       <p className="about__text">
         This blend of experiences naturally led me to focus on software

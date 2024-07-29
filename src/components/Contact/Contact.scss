@@ -8,11 +8,14 @@
   display: flex;
 
   &__profile {
-    width: 30vw;
+    width: 40vw;
     height: auto;
     margin: 1rem;
     outline: 2px solid $gold;
     border: 2px solid $snow;
+      @include tablet{
+        width: 30vw;
+      }
   }
 
   &__info {
