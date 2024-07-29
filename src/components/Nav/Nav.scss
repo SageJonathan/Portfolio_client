@@ -14,7 +14,7 @@
 
   &__logo {
     height: 100%;
-    box-shadow: 0 4px 8px $gold;
+    filter: drop-shadow(2px 2px 4px rgb(5, 2, 38));
     cursor: pointer;
   }
 
