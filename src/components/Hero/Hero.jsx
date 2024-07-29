@@ -1,5 +1,5 @@
 import "./Hero.scss";
-import Author from "../../assets/images/author.jpg";
+import Author3 from "../../assets/images/author3.jpg";
 
 function Hero() {
   return (
@@ -18,7 +18,7 @@ function Hero() {
               <p>Fullstack Developer</p>
             </div>
             <div className="person__img-container">
-              <img className="person__img" src={Author} alt="" />
+              <img className="person__img" src={Author3} alt="" />
             </div>
           </div>
         </div>

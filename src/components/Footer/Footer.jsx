@@ -9,7 +9,7 @@ function Footer() {
     <div className="footer">
       <div className="footer__left">
         <h4 className="footer__header footer__header--contact">
-          Let's work together
+          Let's work
         </h4>
         <div className="footer__contact-wrapper">
           <a className="footer__link" href="mailto:dev@sagecodes.tech">

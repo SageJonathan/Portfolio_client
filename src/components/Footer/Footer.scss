@@ -20,7 +20,8 @@
   }
 
   &__middle {
-    padding-top: 2rem;
+    display: flex;
+    align-items: end;
   }
 
   &__header {

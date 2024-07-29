@@ -10,8 +10,7 @@
     padding: 0.5rem 1rem;
     border: none;
         @include tablet{
-            padding: 1rem 2rem 2rem 2rem;
-            margin-top: -4rem;
+            padding: 1em 2rem 2rem 2rem;
         }
     &__meta{
       background-color: $gold;
@@ -48,6 +47,11 @@
         font-size: 1.4rem;
         color: $snow;
         padding: 1rem 1.5rem;
+        cursor: pointer;
+    }
+    &__link{
+      text-decoration: none;
+      color: inherit;
     }
 }
 
