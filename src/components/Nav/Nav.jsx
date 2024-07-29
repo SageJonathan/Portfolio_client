@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./Nav.scss";
-import sagecodes from "../../assets/logos/hummingbird.ico";
+import Logo from "../../assets/logos/transparentlogo.png"; 
 
 function Nav() {
   return (
     <div className="nav">
       <div className="nav__img-container">
         <Link to="hero" smooth={true} duration={500}>
-          <img className="nav__logo" src={sagecodes} alt="LOGO" />
+          <img className="nav__logo" src={Logo} alt="LOGO" />
         </Link>
       </div>
       <ul className="nav__link-container">
