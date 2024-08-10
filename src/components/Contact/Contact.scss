@@ -2,9 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .contact {
-  background-image: url("../../assets/images/whiteout.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: $snow;
   display: flex;
 
   &__profile {

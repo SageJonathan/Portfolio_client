@@ -14,8 +14,10 @@ function About() {
         experience led me to years of global travel. During this time, I taught
         languages and made significant contributions to community development,
         from volunteering in remote villages to supporting local initiatives.
-        These experiences allowed me to immerse myself deeply in new cultures
-        and languages. It was during my time in Peru that I discovered a profound passion for
+        </p>
+        <p className="about__text">
+        These experiences allowed me to immerse myself deeply in new cultures.
+        It was during my time in Peru that I discovered a profound passion for
         climbing, which led to notable ascents in both the Peruvian Andes and
         Canadian Rockies.
       </p>
