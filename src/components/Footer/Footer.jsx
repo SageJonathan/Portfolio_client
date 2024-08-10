@@ -40,7 +40,7 @@ function Footer() {
         <p className="footer__rights"> &copy; Sage Codes</p>
       </div>
       <div className="footer__right">
-        <h4 className="footer__header footer__header--social">Socials</h4>
+        <h4 className="footer__header footer__header--social"> Let's chat</h4>
         <div className="footer__social-wrapper">
           <a
             className="footer__link"
