@@ -8,9 +8,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer__left">
-        <h4 className="footer__header footer__header--contact">
-          Let's work
-        </h4>
+        <h4 className="footer__header footer__header--contact">Let's work</h4>
         <div className="footer__contact-wrapper">
           <a className="footer__link" href="mailto:dev@sagecodes.tech">
             <img className="footer__contact-img" src={Email} alt="email" />
@@ -24,17 +22,10 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="footer__social-icon"
-              src={Github}
-              alt="GitHub"
-            />
-            <p className="footer__social-text">
-              GitHub
-            </p>
+            <img className="footer__social-icon" src={Github} alt="GitHub" />
+            <p className="footer__social-text">GitHub</p>
           </a>
         </div>
-        
       </div>
       <div className="footer__middle">
         <p className="footer__rights"> &copy; Sage Codes</p>
@@ -68,7 +59,9 @@ function Footer() {
               src={Instagram}
               alt="Instagram"
             />
-            <p className="footer__social-text footer__social-text--instagram">Instagram</p>
+            <p className="footer__social-text footer__social-text--instagram">
+              Instagram
+            </p>
           </a>
         </div>
       </div>

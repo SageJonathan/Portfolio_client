@@ -7,45 +7,24 @@ function About() {
         <h2 className="about__header"> About Me</h2>
         <p className="about__text">
           Welcome! I'm Jonathan Sage, a seasoned professional with a diverse
-          background in global travel, language instruction, and operations
-          management.
+          background in global travel, language instruction, operations
+          management and Alpinism.
         </p>
         <p className="about__text">
           My journey began with a passion for languages and cultural immersion,
           driving extensive travel and meaningful contributions to community
           development across the globe.
         </p>
-
         <p className="about__text">
           Back in Canada, I refined my leadership skills in operations
-          management at top equestrian venues, including{" "}
-          <a
-            className="about__link"
-            href="https://www.sprucemeadows.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Spruce Meadows
-          </a>
-          ,{" "}
-          <a
-            className="about__link"
-            href="https://tbird.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tbird
-          </a>
-          , and{" "}
-          <a
-            className="about__link"
-            href="https://www.royalfair.org/royalhorseshow/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            The Royals
-          </a>
-          .
+          management at top equestrian venues, including Spruce Meadows, Tbird,
+          and The Royals.
+        </p>
+        <p className="about__text">
+          My alpine career underscores a relentless pursuit of excellence
+          through notable ascents around the world. These achievements highlight
+          my ability to tackle complex challenges and demonstrate the resilience
+          and independence essential in demanding environments.
         </p>
         <p className="about__text">
           My diverse background has paved the way for a successful transition
