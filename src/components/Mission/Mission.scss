@@ -42,12 +42,16 @@
     }
 
     &__text {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         color: $charcoal;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.5rem 0rem 1.5rem;
         font-weight: 600;
         text-align: center;
+          @include tablet{
+            margin: 0rem 7rem;
+          }
     }
+    
 }
 
 @keyframes slideInFromLeftMission {
