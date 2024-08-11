@@ -160,6 +160,7 @@ import Instock from "../../assets/images/instock.png";
 import Instock1 from "../../assets/images/instock1.png";
 import Instock2 from "../../assets/images/instock2.png";
 import Instock3 from "../../assets/images/instock3.png";
+import Instock4 from "../../assets/images/instock4.png";
 import Microsoft from "../../assets/images/microsoft.png";
 import Microsoft1 from "../../assets/images/microsoft1.png";
 import Microsoft2 from "../../assets/images/microsoft2.png";
@@ -200,7 +201,7 @@ function Projects() {
 
   const galleries = {
     AvAI: [AvAI, AvAI1, AvAI2, AvAI3],
-    Instock: [Instock, Instock1, Instock2, Instock3],
+    Instock: [Instock, Instock1, Instock2, Instock3,Instock4],
     Microsoft: [Microsoft, Microsoft1, Microsoft2, Microsoft3, Microsoft4],
   };
 
