@@ -15,31 +15,31 @@ import Microsoft3 from "../../assets/images/microsoft3.png";
 import Microsoft4 from "../../assets/images/microsoft4.png";
 import React, { useState } from "react";
 
-const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
-  <div className="project__gallery">
-    <img
-      className="project__img"
-      src={images[currentIndex]}
-      alt={`${altPrefix} ${currentIndex + 1}`}
-    />
-    <div className="project__gallery-controls">
-      <button
-        className="project__gallery-controler project__gallery-controler--prev"
-        onClick={onPrev}
-        aria-label="Previous Image"
-      >
-        &lt;
-      </button>
-      <button
-        className="project__gallery-controler project__gallery-controler--next"
-        onClick={onNext}
-        aria-label="Next Image"
-      >
-        &gt;
-      </button>
-    </div>
-  </div>
-);
+// const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
+//   <div className="project__gallery">
+//     <img
+//       className="project__img"
+//       src={images[currentIndex]}
+//       alt={`${altPrefix} ${currentIndex + 1}`}
+//     />
+//     <div className="project__gallery-controls">
+//       <button
+//         className="project__gallery-controler project__gallery-controler--prev"
+//         onClick={onPrev}
+//         aria-label="Previous Image"
+//       >
+//         &lt;
+//       </button>
+//       <button
+//         className="project__gallery-controler project__gallery-controler--next"
+//         onClick={onNext}
+//         aria-label="Next Image"
+//       >
+//         &gt;
+//       </button>
+//     </div>
+//   </div>
+// );
 
 function Projects() {
   const [currentImageIndexAvAI, setCurrentImageIndexAvAI] = useState(0);
@@ -72,13 +72,13 @@ function Projects() {
         <div className="project__container">
           <div className="project__img-container">
             <img className="project__img" src={AvAI} alt="Avalanche AI" />
-            <Gallery
+            {/* <Gallery
               images={galleries.AvAI}
               currentIndex={currentImageIndexAvAI}
               onPrev={handlePrev(setCurrentImageIndexAvAI, galleries.AvAI)}
               onNext={handleNext(setCurrentImageIndexAvAI, galleries.AvAI)}
               altPrefix="Avalanche AI"
-            />
+            /> */}
           </div>
           <div className="project__description-container">
             <h3 className="project__description-header">Avalanche AI</h3>
@@ -97,13 +97,13 @@ function Projects() {
         <div className="project__container">
           <div className="project__img-container">
             <img className="project__img" src={Instock} alt="Warehouse Tracker" />
-            <Gallery
+            {/* <Gallery
               images={galleries.Instock}
               currentIndex={currentImageIndexInstock}
               onPrev={handlePrev(setCurrentImageIndexInstock, galleries.Instock)}
               onNext={handleNext(setCurrentImageIndexInstock, galleries.Instock)}
               altPrefix="Warehouse Tracker"
-            />
+            /> */}
           </div>
           <div className="project__description-container">
             <h3 className="project__description-header">Warehouse Tracker</h3>
@@ -123,13 +123,13 @@ function Projects() {
         <div className="project__container">
           <div className="project__img-container">
             <img className="project__img" src={Microsoft} alt="Microsoft Hackathon" />
-            <Gallery
+            {/* <Gallery
               images={galleries.Microsoft}
               currentIndex={currentImageIndexMicrosoft}
               onPrev={handlePrev(setCurrentImageIndexMicrosoft, galleries.Microsoft)}
               onNext={handleNext(setCurrentImageIndexMicrosoft, galleries.Microsoft)}
               altPrefix="Microsoft Hackathon"
-            />
+            /> */}
           </div>
           <div className="project__description-container">
             <h3 className="project__description-header">Microsoft Hackathon</h3>
