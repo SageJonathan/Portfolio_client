@@ -24,6 +24,7 @@
   }
 
   &__header {
+    color: $charcoal;
     margin-bottom: 1rem;
     font-size: 2rem;
     position: relative;
@@ -63,6 +64,7 @@
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
     position: relative; 
+    // margin-left: 4rem;
 
     @include tablet {
       margin-bottom: 0.7rem;
@@ -114,7 +116,8 @@
   &__logo {
     position: absolute;
     top: 50%;
-    right: 0%; 
+    // left: -20%; 
+    right: 0%;
     width: 5rem; 
     height: 5rem; 
     transform: translateX(0.5rem) translateY(-50%); 

@@ -13,13 +13,15 @@ function Contact() {
         <h2 className="contact__header">Let's connect</h2>
         <ul className="contact__links">
           <li className="contact__item">
+          <img className="contact__logo" src={Logo} alt="Logo" />
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
               <img className="contact__icons" src={Email} alt="email" />
               Email
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
+            {/* <img className="contact__logo" src={Logo} alt="Logo" /> */}
           </li>
           <li className="contact__item">
+          <img className="contact__logo" src={Logo} alt="Logo" />
             <a
               className="contact__link"
               href="https://github.com/SageJonathan"
@@ -29,9 +31,10 @@ function Contact() {
               <img className="contact__icons" src={Github} alt="GitHub" />
               GitHub
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
+            {/* <img className="contact__logo" src={Logo} alt="Logo" /> */}
           </li>
           <li className="contact__item">
+          <img className="contact__logo" src={Logo} alt="Logo" />
             <a
               className="contact__link"
               href="https://www.linkedin.com/in/sagejonathan/"
@@ -45,9 +48,10 @@ function Contact() {
               />
               LinkedIn
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
+            {/* <img className="contact__logo" src={Logo} alt="Logo" /> */}
           </li>
           <li className="contact__item">
+          <img className="contact__logo" src={Logo} alt="Logo" />
             <a
               className="contact__link"
               href="https://www.instagram.com/wandering_mapachito/"
@@ -57,7 +61,7 @@ function Contact() {
               <img className="contact__icons" src={Instagram} alt="Instagram" />
               Instagram
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
+            {/* <img className="contact__logo" src={Logo} alt="Logo" /> */}
           </li>
         </ul>
       </div>

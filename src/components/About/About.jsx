@@ -18,12 +18,6 @@ function About() {
           projects and navigating remote, multicultural environments equips me
           to tackle any challenge with precision and creativity.
         </p>
-        <p className="about__text">
-          Whether you’re looking for a developer who can drive your project to
-          success or a team member who thrives in dynamic settings, my unique
-          blend of skills and experiences sets me apart. Let’s connect and
-          explore how we can achieve excellence together.
-        </p>
       </div>
     </div>
   );
