@@ -43,7 +43,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:baseline;
     align-items: center;
     // position: relative;
     // overflow: hidden;
@@ -60,6 +60,7 @@
 //   Add flex basis 40 and 60 for text on tablet
   &__img-container {
     // position: relative;
+    background-color: aquamarine;
     width: 80%;
     height: auto;
     overflow: hidden;
@@ -76,8 +77,8 @@
   }
   &__img {
     width: 100%;
-    height: auto;
-    box-shadow: 0 8px 12px $charcoal;
+    height: 100%;
+    // box-shadow: 0 8px 12px $charcoal;
   }
 //   &__gallery {
 //     // Needs to become the img
@@ -119,6 +120,7 @@
 //   }
   
   &__description-container {
+    background-color: aqua;
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem 2rem 2rem;
