@@ -4,17 +4,10 @@
 .contact {
   background-color: $snow;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
 
-  &__profile {
-    width: 40vw;
-    height: auto;
-    margin: 1rem;
-    outline: 2px solid $gold;
-    border: 2px solid $snow;
-      @include tablet{
-        width: 30vw;
-      }
-  }
 
   &__info {
     display: flex;
@@ -63,8 +56,7 @@
     align-items: center;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    position: relative; 
-    // margin-left: 4rem;
+    position: relative;
 
     @include tablet {
       margin-bottom: 0.7rem;
@@ -72,14 +64,6 @@
 
     @include desktop {
       margin-bottom: 1.5rem;
-    }
-
-    &:hover {
-      & .contact__logo {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0.5rem) translateY(-50%);
-      }
     }
   }
 
@@ -101,36 +85,73 @@
     @include desktop {
       margin-left: 6rem;
     }
-    &--linkedin{
+
+    &--linkedin {
       height: 2.8rem;
       margin-left: -0.3rem;
-        @include tablet{
-          margin-left: 1.6rem;
-        }
-        @include desktop{
-          margin-left: 5.5rem;
-        }
+
+      @include tablet {
+        margin-left: 1.6rem;
+      }
+
+      @include desktop {
+        margin-left: 5.5rem;
+      }
     }
   }
+}
 
-  &__logo {
+.mountain-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 300px;
+  height: 150px;
+  margin-top: 2rem;
+  position: relative; // Ensure relative positioning for absolute child elements
+
+  .snowflake {
     position: absolute;
-    top: 50%;
-    // left: -20%; 
-    right: 0%;
-    width: 5rem; 
-    height: 5rem; 
-    transform: translateX(0.5rem) translateY(-50%); 
-    padding: 0.5rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 10; 
+    width: 30px; // Adjust size as needed
+    height: 30px;
+    background: url('../../assets/images/snowflake.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none; // Prevent interaction with snowflake elements
+    animation: fall 10s linear infinite;
+    opacity: 0; // Start with invisible snowflakes
   }
+
+  .mountain {
+    width: 0;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 0 solid lightblue;
+    animation: drawMountain 2s forwards;
+
+    &.mountain-1 { animation-delay: 0s; border-bottom-width: 60px; }
+    &.mountain-2 { animation-delay: 0.5s; border-bottom-width: 80px; }
+    &.mountain-3 { animation-delay: 1s; border-bottom-width: 100px; }
+  }
+}
+
+@keyframes drawMountain {
+  0% { border-left-width: 0; border-right-width: 0; border-bottom-width: 0; }
+  100% { border-left-width: 50px; border-right-width: 50px; }
 }
 
 @keyframes slideInLeft {
-  to {
-    width: calc(100% - 5rem);
+  to { width: calc(100% - 5rem); }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px));
+    opacity: 0;
   }
 }
+
+
