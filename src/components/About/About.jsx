@@ -6,30 +6,23 @@ function About() {
       <div className="about">
         <h2 className="about__header"> About Me</h2>
         <p className="about__text">
-          Welcome! I'm Jonathan Sage, a seasoned professional with a diverse
-          background in global travel, language instruction, operations
-          management and Alpinism.
+          Hi, I’m Jonathan Sage—a web developer with a passion for alpinism and
+          a knack for delivering exceptional results. My journey from leading
+          operations at world-class equestrian events to climbing some of the
+          world’s most challenging peaks has honed my skills in problem-solving,
+          leadership, and adaptability.
         </p>
         <p className="about__text">
-          My journey began with a passion for languages and cultural immersion,
-          driving extensive travel and meaningful contributions to community
-          development across the globe.
+          In development, I leverage this diverse experience to create
+          impactful, user-focused solutions. My background in managing complex
+          projects and navigating remote, multicultural environments equips me
+          to tackle any challenge with precision and creativity.
         </p>
         <p className="about__text">
-          Back in Canada, I refined my leadership skills in operations
-          management at top equestrian venues, including Spruce Meadows, Tbird,
-          and The Royals.
-        </p>
-        <p className="about__text">
-          My alpine career underscores a relentless pursuit of excellence
-          through notable ascents around the world. These achievements highlight
-          my ability to tackle complex challenges and demonstrate the resilience
-          and independence essential in demanding environments.
-        </p>
-        <p className="about__text">
-          My diverse background has paved the way for a successful transition
-          into software engineering, where I focus on problem-solving and
-          crafting effective, user-centric solutions to real-world challenges.
+          Whether you’re looking for a developer who can drive your project to
+          success or a team member who thrives in dynamic settings, my unique
+          blend of skills and experiences sets me apart. Let’s connect and
+          explore how we can achieve excellence together.
         </p>
       </div>
     </div>
