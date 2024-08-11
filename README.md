@@ -32,7 +32,3 @@ At a 24-hour Microsoft hackathon, our cross-collaborative team developed solutio
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, SCSS, JavaScript, React
-- **Backend**: Node.js, Express.js
-- **Database**: MySQL
-- **Tools**: Jira, Git, npm, Heroku, Postman
-- **Others**: APIs, DOM manipulation, OOP, FP, User Authentication, Authorization, Agile Development
