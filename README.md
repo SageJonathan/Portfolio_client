@@ -7,9 +7,6 @@ Welcome to my portfolio site! This site showcases my work, achievements, and pro
 - [About Me](#about-me)
 - [Projects](#projects)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contact](#contact)
 
 ## About Me
 
