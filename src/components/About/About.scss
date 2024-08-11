@@ -2,7 +2,8 @@
 @use '../../styles/partials/variables' as *;
 
 .about{
-    background-color: $logoblue;
+    // background-color: $logoblue;
+    background-color: $snow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,11 +14,12 @@
             padding: 1em 2rem 2rem 2rem;
         }
     &__meta{
-      background-color: $gold;
-      padding: 0rem 0.2rem;
+      // background-color: $gold;
+      // padding: 0rem 0.2rem;
     }
     &__header{
-        color: $snow;
+        // color: $snow;
+        color:$charcoal;
         font-size: 2rem;
         font-weight: 700;
         position: relative;
@@ -45,7 +47,8 @@
     }
     &__text{
         font-size: 1.4rem;
-        color: $snow;
+        // color: $snow;
+        color: $charcoal;
         padding: 1rem 1.5rem;
         cursor: pointer;
     }

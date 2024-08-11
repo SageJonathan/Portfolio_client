@@ -12,7 +12,7 @@
     align-items: center;
        @include tablet{
           flex-direction: row;
-          padding-bottom: 1rem;
+          padding-bottom: 2.5rem;
     }
 }
 //Person side
@@ -133,7 +133,7 @@
 
 //Text Side: 
 .text{
-  margin-top: 4rem;
+  margin-top: 6rem;
   width: 80%;
   animation: slideInTop 1.5s forwards; 
   display: flex;
