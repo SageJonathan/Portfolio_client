@@ -16,22 +16,22 @@ import Microsoft4 from "../../assets/images/microsoft4.png";
 import React, { useState } from "react";
 
 const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
-  <div className="gallery">
+  <div className="project__gallery">
     <img
-      className="video__thumbnail"
+      className="project__img"
       src={images[currentIndex]}
       alt={`${altPrefix} ${currentIndex + 1}`}
     />
-    <div className="gallery__controls">
+    <div className="project__gallery-controls">
       <button
-        className="gallery__control gallery__control--prev"
+        className="project__gallery-controler project__gallery-controler--prev"
         onClick={onPrev}
         aria-label="Previous Image"
       >
         &lt;
       </button>
       <button
-        className="gallery__control gallery__control--next"
+        className="project__gallery-controler project__gallery-controler--next"
         onClick={onNext}
         aria-label="Next Image"
       >
@@ -66,12 +66,12 @@ function Projects() {
 
   return (
     <>
-      <h2 className="section__header">Projects</h2>
+      <h2 className="project__section-header">Projects</h2>
       <div className="project">
         {/* Avalanche AI */}
-        <div className="project__container project__container--1">
-          <div className="video__container">
-            <img className="video__thumbnail" src={AvAI} alt="Avalanche AI" />
+        <div className="project__container">
+          <div className="project__img-container">
+            <img className="project__img" src={AvAI} alt="Avalanche AI" />
             <Gallery
               images={galleries.AvAI}
               currentIndex={currentImageIndexAvAI}
@@ -80,9 +80,9 @@ function Projects() {
               altPrefix="Avalanche AI"
             />
           </div>
-          <div className="description__container">
-            <h3 className="description__header">Avalanche AI</h3>
-            <p className="description__text">
+          <div className="project__description-container">
+            <h3 className="project__description-header">Avalanche AI</h3>
+            <p className="project__description-text">
               This web application is designed to enhance avalanche forecasting
               and safety. It provides a centralized hub for logging snow pit and
               field observation data, organizing avalanche operations, and
@@ -94,9 +94,9 @@ function Projects() {
         </div>
         
         {/* Warehouse Tracker */}
-        <div className="project__container project__container--2">
-          <div className="video__container">
-            <img className="video__thumbnail" src={Instock} alt="Warehouse Tracker" />
+        <div className="project__container">
+          <div className="project__img-container">
+            <img className="project__img" src={Instock} alt="Warehouse Tracker" />
             <Gallery
               images={galleries.Instock}
               currentIndex={currentImageIndexInstock}
@@ -105,9 +105,9 @@ function Projects() {
               altPrefix="Warehouse Tracker"
             />
           </div>
-          <div className="description__container">
-            <h3 className="description__header">Warehouse Tracker</h3>
-            <p className="description__text">
+          <div className="project__description-container">
+            <h3 className="project__description-header">Warehouse Tracker</h3>
+            <p className="project__description-text">
               Collaboratively developed a comprehensive full-stack Warehouse
               Tracker application with a team of four, designed to optimize
               inventory management and enable real-time tracking of goods. This
@@ -120,9 +120,9 @@ function Projects() {
         </div>
         
         {/* Microsoft Hackathon */}
-        <div className="project__container project__container--3">
-          <div className="video__container">
-            <img className="video__thumbnail" src={Microsoft} alt="Microsoft Hackathon" />
+        <div className="project__container">
+          <div className="project__img-container">
+            <img className="project__img" src={Microsoft} alt="Microsoft Hackathon" />
             <Gallery
               images={galleries.Microsoft}
               currentIndex={currentImageIndexMicrosoft}
@@ -131,9 +131,9 @@ function Projects() {
               altPrefix="Microsoft Hackathon"
             />
           </div>
-          <div className="description__container">
-            <h3 className="description__header">Microsoft Hackathon</h3>
-            <p className="description__text">
+          <div className="project__description-container">
+            <h3 className="project__description-header">Microsoft Hackathon</h3>
+            <p className="project__description-text">
               At a 24-hour Microsoft hackathon, our cross-collaborative team
               developed solutions to accelerate AI adoption in Canada. We built
               an application that enables users to learn and experiment with AI

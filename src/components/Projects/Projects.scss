@@ -1,7 +1,17 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.section__header {
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  background-color: $snow;
+
+  @include desktop {
+    flex-direction: row;
+  }
+  &__section-header {
     background-color: $snow;
     color: black;
     font-size: 2rem;
@@ -11,83 +21,63 @@
 
     &::before,
     &::after {
-        content: "";
-        position: absolute;
-        height: 2px;
-        background-color: $gold;
-        width: calc(50% - 2rem);
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gold;
+      width: calc(50% - 2rem);
     }
 
     &::before {
-        left: 2rem;
-        bottom: -0.5rem;
-        animation: slideInFromLeftProj 2s forwards;
+      left: 2rem;
+      bottom: -0.5rem;
+      animation: slideInFromLeftProj 2s forwards;
     }
 
     &::after {
-        right: 2rem;
-        bottom: -0.5rem;
-        animation: slideInFromRightProj 2s forwards;
+      right: 2rem;
+      bottom: -0.5rem;
+      animation: slideInFromRightProj 2s forwards;
     }
-}
-
-.project {
+  }
+  &__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 2rem 0;
-    background-color: $snow;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    @include tablet {
+      padding: 0 1rem;
+      flex-direction: row;
+    }
 
     @include desktop {
-        flex-direction: row;
+      flex-direction: column;
     }
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-
-        @include tablet {
-            padding: 0 1rem;
-            flex-direction: row;
-        }
-
-        @include desktop {
-            flex-direction: column;
-        }
-    }
-}
-
-.video__container {
+  }
+  &__img-container {
     position: relative;
     width: 80%;
     height: auto;
     overflow: hidden;
 
     @include tablet {
-        width: 175%;
+      width: 175%;
     }
 
     @include desktop {
-        width: 80%;
+      width: 80%;
     }
-
-    &:hover .video__thumbnail {
-        transform: scale(1.1);
-    }
-}
-
-.video__thumbnail {
+  }
+  &__img {
     width: 100%;
     height: auto;
     box-shadow: 0 8px 12px $charcoal;
-    transition: transform 0.3s ease;
-}
-
-.gallery {
+  }
+  &__gallery {
+    // Needs to become the img
     display: flex;
     gap: 1rem;
     position: absolute;
@@ -98,24 +88,11 @@
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s, transform 0.3s;
-    z-index: 10; 
+    z-index: 10;
     align-items: center;
     justify-content: center;
-}
-
-.gallery__image {
-    width: 100%;
-    height: auto;
-    max-width: 100%; 
-    border: 1px solid $gold;
-    transition: transform 0.3s ease;
-}
-
-.gallery__image:hover {
-    transform: scale(1.1);
-}
-
-.gallery__controls {
+  }
+  .project__gallery-controls {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -125,37 +102,32 @@
     width: 100%;
     padding: 0 1rem;
     box-sizing: border-box;
-    pointer-events: none; 
-}
-
-.gallery__control {
-    background-color: transparent;
+    pointer-events: auto;
+  }
+  
+  .project__gallery-controler {
+    background-color: rgba(0, 0, 0, 0.5); 
     border: none;
-    color: $gold;
+    color: $gold; 
     font-size: 2rem;
     cursor: pointer;
     transition: color 0.3s;
-    pointer-events: auto; 
-
-    &:hover {
-        color: $charcoal;
-    }
-}
-
-.description__container {
+    padding: 0.5rem; 
+  }
+  
+  &__description-container {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem 2rem 2rem;
     align-items: center;
-}
-
-.description__header {
+  }
+  &__description__header {
     font-size: 1.5rem;
-}
-
-.description__text {
+  }
+  &__description__text {
     color: $charcoal;
     font-size: 1.2rem;
+  }
 }
 
 // Animations for project underline
@@ -180,4 +152,3 @@
     opacity: 1;
   }
 }
-
