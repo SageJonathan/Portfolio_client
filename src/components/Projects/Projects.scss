@@ -58,7 +58,7 @@
     }
   }
   &__img-container {
-    // position: relative;
+    position: relative;
     width: 100%;
     max-width: 80%; 
     height: auto;
@@ -79,47 +79,47 @@
   &__img {
     width: 100%;
     height: auto;
-    // object-fit: contain;
+    object-fit: cover;
     // box-shadow: 0 8px 12px $charcoal;
   }
-//   &__gallery {
-//     // Needs to become the img
-//     display: flex;
-//     gap: 1rem;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     opacity: 1;
-//     visibility: visible;
-//     transition: opacity 0.3s, transform 0.3s;
-//     z-index: 10;
-//     align-items: center;
-//     justify-content: center;
-//   }
-//   .project__gallery-controls {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     display: flex;
-//     justify-content: space-between;
-//     width: 100%;
-//     padding: 0 1rem;
-//     box-sizing: border-box;
-//     pointer-events: auto;
-//   }
+  // &__gallery {
+  //   // Needs to become the img
+  //   display: flex;
+  //   gap: 1rem;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   opacity: 1;
+  //   visibility: visible;
+  //   transition: opacity 0.3s, transform 0.3s;
+  //   z-index: 10;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+  .project__gallery-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+  }
   
-//   .project__gallery-controler {
-//     background-color: rgba(0, 0, 0, 0.5); 
-//     border: none;
-//     color: $gold; 
-//     font-size: 2rem;
-//     cursor: pointer;
-//     transition: color 0.3s;
-//     padding: 0.5rem; 
-//   }
+  .project__gallery-controler {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: none;
+    color: $gold; 
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0.5rem; 
+  }
   
   &__description-container {
     display: flex;
