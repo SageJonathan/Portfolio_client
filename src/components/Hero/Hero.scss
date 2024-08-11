@@ -140,12 +140,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    @include tablet{
-      margin-top: -5rem;
-    }
+    // @include tablet{
+    //   margin-top: -5rem;
+    // }
     @include desktop{
       padding-left: 1rem;
-      margin-top: 0rem;
+      // margin-top: 0rem;
     }
 
   &__text{
@@ -156,18 +156,19 @@
   &__header{
     color: $snow;  
     font-weight: 400;
-    padding-left: 0.7rem;
+    padding-right: 1rem;
     font-size: 2rem;
   }
   &__subheader{
     color: $gold;
     font-weight: 200;
     font-size: 1.5rem;
+    margin-left: -1rem;
   }
     @include tablet{
       padding-bottom: 0;
       width: 30%;
-      margin-right: 2rem;
+      margin-right: 3rem;
       animation: slideInRight 1.5s forwards;
       position: relative;
 
