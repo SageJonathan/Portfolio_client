@@ -57,11 +57,10 @@
       flex-direction: column;
     }
   }
-//   Add flex basis 40 and 60 for text on tablet
   &__img-container {
     // position: relative;
-    background-color: aquamarine;
-    width: 80%;
+    width: 100%;
+    max-width: 80%; 
     height: auto;
     overflow: hidden;
     margin: 1rem 0rem;
@@ -72,12 +71,15 @@
     }
 
     @include desktop {
-      width: 80%;
+     min-width: 80%;
+     max-width: 80%;
+     margin: 0rem 0rem;
     }
   }
   &__img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    // object-fit: contain;
     // box-shadow: 0 8px 12px $charcoal;
   }
 //   &__gallery {
@@ -120,7 +122,6 @@
 //   }
   
   &__description-container {
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem 2rem 2rem;

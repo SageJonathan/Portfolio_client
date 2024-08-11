@@ -1,10 +1,11 @@
 // Breakpoints
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1024px;
+// $tablet-breakpoint: 768px;
+$tablet-breakpoint: 800px;
+// $desktop-breakpoint: 1024px;
+$desktop-breakpoint: 1100px;
 
 // Main Colors
 $logoblue: rgba(20, 101, 149, 1);
-$palelogoblue: rgba(20, 101, 149, .6);
 
 // Secondary Colors
 $gold: rgb(255, 191, 0);
