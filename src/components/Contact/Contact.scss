@@ -117,6 +117,7 @@
   height: 150px;
   margin-top: 2rem;
   position: relative; 
+  margin-right: 1rem;
 
   .snowflake {
     position: absolute;
@@ -140,6 +141,19 @@
     &.mountain-2 { animation-delay: 0.5s; border-bottom-width: 80px; }
     &.mountain-3 { animation-delay: 1s; border-bottom-width: 100px; }
   }
+  .flag {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/redflag.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    bottom: 65%;
+    left: 85.4%;
+    transform: translateX(-50%);
+    opacity: 0; 
+    animation: raiseFlag 1s forwards; 
+    animation-delay: 3.5s; 
+  }
 }
 
 
@@ -160,6 +174,16 @@
   100% {
     transform: translateY(calc(100vh + 100px));
     opacity: 0;
+  }
+}
+@keyframes raiseFlag {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10px); // Start slightly below its position
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0); // Final position at the top of the mountain
   }
 }
 

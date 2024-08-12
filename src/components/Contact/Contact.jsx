@@ -67,7 +67,9 @@ function Contact() {
         {snowflakes}
         <div className="mountain mountain-1"></div>
         <div className="mountain mountain-2"></div>
-        <div className="mountain mountain-3"></div>
+        <div className="mountain mountain-3">
+        <div className="flag"></div>
+        </div>
       </div>
     </div>
   );
