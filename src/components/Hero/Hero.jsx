@@ -5,17 +5,17 @@ function Hero() {
   return (
     <>
       <div className="hero">
-        <div class="person">
-          <div class="person__box">
-            <div class="person__title">
-              <span class="person__block"></span>
-              <h1>
-                Jonathan Sage<span></span>
+        <div className="person">
+          <div className="person__container">
+            <div className="person__text--upper">
+              <span className="person__spread--gold"></span>
+              <h1 className="person__name">
+                Jonathan Sage<span className="person__dot"></span>
               </h1>
             </div>
-            <div class="person__role">
-              <div class="person__block"></div>
-              <p>Fullstack Developer</p>
+            <div className="person__text--lower">
+              <div className="person__spread--cyan"></div>
+              <p className="person__role">Fullstack Developer</p>
             </div>
             <div className="person__img-container">
               <img className="person__img" src={Author3} alt="" />
