@@ -1,4 +1,3 @@
-
 import './Contact.scss';
 import Github from '../../assets/logos/github.svg';
 import Linkedin from '../../assets/logos/linkedin.svg';
@@ -26,7 +25,7 @@ function Mountain({ className, delay }) {
 
 function Contact() {
   const [headerRef, isVisible] = useViewObserver(0.1);
-
+  
   return (
     <div className={`contact ${isVisible ? 'animate' : ''}`}>
       <div className="contact__info">
