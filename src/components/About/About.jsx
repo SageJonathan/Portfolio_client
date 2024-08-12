@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+
+import  { useEffect, useRef, useState } from 'react';
 import './About.scss';
 import Author2 from '../../assets/images/author2.jpg';
 
@@ -11,10 +12,10 @@ const About = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target); // Stop observing after it becomes visible
         }
       },
-      { threshold: 0.1 } 
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
     );
 
     if (headerRef.current) {

@@ -29,15 +29,14 @@
       width: calc(50% - 2rem);
     }
 
-    &::before {
+    &.animate::before {
       left: 2rem;
       bottom: -0.5rem;
       animation: slideInFromLeftProj 2s forwards;
-  
      
     }
 
-    &::after {
+    &.animate::after {
       right: 2rem;
       bottom: -0.5rem;
       animation: slideInFromRightProj 2s forwards;
