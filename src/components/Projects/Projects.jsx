@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import './Projects.scss';
 import AvAI from '../../assets/images/avai.png';
 import AvAI1 from '../../assets/images/avai1.png';
@@ -14,6 +13,8 @@ import Microsoft1 from '../../assets/images/microsoft1.png';
 import Microsoft2 from '../../assets/images/microsoft2.png';
 import Microsoft3 from '../../assets/images/microsoft3.png';
 import Microsoft4 from '../../assets/images/microsoft4.png';
+import {useState } from 'react';
+import { useViewObserver } from '../../utils/viewObserver';
 
 const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
   <div className="project__gallery">
@@ -45,8 +46,7 @@ function Projects() {
   const [currentImageIndexAvAI, setCurrentImageIndexAvAI] = useState(0);
   const [currentImageIndexInstock, setCurrentImageIndexInstock] = useState(0);
   const [currentImageIndexMicrosoft, setCurrentImageIndexMicrosoft] = useState(0);
-  const headerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [headerRef, isVisible] = useViewObserver(0.1);
 
   const galleries = {
     AvAI: [AvAI, AvAI1, AvAI2, AvAI3],
@@ -66,34 +66,11 @@ function Projects() {
     );
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target); 
-        }
-      },
-      { threshold: 0.1 } 
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
-    };
-  }, []);
-
   return (
     <>
       <h2
         ref={headerRef}
-        className={`project__section-header ${isVisible ? 'animate' : ''}`}
-      >
+        className={`project__section-header ${isVisible ? 'animate' : ''}`}>
         Projects
       </h2>
       <div className="project">
@@ -120,7 +97,7 @@ function Projects() {
             </p>
           </div>
         </div>
-        
+
         {/* Warehouse Tracker */}
         <div className="project__container">
           <div className="project__img-container">
@@ -145,7 +122,7 @@ function Projects() {
             </p>
           </div>
         </div>
-        
+
         {/* Microsoft Hackathon */}
         <div className="project__container">
           <div className="project__img-container">
