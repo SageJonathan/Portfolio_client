@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Projects.scss';
 import AvAI from '../../assets/images/avai.png';
 import AvAI1 from '../../assets/images/avai1.png';
