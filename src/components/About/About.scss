@@ -24,7 +24,6 @@
     @include desktop {
       width: 40%;
       margin: 1rem 0.5rem;
-
     }
   }
 
@@ -34,7 +33,6 @@
     max-height: 200px; 
     object-fit: cover; 
     display: block;
-
 
     @include tablet {
       max-height: 300px; 
@@ -98,12 +96,18 @@
     &::before {
       left: 1rem;
       bottom: -0.5rem;
-      animation: slideInFromLeftAbout 2s forwards;
     }
 
     &::after {
       right: 1rem;
       bottom: -0.5rem;
+    }
+    
+    &.animate::before {
+      animation: slideInFromLeftAbout 2s forwards;
+    }
+
+    &.animate::after {
       animation: slideInFromRightAbout 2s forwards;
     }
   }
@@ -128,7 +132,6 @@
   }
 }
 
-// Keyframes for animations
 @keyframes slideInFromLeftAbout {
   from {
     transform: translateX(-100%);

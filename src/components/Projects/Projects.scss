@@ -33,12 +33,15 @@
       left: 2rem;
       bottom: -0.5rem;
       animation: slideInFromLeftProj 2s forwards;
+  
+     
     }
 
     &::after {
       right: 2rem;
       bottom: -0.5rem;
       animation: slideInFromRightProj 2s forwards;
+      
     }
   }
 
@@ -132,7 +135,6 @@
   }
 }
 
-// Animations for project underline
 @keyframes slideInFromLeftProj {
   from {
     transform: translateX(-100%);
