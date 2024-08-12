@@ -179,11 +179,11 @@
 @keyframes raiseFlag {
   0% {
     opacity: 0;
-    transform: translate(-50%, 10px); // Start slightly below its position
+    transform: translate(-50%, 10px); 
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, 0); // Final position at the top of the mountain
+    transform: translate(-50%, 0); 
   }
 }
 

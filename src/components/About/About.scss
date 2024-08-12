@@ -9,8 +9,7 @@
 
   @include desktop {
     flex-direction: row; 
-    align-items: flex-start; 
-    background-color: $snow;
+    align-items: center;
   }
 
   &__img-container {
@@ -24,10 +23,8 @@
     }
     @include desktop {
       width: 40%;
-      border-radius: 0px; 
-      outline: none;
-      border: none;
-      margin: 0.5rem;
+      margin: 1rem 0.5rem;
+
     }
   }
 
@@ -68,9 +65,9 @@
     @include desktop {
       width: 65%; 
       padding: 1rem; 
-      border-radius: 0; 
       margin: 0;
       box-shadow: none;
+      margin: 2rem 1rem;
     }
   }
 
