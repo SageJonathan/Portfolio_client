@@ -1,33 +1,10 @@
 
-import  { useEffect, useRef, useState } from 'react';
 import './About.scss';
 import Author2 from '../../assets/images/author2.jpg';
+import { useViewObserver } from '../../utils/viewObserver';
 
 const About = () => {
-  const headerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target); // Stop observing after it becomes visible
-        }
-      },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
-    };
-  }, []);
+  const [headerRef, isVisible] = useViewObserver(0.1);
 
   return (
     <div className="about">

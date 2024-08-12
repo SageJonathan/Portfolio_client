@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+
 import './Contact.scss';
 import Github from '../../assets/logos/github.svg';
 import Linkedin from '../../assets/logos/linkedin.svg';
 import Email from '../../assets/logos/e-mail.svg';
 import Instagram from '../../assets/logos/instagram.svg';
+import { useViewObserver } from '../../utils/viewObserver';
 
 function Snowflake({ index }) {
   return (
@@ -24,30 +25,7 @@ function Mountain({ className, delay }) {
 }
 
 function Contact() {
-  const headerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // Stop observing after animation starts
-        }
-      },
-      { threshold: 0.1 } // Adjust the threshold as needed
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
-    };
-  }, []);
+  const [headerRef, isVisible] = useViewObserver(0.1);
 
   return (
     <div className={`contact ${isVisible ? 'animate' : ''}`}>
