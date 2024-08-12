@@ -137,7 +137,7 @@
     width: 0;
     border-left: 0 solid transparent;
     border-right: 0 solid transparent;
-    border-bottom: 0 solid lightblue;
+    border-bottom: 0 solid $palelogoblue;
     animation: drawMountain 2s forwards;
 
     &.mountain-1 { animation-delay: 0s; border-bottom-width: 60px; }
