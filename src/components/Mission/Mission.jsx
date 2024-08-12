@@ -1,16 +1,23 @@
-import "./Mission.scss";
+import './Mission.scss';
+import { useViewObserver } from '../../utils/viewObserver';
 
 function Mission() {
+  const [headerRef, isVisible] = useViewObserver(0.1);
+
   return (
     <div className="mission">
-      <h2 className="mission__header">Mission Statement</h2>
+      <h2
+        ref={headerRef}
+        className={`mission__header ${isVisible ? 'animate' : ''}`}
+      >
+        Mission Statement
+      </h2>
       <p className="mission__text">
-        {" "}
-        As a software engineer, I leverage my diverse experiences and
-        problem-solving skills to craft innovative, user-centric solutions.
-        Through continuous learning and collaboration, I aim to deliver
-        excellence in every project. Staying current with industry trends
-        ensures my work remains relevant and impactful.
+        I am committed to redefining what is possible.
+      </p>
+      <p className="mission__text">
+        My goal is to deliver solutions that not only solve problems but also
+        inspire and empower users, setting new benchmarks in the industry.
       </p>
     </div>
   );

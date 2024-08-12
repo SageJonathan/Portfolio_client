@@ -1,65 +1,71 @@
-import "./Contact.scss";
-import Author2 from "../../assets/images/author2.jpg";
-import Github from "../../assets/logos/github.svg";
-import Linkedin from "../../assets/logos/linkedin.svg";
-import Email from "../../assets/logos/e-mail.svg";
-import Instagram from "../../assets/logos/instagram.svg";
-import Logo from "../../assets/logos/transparentlogo.png"; 
-function Contact() {
+import './Contact.scss';
+import Github from '../../assets/logos/github.svg';
+import Linkedin from '../../assets/logos/linkedin.svg';
+import Email from '../../assets/logos/e-mail.svg';
+import Instagram from '../../assets/logos/instagram.svg';
+import { useViewObserver } from '../../utils/viewObserver';
+
+function Snowflake({ index }) {
   return (
-    <div className="contact">
-      <img className="contact__profile" src={Author2} alt="Author" />
+    <div
+      className="snowflake"
+      style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 10}s` }}
+      key={index}
+    />
+  );
+}
+
+function Mountain({ className, delay }) {
+  return (
+    <div className={`mountain ${className}`} style={{ animationDelay: `${delay}s` }}>
+      {className === 'mountain-3' && <div className="flag"></div>}
+    </div>
+  );
+}
+
+function Contact() {
+  const [headerRef, isVisible] = useViewObserver(0.1);
+  
+  return (
+    <div className={`contact ${isVisible ? 'animate' : ''}`}>
       <div className="contact__info">
-        <h2 className="contact__header">Let's connect</h2>
+        <h2 className="contact__header">
+          Let's <span ref={headerRef} className={`contact__header--highlight`}>connect</span>
+        </h2>
         <ul className="contact__links">
           <li className="contact__item">
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
               <img className="contact__icons" src={Email} alt="email" />
               Email
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
           </li>
           <li className="contact__item">
-            <a
-              className="contact__link"
-              href="https://github.com/SageJonathan"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="contact__link" href="https://github.com/SageJonathan" target="_blank" rel="noopener noreferrer">
               <img className="contact__icons" src={Github} alt="GitHub" />
               GitHub
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
           </li>
           <li className="contact__item">
-            <a
-              className="contact__link"
-              href="https://www.linkedin.com/in/sagejonathan/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="contact__icons contact__icons--linkedin"
-                src={Linkedin}
-                alt="LinkedIn"
-              />
+            <a className="contact__link" href="https://www.linkedin.com/in/sagejonathan/" target="_blank" rel="noopener noreferrer">
+              <img className="contact__icons contact__icons--linkedin" src={Linkedin} alt="LinkedIn" />
               LinkedIn
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
           </li>
           <li className="contact__item">
-            <a
-              className="contact__link"
-              href="https://www.instagram.com/wandering_mapachito/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="contact__link" href="https://www.instagram.com/wandering_mapachito/" target="_blank" rel="noopener noreferrer">
               <img className="contact__icons" src={Instagram} alt="Instagram" />
               Instagram
             </a>
-            <img className="contact__logo" src={Logo} alt="Logo" />
           </li>
         </ul>
+      </div>
+      <div className="mountain-range">
+        {[...Array(10)].map((_, index) => (
+          <Snowflake key={index} index={index} />
+        ))}
+        <Mountain className="mountain-1" delay={0} />
+        <Mountain className="mountain-2" delay={0.5} />
+        <Mountain className="mountain-3" delay={1} />
       </div>
     </div>
   );

@@ -4,16 +4,41 @@
 .contact {
   background-color: $snow;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  @include desktop {
+    justify-content: space-around;
+  }
 
-  &__profile {
-    width: 40vw;
-    height: auto;
-    margin: 1rem;
-    outline: 2px solid $gold;
-    border: 2px solid $snow;
-      @include tablet{
-        width: 30vw;
-      }
+  &.animate {
+
+    .contact__header--highlight::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $gold;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      animation: slideInLeft 2s forwards;
+
+    }
+
+    .mountain {
+      animation: drawMountain 2s forwards;
+    }
+
+    .snowflake {
+      animation: fall 10s linear infinite;
+      animation-delay: 2s;
+    }
+
+    .flag {
+      animation: raiseFlag 1s forwards;
+      animation-delay: 3s;
+    }
   }
 
   &__info {
@@ -23,31 +48,26 @@
     margin: 1rem;
   }
 
-  &__header {
-    margin-bottom: 1rem;
-    font-size: 2rem;
+&__header {
+  color: $black;
+  margin-bottom: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  position: relative;
+
+  &--highlight {
     position: relative;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background-color: $gold;
-      position: absolute;
-      bottom: -2px;
-      left: 5.5rem;
-      animation: slideInLeft 2s forwards;
-    }
-
-    @include tablet {
-      margin-left: 2rem;
-    }
-
-    @include desktop {
-      margin-left: 6rem;
-    }
+    display: inline-block; 
   }
+
+  @include tablet {
+    margin-left: 2rem;
+  }
+
+  @include desktop {
+    margin-left: 6rem;
+  }
+}
 
   &__links {
     display: flex;
@@ -55,6 +75,10 @@
     justify-content: center;
     list-style: none;
     padding: 0;
+
+    @include desktop {
+      flex-direction: row;
+    }
   }
 
   &__item {
@@ -62,7 +86,7 @@
     align-items: center;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    position: relative; 
+    position: relative;
 
     @include tablet {
       margin-bottom: 0.7rem;
@@ -70,14 +94,6 @@
 
     @include desktop {
       margin-bottom: 1.5rem;
-    }
-
-    &:hover {
-      & .contact__logo {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0.5rem) translateY(-50%);
-      }
     }
   }
 
@@ -99,35 +115,83 @@
     @include desktop {
       margin-left: 6rem;
     }
-    &--linkedin{
+
+    &--linkedin {
       height: 2.8rem;
       margin-left: -0.3rem;
-        @include tablet{
-          margin-left: 1.6rem;
-        }
-        @include desktop{
-          margin-left: 5.5rem;
-        }
+
+      @include tablet {
+        margin-left: 1.6rem;
+      }
+
+      @include desktop {
+        margin-left: 5.5rem;
+      }
     }
+
+  }
+}
+
+.mountain-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 300px;
+  height: 250px;
+  margin-top: 2rem;
+  position: relative;
+  margin-right: 1rem;
+
+  .snowflake {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('../../assets/images/snowflake.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0; 
   }
 
-  &__logo {
+  .mountain {
+    width: 0;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 0 solid $palelogoblue;
+    opacity: 0; 
+
+    &.mountain-1 { border-bottom-width: 60px; }
+    &.mountain-2 { border-bottom-width: 80px; }
+    &.mountain-3 { border-bottom-width: 100px; }
+  }
+
+  .flag {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/redflag.png') no-repeat center center;
+    background-size: contain;
     position: absolute;
-    top: 50%;
-    right: 0%; 
-    width: 5rem; 
-    height: 5rem; 
-    transform: translateX(0.5rem) translateY(-50%); 
-    padding: 0.5rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 10; 
+    bottom: 39%;
+    left: 85.4%;
+    transform: translateX(-50%);
+    opacity: 0; 
   }
 }
 
 @keyframes slideInLeft {
-  to {
-    width: calc(100% - 5rem);
-  }
+  to { width: calc(100%); }
+}
+
+@keyframes drawMountain {
+  0% { border-left-width: 0; border-right-width: 0; border-bottom-width: 0; opacity: 0; }
+  100% { border-left-width: 50px; border-right-width: 50px; opacity: 1; }
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px); opacity: 1; }
+  100% { transform: translateY(calc(100vh + 100px)); opacity: 0; }
+}
+
+@keyframes raiseFlag {
+  0% { opacity: 0; transform: translate(-50%, 10px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
 }

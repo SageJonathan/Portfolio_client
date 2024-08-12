@@ -11,9 +11,11 @@
   @include desktop {
     flex-direction: row;
   }
+
   &__section-header {
     background-color: $snow;
-    color: black;
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2rem;
     text-align: center;
     font-weight: 600;
@@ -28,25 +30,26 @@
       width: calc(50% - 2rem);
     }
 
-    &::before {
+    &.animate::before {
       left: 2rem;
       bottom: -0.5rem;
       animation: slideInFromLeftProj 2s forwards;
+     
     }
 
-    &::after {
+    &.animate::after {
       right: 2rem;
       bottom: -0.5rem;
       animation: slideInFromRightProj 2s forwards;
+      
     }
   }
+
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content:baseline;
+    justify-content: baseline;
     align-items: center;
-    // position: relative;
-    // overflow: hidden;
 
     @include tablet {
       padding: 0 1rem;
@@ -57,48 +60,34 @@
       flex-direction: column;
     }
   }
+
   &__img-container {
     position: relative;
     width: 100%;
-    max-width: 80%; 
+    max-width: 80%;
     height: auto;
     overflow: hidden;
-    margin: 1rem 0rem;
+    margin: 1rem 0;
 
     @include tablet {
       width: 175%;
-      flex: 0 0 40%; /* Take 40% width */
+      flex: 0 0 40%;
     }
 
     @include desktop {
-     min-width: 80%;
-     max-width: 80%;
-     margin: 0rem 0rem;
+      min-width: 80%;
+      max-width: 80%;
+      margin: 0;
     }
   }
+
   &__img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    // box-shadow: 0 8px 12px $charcoal;
   }
-  // &__gallery {
-  //   // Needs to become the img
-  //   display: flex;
-  //   gap: 1rem;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   opacity: 1;
-  //   visibility: visible;
-  //   transition: opacity 0.3s, transform 0.3s;
-  //   z-index: 10;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
-  .project__gallery-controls {
+
+  &__gallery-controls {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -110,36 +99,43 @@
     box-sizing: border-box;
     pointer-events: auto;
   }
-  
-  .project__gallery-controler {
-    background-color: rgba(0, 0, 0, 0.5); 
+
+  &__gallery-controler {
+    background-color: $paleblack;
     border: none;
-    color: $gold; 
+    color: $gold;
     font-size: 2rem;
     cursor: pointer;
     transition: color 0.3s;
-    padding: 0.5rem; 
+    padding: 0.5rem;
   }
-  
+
   &__description-container {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 1.5rem 2rem;
     align-items: center;
-  }
-  &__description__header {
-    font-size: 1.5rem;
-  }
-  &__description__text {
-    color: $charcoal;
-    font-size: 1.2rem;
-  }
-    @include tablet{
-        flex: 0 0 60%; /* Take 40% width */
+
+    @include tablet {
+      flex: 0 0 60%;
     }
+  }
+
+  &__description-header {
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+      @include tablet{
+        font-size: 1.5rem;
+      }
+  }
+
+  &__description-text {
+    color: $charcoal;
+  }
 }
 
-// Animations for project underline
 @keyframes slideInFromLeftProj {
   from {
     transform: translateX(-100%);
@@ -161,3 +157,4 @@
     opacity: 1;
   }
 }
+

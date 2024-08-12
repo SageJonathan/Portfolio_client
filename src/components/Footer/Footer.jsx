@@ -1,9 +1,4 @@
 import "./Footer.scss";
-import Github from "../../assets/logos/github.svg";
-import Linkedin from "../../assets/logos/linkedin.svg";
-import Email from "../../assets/logos/e-mail.svg";
-import Instagram from "../../assets/logos/instagram.svg";
-
 function Footer() {
   return (
     <div className="footer">
@@ -11,7 +6,6 @@ function Footer() {
         <h4 className="footer__header footer__header--contact">Let's work</h4>
         <div className="footer__contact-wrapper">
           <a className="footer__link" href="mailto:dev@sagecodes.tech">
-            <img className="footer__contact-img" src={Email} alt="email" />
             <p className="footer__contact--text">Email</p>
           </a>
         </div>
@@ -22,13 +16,12 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="footer__social-icon" src={Github} alt="GitHub" />
             <p className="footer__social-text">GitHub</p>
           </a>
         </div>
       </div>
       <div className="footer__middle">
-        <p className="footer__rights"> &copy; Sage Codes</p>
+        <p className="footer__copyright"> &copy; Sage Codes</p>
       </div>
       <div className="footer__right">
         <h4 className="footer__header footer__header--social"> Let's chat</h4>
@@ -39,12 +32,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="footer__social-icon footer__social-icon--linkedin"
-              src={Linkedin}
-              alt="LinkedIn"
-            />
-            <p className="footer__social">LinkedIn</p>
+            <p className="footer__social-text">LinkedIn</p>
           </a>
         </div>
         <div className="footer__social-wrapper">
@@ -54,11 +42,6 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="footer__social-icon footer__social-icon--instagram"
-              src={Instagram}
-              alt="Instagram"
-            />
             <p className="footer__social-text footer__social-text--instagram">
               Instagram
             </p>

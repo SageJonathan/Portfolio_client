@@ -1,58 +1,136 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-.about{
-    background-color: $logoblue;
+.about {
+  background-color: $logoblue;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+
+  @include desktop {
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  &__img-container {
+    outline: 2px solid $snow;
+    border: 2px solid $gold;
+    width: 80%; 
+    margin: 1rem 0rem; 
+    border-radius: 8px; 
+    @include tablet {
+      width: 60%; 
+    }
+    @include desktop {
+      width: 40%;
+      margin: 1rem 0.5rem 1rem 1rem;
+    }
+  }
+
+  &__img {
+    width: 100%; 
+    height: auto;
+    max-height: 200px; 
+    object-fit: cover; 
+    display: block;
+
+    @include tablet {
+      max-height: 300px; 
+    }
+    @include desktop{
+      max-height: 430px;
+    }
+  }
+
+  &__description {
+    background-color: $snow;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 1rem; 
     border: none;
-        @include tablet{
-            padding: 1em 2rem 2rem 2rem;
-        }
-    &__meta{
-      background-color: $gold;
-      padding: 0rem 0.2rem;
-    }
-    &__header{
-        color: $snow;
-        font-size: 2rem;
-        font-weight: 700;
-        position: relative;
+    margin: 1rem;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%; 
 
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          height: 2px; 
-          background-color: $gold;
-          width: calc(50% - 1rem); 
-        }
-      
-        &::before {
-          left: 1rem;
-          bottom: -0.5rem; 
-          animation: slideInFromLeftAbout 2s forwards; 
-        }
-      
-        &::after {
-          right: 1rem; 
-          bottom: -0.5rem; 
-          animation: slideInFromRightAbout 2s forwards; 
-        }
+    @include tablet {
+      width: 80%; 
+      padding: 1.5rem;
     }
-    &__text{
-        font-size: 1.4rem;
-        color: $snow;
-        padding: 1rem 1.5rem;
-        cursor: pointer;
+
+    @include desktop {
+      width: 65%; 
+      padding: 1rem; 
+      margin: 0;
+      box-shadow: none;
+      margin: 2rem 1rem;
     }
-    &__link{
-      text-decoration: none;
-      color: inherit;
+  }
+
+  &__header {
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem; 
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 1rem; 
+
+    @include tablet {
+      font-size: 1.8rem; 
     }
+
+    @include desktop {
+      font-size: 2rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gold;
+      width: calc(50%);
+    }
+
+    &::before {
+      left: 1rem;
+      bottom: -0.5rem;
+    }
+
+    &::after {
+      right: 1rem;
+      bottom: -0.5rem;
+    }
+    
+    &.animate::before {
+      animation: slideInFromLeftAbout 2s forwards;
+    }
+
+    &.animate::after {
+      animation: slideInFromRightAbout 2s forwards;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem; 
+    color: $charcoal;
+    padding: 0.5rem 0rem; 
+
+    @include tablet {
+      font-size: 1.3rem; 
+    }
+
+    @include desktop {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 @keyframes slideInFromLeftAbout {

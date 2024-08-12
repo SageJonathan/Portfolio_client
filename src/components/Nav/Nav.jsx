@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./Nav.scss";
-import Logo from "../../assets/logos/transparentlogo.png"; 
 
 function Nav() {
   return (
     <div className="nav">
       <div className="nav__img-container">
         <Link to="hero" smooth={true} duration={500}>
-          <img className="nav__logo" src={Logo} alt="LOGO" />
+          <img className="nav__logo" src="/transparentlogo.png" alt="LOGO" />
         </Link>
       </div>
       <ul className="nav__link-container">
@@ -31,7 +30,7 @@ function Nav() {
           <span className="nav__link-dash">|</span>
         </li>
         <li className="nav__link nav__link--writing">
-          <a className="blog" 
+          <a className="nav__blog" 
           href="https://www.storiesfromthefringe.net/" 
           target="_blank" 
           rel="noopener noreferrer">
