@@ -1,44 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
 import './Mission.scss';
-
-
-function useOnScreen(ref) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target); 
-        }
-      },
-      { threshold: 0.1} 
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current); 
-      }
-    };
-  }, [ref]);
-
-  return isVisible;
-}
+import { useViewObserver } from '../../utils/viewObserver';
 
 function Mission() {
-  const headerRef = useRef(null);
-  const isHeaderVisible = useOnScreen(headerRef);
+  const [headerRef, isVisible] = useViewObserver(0.1);
 
   return (
     <div className="mission">
       <h2
         ref={headerRef}
-        className={`mission__header ${isHeaderVisible ? 'animate' : ''}`}
+        className={`mission__header ${isVisible ? 'animate' : ''}`}
       >
         Mission Statement
       </h2>
