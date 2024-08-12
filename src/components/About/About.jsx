@@ -51,11 +51,11 @@ function About() {
           In development, I leverage this diverse experience to create
           impactful, user-focused solutions. My background in managing complex
           projects and navigating remote, multicultural environments equips me
-          to tackle any challenge with precision and creativity.
+          to tackle any project with precision and creativity.
         </p>
       </div>
     </div>
-  );
+  ); 
 }
 
 export default About;
