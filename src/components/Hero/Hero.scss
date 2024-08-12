@@ -59,6 +59,7 @@
   }
 
   &__name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: $snow;
     font-size: 32px;
     -webkit-animation: mainFadeIn 2s forwards;
@@ -154,6 +155,7 @@
     font-size: 2rem;
   }
   &__subheader {
+
     color: $gold;
     font-weight: 200;
     font-size: 1.5rem;

@@ -49,8 +49,9 @@
   }
 
 &__header {
-  color: $charcoal;
+  color: $black;
   margin-bottom: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2rem;
   position: relative;
 
@@ -148,7 +149,7 @@
     background: url('../../assets/images/snowflake.png') no-repeat center center;
     background-size: contain;
     pointer-events: none;
-    opacity: 0; // Start as invisible
+    opacity: 0; 
   }
 
   .mountain {
@@ -156,7 +157,7 @@
     border-left: 0 solid transparent;
     border-right: 0 solid transparent;
     border-bottom: 0 solid $palelogoblue;
-    opacity: 0; // Start as invisible
+    opacity: 0; 
 
     &.mountain-1 { border-bottom-width: 60px; }
     &.mountain-2 { border-bottom-width: 80px; }
@@ -172,7 +173,7 @@
     bottom: 39%;
     left: 85.4%;
     transform: translateX(-50%);
-    opacity: 0; // Start as invisible
+    opacity: 0; 
   }
 }
 

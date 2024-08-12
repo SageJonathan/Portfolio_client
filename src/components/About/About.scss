@@ -70,7 +70,8 @@
   }
 
   &__header {
-    color: black;
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.6rem; 
     font-weight: 700;
     position: relative;

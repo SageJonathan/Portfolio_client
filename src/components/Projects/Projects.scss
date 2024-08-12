@@ -14,7 +14,8 @@
 
   &__section-header {
     background-color: $snow;
-    color: black;
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2rem;
     text-align: center;
     font-weight: 600;
@@ -100,7 +101,7 @@
   }
 
   &__gallery-controler {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $paleblack;
     border: none;
     color: $gold;
     font-size: 2rem;
@@ -121,7 +122,8 @@
   }
 
   &__description-header {
-    color: black;
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2rem;
     margin-bottom: 0.5rem;
       @include tablet{
