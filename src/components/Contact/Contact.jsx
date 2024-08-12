@@ -3,7 +3,6 @@ import Github from "../../assets/logos/github.svg";
 import Linkedin from "../../assets/logos/linkedin.svg";
 import Email from "../../assets/logos/e-mail.svg";
 import Instagram from "../../assets/logos/instagram.svg";
-// import Snowflake from "../../assets/images/snowflake.png"; 
 
 function Contact() {
   const snowflakes = Array.from({ length: 10 }).map((_, index) => (
@@ -17,7 +16,7 @@ function Contact() {
   return (
     <div className="contact">
       <div className="contact__info">
-        <h2 className="contact__header">Let's connect</h2>
+        <h2 className="contact__header">Let's <span className="contact__header--highlight">connect</span></h2>
         <ul className="contact__links">
           <li className="contact__item">
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
