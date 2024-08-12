@@ -1,6 +1,6 @@
 
 import './About.scss';
-import Author2 from '../../assets/images/author2.jpg';
+import Author2 from '../../assets/images/author2.png';
 import { useViewObserver } from '../../utils/viewObserver';
 
 const About = () => {
