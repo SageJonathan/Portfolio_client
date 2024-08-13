@@ -18,7 +18,7 @@ function Hero() {
               <p className="person__role">Fullstack Developer</p>
             </div>
             <div className="person__img-container">
-              <img className="person__img" src={Author3} alt="" />
+              <img className="person__img" src={Author3} alt="author" />
             </div>
           </div>
         </div>
