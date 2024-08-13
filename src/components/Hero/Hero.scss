@@ -17,13 +17,12 @@
 //Person side
 .person {
   width: 100vw;
-  height: 50vh;
+  height: auto;
   padding-top: 1rem;
   display: flex;
   justify-content: center;
   @include tablet {
     width: 50%;
-    height: 60vh;
     margin-left: 1rem;
     display: flex;
     justify-content: center;
@@ -157,7 +156,6 @@
     font-size: 2rem;
   }
   &__subheader {
-
     color: $gold;
     font-weight: 200;
     font-size: 1.5rem;
