@@ -2,7 +2,9 @@
 @use '../../styles/partials/variables' as *;
 
 .about {
-  background-color: $logoblue;
+  // background-color: $logoblue;
+  background-color: $black; 
+  background: linear-gradient($logoblue, $black);
   display: flex;
   flex-direction: column; 
   align-items: center; 

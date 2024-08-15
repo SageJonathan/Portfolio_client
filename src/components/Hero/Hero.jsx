@@ -1,5 +1,4 @@
 import "./Hero.scss";
-import Author3 from "../../assets/images/author3.jpg";
 
 function Hero() {
   return (
