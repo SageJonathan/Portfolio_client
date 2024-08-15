@@ -71,7 +71,7 @@ function Projects() {
       <h2
         ref={headerRef}
         className={`project__section-header ${isVisible ? 'animate' : ''}`}>
-        Projects
+        Recent Projects
       </h2>
       <div className="project">
         {/* Avalanche AI */}
