@@ -1,15 +1,15 @@
 import "./Skills.scss";
-import html from "../../assets/images/html.png";
-import css from "../../assets/images/css.png";
-import sass from "../../assets/images/sass.png";
-import js from "../../assets/images/javascript.png";
-import node from "../../assets/images/node.png";
-import react from "../../assets/images/react.svg";
-import express from "../../assets/images/express.png";
-import axios from "../../assets/images/axios.png";
-import mysql from "../../assets/images/mysql.png";
-import knex from "../../assets/images/knex.png";
-import figma from "../../assets/images/figma.png";
+import html from "../../assets/logos/html.png";
+import css from "../../assets/logos/css.png";
+import sass from "../../assets/logos/sass.png";
+import js from "../../assets/logos/javascript.png";
+import node from "../../assets/logos/node.png";
+import react from "../../assets/logos/react.svg";
+import express from "../../assets/logos/express.png";
+import axios from "../../assets/logos/axios.png";
+import mysql from "../../assets/logos/mysql.png";
+import knex from "../../assets/logos/knex.png";
+import figma from "../../assets/logos/figma.png";
 
 function Skills() {
   return (

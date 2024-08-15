@@ -1,8 +1,8 @@
 import './Contact.scss';
-import Github from '../../assets/logos/github.svg';
-import Linkedin from '../../assets/logos/linkedin.svg';
-import Email from '../../assets/logos/e-mail.svg';
-import Instagram from '../../assets/logos/instagram.svg';
+import Github from '../../assets/icons/github.svg';
+import Linkedin from '../../assets/icons/linkedin.svg';
+import Email from '../../assets/icons/e-mail.svg';
+import Instagram from '../../assets/icons/instagram.svg';
 import { useViewObserver } from '../../utils/viewObserver';
 
 function Snowflake({ index }) {

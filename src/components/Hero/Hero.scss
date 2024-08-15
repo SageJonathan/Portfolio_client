@@ -3,19 +3,14 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
-  padding-bottom: 2rem;
-  // background: $logoblue;
   background-image: url(../../assets/images/mtnHero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   @include tablet {
-    flex-direction: row;
-    padding-bottom: 2.5rem;
     height: 80vh;
   }
   @include desktop{
@@ -23,165 +18,41 @@
     height: 90vh;
   }
 }
-//Person side
-.person {
-  width: 100vw;
-  height: auto;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-  @include tablet {
-    width: 50%;
-    margin-left: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-  @include desktop {
-    width: 30%;
-  }
-
-  &__container {
-    width: 250px;
-    height: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__text--upper {
-    padding-bottom: 0.5rem;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 50px;
-  }
-
-  &__spread--gold {
-    width: 0%;
-    height: inherit;
-    background: $gold;
-    position: absolute;
-    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-    display: flex;
-  }
-
-  &__name {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: $snow;
-    font-size: 32px;
-    -webkit-animation: mainFadeIn 2s forwards;
-    -o-animation: mainFadeIn 2s forwards;
-    animation: mainFadeIn 2s forwards;
-    animation-delay: 1.6s;
-    opacity: 0;
-    display: flex;
-    align-items: baseline;
-    position: relative;
-  }
-
-  &__dot{
-    width: 0px;
-    height: 0px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-
-    background: $gold;
-    -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-    animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-    animation-delay: 2s;
-    margin-left: 5px;
-    position: absolute;
-    bottom: 13px;
-    right: -12px;
-  }
-
-  &__text--lower {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    margin-bottom: 1rem;
-  }
-
-  &__spread--cyan {
-    width: 0%;
-    height: inherit;
-    background: $cyan;
-    position: absolute;
-    animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-    animation-delay: 2s;
-    display: flex;
-  }
-
-  &__role {
-    animation: secFadeIn 2s forwards;
-    animation-delay: 3.2s;
-    opacity: 0;
-    font-weight: 400;
-    color: $snow;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-  }
-
-  &__img {
-    width: 100%;           
-    height: auto;      
-    display: block;
-    
-  }
-  &__img-container {
-    width: auto;
-    // border: 2px solid $gold;
-    // outline: 3px solid $snow;
-  }
-}
-
-//Text Side:
 .text {
-  margin-top: 6rem;
-  // width: 80%;
-  animation: slideInTop 1.5s forwards;
+  background-color: $paleblack;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $paleblack;
+  margin-top: 10rem;
+   position: relative;
+   animation: slideInRight 1.5s forwards;
+   animation: slideInTop 1.5s forwards;
+   padding: 1rem 2rem;
   @include tablet{
-
+    margin-top: 22rem;
+    margin-right: 20rem;
   }
   @include desktop {
-    padding-left: 1rem;
-   max-width: 40%;
+    margin-top: 15rem;
+    margin-right: 0rem;
+    margin-left: 25rem;
   }
 
   &__text {
     font-size: 1.4rem;
     color: $snow;
-    padding: 0.5rem 0rem 0.5rem 1rem;
   }
   &__header {
     color: $snow;
     font-weight: 400;
-    padding-right: 1rem;
     font-size: 2rem;
   }
   &__subheader {
     color: $gold;
     font-weight: 200;
     font-size: 1.5rem;
-    margin-left: -1rem;
   }
-  // @include tablet {
-    padding-bottom: 0;
-    width: 30%;
-    margin-right: 3rem;
-    animation: slideInRight 1.5s forwards;
-    position: relative;
-
     &::after,
     &::before {
       content: "";
@@ -205,10 +76,9 @@
       right: 0;
       animation: slideInRight 3s forwards;
     }
-  // }
 }
 
-//Text Keyframes
+
 @keyframes slideInTop {
   from {
     transform: translateY(-100%);
@@ -228,115 +98,5 @@
   to {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-
-//Person Keyframes
-@keyframes mainBlock {
-  0% {
-    width: 0%;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes secBlock {
-  0% {
-    width: 0%;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes mainFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes popIn {
-  0% {
-    width: 0px;
-    height: 0px;
-    background: #e9d856;
-    border: 0px solid #ddd;
-    opacity: 0;
-  }
-  50% {
-    width: 10px;
-    height: 10px;
-    background: #e9d856;
-    opacity: 1;
-    bottom: 45px;
-  }
-  65% {
-    width: 7px;
-    height: 7px;
-    bottom: 0px;
-    width: 15px;
-  }
-  80% {
-    width: 10px;
-    height: 10px;
-    bottom: 20px;
-  }
-  100% {
-    width: 7px;
-    height: 7px;
-    background: #e9d856;
-    border: 0px solid #222;
-    bottom: 13px;
-  }
-}
-
-@keyframes secFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes top {
-  0% {
-    opacity: 0;
-    bottom: -80px;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
-  }
-}
-
-@keyframes icon {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.3) rotate(-02deg);
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
   }
 }
