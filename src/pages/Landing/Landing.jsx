@@ -1,5 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
+import Nav from "../../components/Nav/Nav";
+import Footer from "../../components/Footer/Footer";
 import "./Landing.scss";
 import Hero from "../../components/Hero/Hero";
 import Projects from "../../components/Projects/Projects";
@@ -11,6 +13,7 @@ import Mission from "../../components/Mission/Mission";
 function Landing() {
   return (
     <>
+    <Nav />
       <Element name="hero">
         <Hero />
       </Element>
@@ -29,6 +32,7 @@ function Landing() {
       <Element name="contact">
         <Contact />
       </Element>
+      <Footer />
     </>
   );
 }
