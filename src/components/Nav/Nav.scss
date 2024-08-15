@@ -7,6 +7,9 @@
   align-items: center;
   background-color: $logoblue;
   justify-content: space-between;  
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
   &__img-container {
     height: 12vh;
     padding-left: 1rem;
