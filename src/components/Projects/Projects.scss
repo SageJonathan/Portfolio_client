@@ -7,12 +7,12 @@
   justify-content: space-evenly;
   padding: 2rem 0;
   background-color: $snow;
-
   @include desktop {
     flex-direction: row;
   }
 
   &__section-header {
+    padding-top: 2rem;
     background-color: $snow;
     color: $black;
     font-family: Georgia, 'Times New Roman', Times, serif;
