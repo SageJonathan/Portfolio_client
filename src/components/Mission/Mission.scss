@@ -7,19 +7,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 2rem 0rem;
   position: relative;
 
   @include tablet {
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
   }
 
   &__header {
     padding-top: 1rem;
     color: $black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 2.5rem; 
+    text-align: center; 
     position: relative;
+    margin-bottom: 1rem; 
 
     &::before,
     &::after {
@@ -27,7 +29,7 @@
       position: absolute;
       height: 2px;
       background-color: $gold;
-      width: calc(50%);
+      width: calc(50% - 1rem); // Adjusted to account for padding
     }
 
     &::before {
@@ -52,12 +54,13 @@
   &__text {
     font-size: 1.3rem;
     color: $charcoal;
-    padding: 2rem 1.5rem 0rem 1.5rem;
-    font-weight: 600;
-    text-align: center;
+    padding: 1rem 1.5rem;
+    font-weight: 400; 
+    text-align: center; 
 
     @include tablet {
-      margin: 0rem 7rem;
+      margin: 0; 
+      max-width: 800px; 
     }
   }
 }
