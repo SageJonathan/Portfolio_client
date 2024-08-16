@@ -1,8 +1,8 @@
 import './Contact.scss';
-import Github from '../../assets/icons/github.svg';
-import Linkedin from '../../assets/icons/linkedin.svg';
-import Email from '../../assets/icons/e-mail.svg';
-import Instagram from '../../assets/icons/instagram.svg';
+import Github from '../../assets/icons/github.png';
+import Linkedin from '../../assets/icons/linkedin.png';
+import Email from '../../assets/icons/email.png';
+import Instagram from '../../assets/icons/instagram.png';
 import { useViewObserver } from '../../utils/viewObserver';
 
 function Snowflake({ index }) {
@@ -48,13 +48,13 @@ function Contact() {
           <li className="contact__item">
             <a className="contact__link" href="https://www.linkedin.com/in/sagejonathan/" target="_blank" rel="noopener noreferrer">
               <img className="contact__icons contact__icons--linkedin" src={Linkedin} alt="LinkedIn" />
-              LinkedIn
+             LinkedIn
             </a>
           </li>
           <li className="contact__item">
             <a className="contact__link" href="https://www.instagram.com/wandering_mapachito/" target="_blank" rel="noopener noreferrer">
-              <img className="contact__icons" src={Instagram} alt="Instagram" />
-              Instagram
+              <img className="contact__icons contact__icons--instagram" src={Instagram} alt="Instagram" />
+             Instagram
             </a>
           </li>
         </ul>

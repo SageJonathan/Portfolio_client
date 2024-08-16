@@ -32,7 +32,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p className="footer__social-text">LinkedIn</p>
+            <p className="footer__social-text footer__social-text--linkedin">LinkedIn</p>
           </a>
         </div>
         <div className="footer__social-wrapper">
