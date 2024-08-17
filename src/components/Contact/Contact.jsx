@@ -35,7 +35,7 @@ function Contact() {
         <ul className="contact__links">
           <li className="contact__item">
             <a className="contact__link" href="mailto:dev@sagecodes.tech">
-              <img className="contact__icons" src={Email} alt="email" />
+              <img className="contact__icons contact__icons--email" src={Email} alt="email" />
               Email
             </a>
           </li>
