@@ -2,7 +2,6 @@
 @use '../../styles/partials/variables' as *;
 
 .about {
-  // background-color: $logoblue;
   background-color: $black; 
   background: linear-gradient($logoblue, $black);
   display: flex;
@@ -73,6 +72,7 @@
     font-weight: 700;
     position: relative;
     margin-bottom: 1rem; 
+    text-align: center; 
 
     @include tablet {
       font-size: 1.8rem; 

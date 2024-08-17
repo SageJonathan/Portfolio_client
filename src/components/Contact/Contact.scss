@@ -57,14 +57,12 @@
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 2rem;
     position: relative;
-
     &--highlight {
       position: relative;
       display: inline-block;
     }
 
     @include tablet {
-  
       margin-left: 2rem;
     }
 
@@ -116,9 +114,18 @@
 
   &__icons {
     margin-right: 0.5rem;
-    height: 2rem;
+    height: 2.4rem;
+    &--email {
+      height: 2.1rem;
+      margin-right: 0.65rem;
+      margin-left: 0.15rem;
+    }
     @include tablet {
       margin-left: 2rem;
+      &--email {
+        margin-right: 0.7rem;
+        margin-left: 2.1rem;
+      }
     }
 
     @include desktop {
