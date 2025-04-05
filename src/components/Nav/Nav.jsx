@@ -41,10 +41,10 @@ function Nav() {
         </li>
         <li className="nav__link nav__link--writing">
           <a className="nav__blog" 
-          href="https://www.storiesfromthefringe.net/" 
+          href="https://www.mountainstories.ca/" 
           target="_blank" 
           rel="noopener noreferrer">
-            Writing
+            Blog
           <span className="nav__link-dash">|</span>
           </a>
         </li>
