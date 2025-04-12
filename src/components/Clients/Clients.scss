@@ -44,7 +44,10 @@
 }
 
 &__instance{
-  padding-top: 1rem;
+  padding: 1rem;
+  @include tablet{
+    padding: 2rem;
+  }
     &--logo{
         height: 3rem;
         @include tablet{

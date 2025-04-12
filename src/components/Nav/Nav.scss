@@ -86,10 +86,10 @@
         display: block;
       }
      &--writing{
-      display: none;
-      @include tablet{
-        display: inline;
-       }
+      display: inline;
+      // @include tablet{
+      //   display: inline;
+      //  }
       }
     }
     .nav__link-dash{

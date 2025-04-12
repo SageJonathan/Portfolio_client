@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useViewObserver } from "../../utils/viewObserver";
+import Button from "../Button/button";
 import "./Projects.scss";
 import Instock from "../../assets/images/instock.png";
 import Instock1 from "../../assets/images/instock1.png";
@@ -83,7 +84,7 @@ function Projects() {
             <Gallery
               images={galleries.ArtStore}
               currentIndex={currentImageIndexArtStore}
-              onPrev={handlePrev(                                          
+              onPrev={handlePrev(
                 setCurrentImageIndexArtStore,
                 galleries.ArtStore
               )}
@@ -94,34 +95,29 @@ function Projects() {
               altPrefix="Louise Guay Art Store"
             />
           </div>
-          
-          <div className="project__description-container">
-          <a href="https://www.louiseguay.ca/" className="refLink">
-          <h3 className="project__description-header">Art Commerce</h3>
-          </a>
-           
 
+          <div className="project__description-container">
+            <a href="https://www.louiseguay.ca/" className="refLink">
+              <h3 className="project__description-header">Art Commerce</h3>
+            </a>
             <p className="project__description-text">
-              This full-stack web application{" "}
+              This custom-built web application{" "}
               <span className="project__description-text--bold">
-                empowers artists to showcase, sell, and manage their artwork
-                effortlessly
+                streamlines the client's artwork sales process,
               </span>{" "}
-              through a streamlined online platform. It automates the entire
-              sales flow, from browsing to shipping, allowing artists to{" "}
+              automating everything from browsing to shipping, so they can{" "}
               <span className="project__description-text--bold">
-                focus on their craft without worrying about logistics.
+                focus on their craft, not logistics.
               </span>{" "}
-              Built for both creators and buyers, the platform ensures{" "}
-              <span className="project__description-text--bold">
-                secure transactions, dynamic gallery browsing,
-              </span>{" "}
-              and smooth shipping processes, all optimized for performance,
-              simplicity, and scalability.
+              With secure transactions, dynamic galleries, and efficient
+              shipping, the platform is perfectly tailored to meet their
+              specific needs and goals.
             </p>
+            <a href="https://www.louiseguay.ca/">
+              <Button text="Visit Site" />
+            </a>
           </div>
         </div>
-       
 
         {/* Warehouse Tracker */}
         <div className="project__container">
@@ -141,25 +137,25 @@ function Projects() {
             />
           </div>
           <div className="project__description-container">
-            <h3 className="project__description-header">Warehouse Tracker</h3>
+          <a href="https://github.com/chinghang0504/instock_client" className="refLink">
+          <h3 className="project__description-header">Warehouse Tracker</h3>
+            </a>
             <p className="project__description-text">
               <span className="project__description-text--bold">
-                Collaboratively developed{" "}
-              </span>
-              a full-stack Warehouse Tracker app with a team of four, designed
-              to optimize inventory management and{" "}
+                Collaboratively developed
+              </span>{" "}
+              a full-stack Warehouse Tracker app with a team of four to optimize
+              inventory management and{" "}
               <span className="project__description-text--bold">
-                enable real-time tracking of goods.{" "}
-              </span>
-              This solution enhances operational efficiency with accurate,
-              up-to-date stock information, streamlines logistics through
-              improved data visibility and reporting, supports all CRUD
-              operations, and{" "}
-              <span className="project__description-text--bold">
-                ensures robust database security with client and server-side
-                protection.
-              </span>
+                enable real-time tracking of goods.
+              </span>{" "}
+              The solution improves efficiency with accurate stock data,
+              streamlined logistics, and supports all CRUD operations, while
+              ensuring strong database security.
             </p>
+            <a href="https://github.com/chinghang0504/instock_client">
+              <Button text="Visit Repo" />
+            </a>
           </div>
         </div>
 
@@ -181,11 +177,11 @@ function Projects() {
             />
           </div>
           <div className="project__description-container">
-          <a href="https://www.solarwatch.ca/" className="refLink">
-          <h3 className="project__description-header">Solar Watch</h3>
-          </a>
+            <a href="https://www.solarwatch.ca/" className="refLink">
+              <h3 className="project__description-header">Solar Watch</h3>
+            </a>
             <p className="project__description-text">
-              Solar Watch is a weather and solar data application{" "}
+              This cross platform application was{" "}
               <span className="project__description-text--bold">
                 designed to help users plan their outdoor activities with
                 confidence
@@ -199,10 +195,10 @@ function Projects() {
                 ensures you stay connected to changing conditions wherever you
                 are
               </span>
-              . Built for adventurers, professionals, and anyone who values
-              accuracy, the platform focuses on speed, simplicity, and a
-              seamless user experience.
             </p>
+            <a href="https://www.solarwatch.ca/">
+              <Button text="Visit Site" />
+            </a>
           </div>
         </div>
       </div>
