@@ -1,0 +1,34 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.button {
+    color: $black;
+    background-color: $palelogoblue;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid $gold;
+    height: 3.5rem;
+    width: 9rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: lighten($palelogoblue, 10%);
+      border-color: darken($gold, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($gold, 0.5);
+    }
+  }
+  

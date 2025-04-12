@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useViewObserver } from "../../utils/viewObserver";
+import Button from "../Button/button";
 import "./Projects.scss";
 import Instock from "../../assets/images/instock.png";
 import Instock1 from "../../assets/images/instock1.png";
@@ -99,7 +100,6 @@ function Projects() {
             <a href="https://www.louiseguay.ca/" className="refLink">
               <h3 className="project__description-header">Art Commerce</h3>
             </a>
-
             <p className="project__description-text">
               This custom-built web application{" "}
               <span className="project__description-text--bold">
@@ -113,6 +113,9 @@ function Projects() {
               shipping, the platform is perfectly tailored to meet their
               specific needs and goals.
             </p>
+            <a href="https://www.louiseguay.ca/">
+              <Button text="Visit Site" />
+            </a>
           </div>
         </div>
 
@@ -134,7 +137,9 @@ function Projects() {
             />
           </div>
           <div className="project__description-container">
-            <h3 className="project__description-header">Warehouse Tracker</h3>
+          <a href="https://github.com/chinghang0504/instock_client" className="refLink">
+          <h3 className="project__description-header">Warehouse Tracker</h3>
+            </a>
             <p className="project__description-text">
               <span className="project__description-text--bold">
                 Collaboratively developed
@@ -148,6 +153,9 @@ function Projects() {
               streamlined logistics, and supports all CRUD operations, while
               ensuring strong database security.
             </p>
+            <a href="https://github.com/chinghang0504/instock_client">
+              <Button text="Visit Repo" />
+            </a>
           </div>
         </div>
 
@@ -188,6 +196,9 @@ function Projects() {
                 are
               </span>
             </p>
+            <a href="https://www.solarwatch.ca/">
+              <Button text="Visit Site" />
+            </a>
           </div>
         </div>
       </div>
