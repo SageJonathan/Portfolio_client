@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useViewObserver } from "../../utils/viewObserver";
 import "./Projects.scss";
 import AvAI from "../../assets/images/avai.png";
 import AvAI1 from "../../assets/images/avai1.png";
@@ -13,8 +15,12 @@ import Microsoft1 from "../../assets/images/microsoft1.png";
 import Microsoft2 from "../../assets/images/microsoft2.png";
 import Microsoft3 from "../../assets/images/microsoft3.png";
 import Microsoft4 from "../../assets/images/microsoft4.png";
-import { useState } from "react";
-import { useViewObserver } from "../../utils/viewObserver";
+import SolarWatch from "../../assets/images/solarWatch.webp";
+import SolarWatch1 from "../../assets/images/solarWatch1.webp";
+import SolarWatch2 from "../../assets/images/solarWatch2.webp";
+import SolarWatch3 from "../../assets/images/solarWatch3.webp";
+
+
 
 const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
   <div className="project__gallery">
@@ -45,14 +51,14 @@ const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
 function Projects() {
   const [currentImageIndexAvAI, setCurrentImageIndexAvAI] = useState(0);
   const [currentImageIndexInstock, setCurrentImageIndexInstock] = useState(0);
-  const [currentImageIndexMicrosoft, setCurrentImageIndexMicrosoft] =
+  const [currentImageIndexSolarWatch, setCurrentImageIndexSolarWatch] =
     useState(0);
   const [headerRef, isVisible] = useViewObserver(0.1);
 
   const galleries = {
     AvAI: [AvAI, AvAI1, AvAI2, AvAI3],
     Instock: [Instock, Instock1, Instock2, Instock3, Instock4],
-    Microsoft: [Microsoft, Microsoft1, Microsoft2, Microsoft3, Microsoft4],
+    SolarWatch: [SolarWatch, SolarWatch1, SolarWatch2, SolarWatch3],
   };
 
   const handleNext = (setCurrentIndex, images) => () => {
@@ -150,25 +156,25 @@ function Projects() {
           </div>
         </div>
 
-        {/* Microsoft Hackathon */}
+        {/* Solar Watch */}
         <div className="project__container">
           <div className="project__img-container">
             <Gallery
-              images={galleries.Microsoft}
-              currentIndex={currentImageIndexMicrosoft}
+              images={galleries.SolarWatch}
+              currentIndex={currentImageIndexSolarWatch}
               onPrev={handlePrev(
-                setCurrentImageIndexMicrosoft,
-                galleries.Microsoft
+                setCurrentImageIndexSolarWatch,
+                galleries.SolarWatch
               )}
               onNext={handleNext(
-                setCurrentImageIndexMicrosoft,
-                galleries.Microsoft
+                setCurrentImageIndexSolarWatch,
+                galleries.SolarWatch
               )}
               altPrefix="Microsoft Hackathon"
             />
           </div>
           <div className="project__description-container">
-            <h3 className="project__description-header">Microsoft Hackathon</h3>
+            <h3 className="project__description-header">Solar Watch</h3>
             <p className="project__description-text">
               At a 24-hour Microsoft hackathon, our team developed an{" "}
               <span className="project__description-text--bold">
