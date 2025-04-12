@@ -25,12 +25,12 @@ function Landing() {
       <Element name="projects">
         <Projects />
       </Element>
-      <Element name="skills">
-        <Skills />
-      </Element>
       <Element name="clients">
         <Clients />
       </Element>
+      {/* <Element name="skills">
+        <Skills />
+      </Element> */}
       <Element name="about">
         <About />
       </Element>
