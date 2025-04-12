@@ -1,24 +1,21 @@
 import { useState } from "react";
 import { useViewObserver } from "../../utils/viewObserver";
 import "./Projects.scss";
-import AvAI from "../../assets/images/avai.png";
-import AvAI1 from "../../assets/images/avai1.png";
-import AvAI2 from "../../assets/images/avai2.png";
-import AvAI3 from "../../assets/images/avai3.png";
 import Instock from "../../assets/images/instock.png";
 import Instock1 from "../../assets/images/instock1.png";
 import Instock2 from "../../assets/images/instock2.png";
 import Instock3 from "../../assets/images/instock3.png";
 import Instock4 from "../../assets/images/instock4.png";
-import Microsoft from "../../assets/images/microsoft.png";
-import Microsoft1 from "../../assets/images/microsoft1.png";
-import Microsoft2 from "../../assets/images/microsoft2.png";
-import Microsoft3 from "../../assets/images/microsoft3.png";
-import Microsoft4 from "../../assets/images/microsoft4.png";
 import SolarWatch from "../../assets/images/solarWatch.webp";
 import SolarWatch1 from "../../assets/images/solarWatch1.webp";
 import SolarWatch2 from "../../assets/images/solarWatch2.webp";
 import SolarWatch3 from "../../assets/images/solarWatch3.webp";
+import ArtStore from "../../assets/images/artStore.webp";
+import ArtStore1 from "../../assets/images/artStore1.webp";
+import ArtStore2 from "../../assets/images/artStore2.webp";
+import ArtStore3 from "../../assets/images/artStore3.webp";
+import ArtStore4 from "../../assets/images/artStore4.webp";
+import ArtStore5 from "../../assets/images/artStore5.webp";
 
 
 
@@ -49,14 +46,14 @@ const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
 );
 
 function Projects() {
-  const [currentImageIndexAvAI, setCurrentImageIndexAvAI] = useState(0);
+  const [currentImageIndexArtStore, setCurrentImageIndexArtStore] = useState(0);
   const [currentImageIndexInstock, setCurrentImageIndexInstock] = useState(0);
   const [currentImageIndexSolarWatch, setCurrentImageIndexSolarWatch] =
     useState(0);
   const [headerRef, isVisible] = useViewObserver(0.1);
 
   const galleries = {
-    AvAI: [AvAI, AvAI1, AvAI2, AvAI3],
+    ArtStore: [ArtStore, ArtStore1, ArtStore2, ArtStore3, ArtStore4, ArtStore5],
     Instock: [Instock, Instock1, Instock2, Instock3, Instock4],
     SolarWatch: [SolarWatch, SolarWatch1, SolarWatch2, SolarWatch3],
   };
@@ -82,19 +79,19 @@ function Projects() {
         Recent Projects
       </h2>
       <div className="project">
-        {/* Avalanche AI */}
+        {/* Art Store*/}
         <div className="project__container">
           <div className="project__img-container">
             <Gallery
-              images={galleries.AvAI}
-              currentIndex={currentImageIndexAvAI}
-              onPrev={handlePrev(setCurrentImageIndexAvAI, galleries.AvAI)}
-              onNext={handleNext(setCurrentImageIndexAvAI, galleries.AvAI)}
-              altPrefix="Avalanche AI"
+              images={galleries.ArtStore}
+              currentIndex={currentImageIndexArtStore}
+              onPrev={handlePrev(setCurrentImageIndexArtStore, galleries.ArtStore)}
+              onNext={handleNext(setCurrentImageIndexArtStore, galleries.ArtStore)}
+              altPrefix="Louise Guay Art Store"
             />
           </div>
           <div className="project__description-container">
-            <h3 className="project__description-header">Avalanche AI</h3>
+            <h3 className="project__description-header">Art Commerce</h3>
             <p className="project__description-text">
               This full-stack web application{" "}
               <span className="project__description-text--bold">
