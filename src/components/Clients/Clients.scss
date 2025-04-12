@@ -1,0 +1,62 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.clients {
+
+&__header{
+    padding-top: 1rem;
+    background-color: $snow;
+    color: $black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gold;
+      width: calc(50% - 2rem);
+    }
+
+    &.animate::before {
+      left: 2rem;
+      bottom: -0.5rem;
+      animation: slideInFromLeftProj 2s forwards;
+     
+    }
+
+    &.animate::after {
+      right: 2rem;
+      bottom: -0.5rem;
+      animation: slideInFromRightProj 2s forwards;
+      
+    }
+}
+}
+
+
+@keyframes slideInFromLeftProj {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRightProj {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

@@ -1,14 +1,16 @@
 import React from "react";
 import { Element } from "react-scroll";
+import "./Landing.scss";
 import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";
-import "./Landing.scss";
 import Hero from "../../components/Hero/Hero";
-import Projects from "../../components/Projects/Projects";
-import Contact from "../../components/Contact/Contact";
-import Skills from "../../components/Skills/Skills";
-import About from "../../components/About/About";
 import Mission from "../../components/Mission/Mission";
+import Projects from "../../components/Projects/Projects";
+import Skills from "../../components/Skills/Skills";
+import Clients from "../../components/Clients/Clients";
+import About from "../../components/About/About";
+import Contact from "../../components/Contact/Contact";
+
 
 function Landing() {
   return (
@@ -25,6 +27,9 @@ function Landing() {
       </Element>
       <Element name="skills">
         <Skills />
+      </Element>
+      <Element name="clients">
+        <Clients />
       </Element>
       <Element name="about">
         <About />
