@@ -5,16 +5,18 @@
 .nav {
   display: flex;
   align-items: center;
-  background-color: $logoblue;
+  background-color: $navlogoblue;
   justify-content: space-between;  
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
   &__img-container {
     height: 12vh;
     padding-left: 1rem;
   }
-
   &__logo {
     height: 100%;
-    min-width: 75px;
+    min-width:65px;
     filter: drop-shadow(2px 2px 4px rgb(5, 2, 38));
     cursor: pointer;
   }
@@ -26,10 +28,14 @@
   &__link {
     font-weight: 200;
     list-style: none;
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 0.5rem;
     color: $gold;
     cursor: pointer;
+    &--scroll{
+      display: none;
+    }
     @include tablet {
+      padding: 0rem 1rem;
       font-size: 1.3rem;
     }
     &--writing {
@@ -46,11 +52,49 @@
     }
   }
   &__link-dash {
-    color: $snow;
+    display: none;
+    @include tablet{
+      display: inline;
+      color: $snow;
+    }
   }
   &__blog{
     text-decoration: none;
     color: inherit;
+  }
+
+  // Styles for Active scroll 
+  &.scrolled {
+    height: 6vh;
+    justify-content: center;
+    @include tablet{
+      justify-content: flex-end;
+    }
+    .nav__logo{
+      display: none;
+    }
+    .nav__img-container{
+      display: none;
+      @include tablet{
+        display: inline;
+      }
+    }
+    .nav__link{
+      font-size: 1rem;
+      padding: 0rem 1rem;
+      &--scroll{
+        display: block;
+      }
+     &--writing{
+      display: none;
+      @include tablet{
+        display: inline;
+       }
+      }
+    }
+    .nav__link-dash{
+      display: none;
+    }
   }
 }
 

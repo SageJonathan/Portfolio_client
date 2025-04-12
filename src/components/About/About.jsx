@@ -1,6 +1,6 @@
 
 import './About.scss';
-import Author2 from '../../assets/images/author2.png';
+import Author2 from '../../assets/images/author.png';
 import { useViewObserver } from '../../utils/viewObserver';
 
 const About = () => {
@@ -19,7 +19,7 @@ const About = () => {
           About Me
         </h2>
         <p className="about__text">
-          Hi, I’m Jonathan Sage—a web developer with a passion for alpinism and
+          Hi, I’m Jonathan Sage—a full-stack developer with a passion for alpinism and
           a knack for delivering exceptional results. My journey from leading
           operations at world-class equestrian events to climbing some of the
           world’s most challenging peaks has honed my skills in problem-solving,
