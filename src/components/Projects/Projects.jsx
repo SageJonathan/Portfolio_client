@@ -17,8 +17,6 @@ import ArtStore3 from "../../assets/images/artStore3.webp";
 import ArtStore4 from "../../assets/images/artStore4.webp";
 import ArtStore5 from "../../assets/images/artStore5.webp";
 
-
-
 const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
   <div className="project__gallery">
     <img
@@ -76,7 +74,7 @@ function Projects() {
         ref={headerRef}
         className={`project__section-header ${isVisible ? "animate" : ""}`}
       >
-        Recent Projects
+        Featured Projects
       </h2>
       <div className="project">
         {/* Art Store*/}
@@ -85,30 +83,37 @@ function Projects() {
             <Gallery
               images={galleries.ArtStore}
               currentIndex={currentImageIndexArtStore}
-              onPrev={handlePrev(setCurrentImageIndexArtStore, galleries.ArtStore)}
-              onNext={handleNext(setCurrentImageIndexArtStore, galleries.ArtStore)}
+              onPrev={handlePrev(
+                setCurrentImageIndexArtStore,
+                galleries.ArtStore
+              )}
+              onNext={handleNext(
+                setCurrentImageIndexArtStore,
+                galleries.ArtStore
+              )}
               altPrefix="Louise Guay Art Store"
             />
           </div>
           <div className="project__description-container">
             <h3 className="project__description-header">Art Commerce</h3>
+
             <p className="project__description-text">
               This full-stack web application{" "}
               <span className="project__description-text--bold">
-                centralizes professional-grade snowpack and weather data
+                empowers artists to showcase, sell, and manage their artwork
+                effortlessly
               </span>{" "}
-              to enhance avalanche mitigation. It streamlines operations,
-              sharing quality information with recreational users through{" "}
+              through a streamlined online platform. It automates the entire
+              sales flow, from browsing to shipping, allowing artists to{" "}
               <span className="project__description-text--bold">
-                customizable privacy settings.
+                focus on their craft without worrying about logistics.
               </span>{" "}
-              Designed for both professionals and recreational users, the
-              platform ensures secure data control, promotes seamless
-              collaboration, and{" "}
+              Built for both creators and buyers, the platform ensures{" "}
               <span className="project__description-text--bold">
-                offers AI for advanced query,{" "}
-              </span>
-              focusing on efficiency, safety, and scalability.
+                secure transactions, dynamic gallery browsing,
+              </span>{" "}
+              and smooth shipping processes, all optimized for performance,
+              simplicity, and scalability.
             </p>
           </div>
         </div>
@@ -137,14 +142,14 @@ function Projects() {
                 Collaboratively developed{" "}
               </span>
               a full-stack Warehouse Tracker app with a team of four, designed
-              to optimize inventory management and {" "}
+              to optimize inventory management and{" "}
               <span className="project__description-text--bold">
-                enable real-time tracking of goods. {" "}
+                enable real-time tracking of goods.{" "}
               </span>
               This solution enhances operational efficiency with accurate,
               up-to-date stock information, streamlines logistics through
               improved data visibility and reporting, supports all CRUD
-              operations, and {" "}
+              operations, and{" "}
               <span className="project__description-text--bold">
                 ensures robust database security with client and server-side
                 protection.
@@ -172,23 +177,25 @@ function Projects() {
           </div>
           <div className="project__description-container">
             <h3 className="project__description-header">Solar Watch</h3>
+
             <p className="project__description-text">
-              At a 24-hour Microsoft hackathon, our team developed an{" "}
+              Solar Watch is a weather and solar data application{" "}
               <span className="project__description-text--bold">
-               application to boost AI adoption in Canada.
-              </span>{" "}
-              Using grassroots methods, the app offers hands-on AI learning and
-              experimentation,
-              <span className="project__description-text--bold">
-              {" "} allowing users to integrate AI into their workflows.
-              </span>{" "}
-              We proposed incentives and strategies to address privacy concerns
-              and build trust in Microsoft’s AI tools,{" "}
-              <span className="project__description-text--bold">
-                {" "}
-                focusing on enhancing user engagement and confidence in AI
-                technologies.
+                designed to help users plan their outdoor activities with
+                confidence
               </span>
+              . It delivers real-time forecasts, visibility conditions, and{" "}
+              <span className="project__description-text--bold">
+                detailed solar information like sunrise, sunset, and golden hour
+              </span>
+              . Optimized for mobile and desktop, Solar Watch{" "}
+              <span className="project__description-text--bold">
+                ensures you stay connected to changing conditions wherever you
+                are
+              </span>
+              . Built for adventurers, professionals, and anyone who values
+              accuracy, the platform focuses on speed, simplicity, and a
+              seamless user experience.
             </p>
           </div>
         </div>
