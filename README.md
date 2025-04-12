@@ -1,31 +1,64 @@
 # Jonathan Sage Portfolio
 
-Welcome to my portfolio site! This site showcases my work, achievements, and projects across various fields including software engineering, alpinism, and creative writing.
+Welcome to my portfolio. I'm committed to redefining what is possible.
 
-## Table of Contents
+My mission is to deliver innovative, user-centric solutions that solve real-world problems and empower businesses to scale.
 
-- [About Me](#about-me)
-- [Projects](#projects)
-- [Technologies Used](#technologies-used)
+## Featured Projects
 
-## About Me
+### Louise Guay Art Store
 
-I am Jonathan Sage, an alpinist, poet, photographer, and software engineer. My journey spans multiple countries and disciplines, from high-altitude mountaineering in the Peruvian Andes to developing AI-driven web applications. This portfolio highlights my diverse skills and experiences.
+**Art Commerce, Simplified**
 
-## Projects
+A full-stack web application that empowers artists to showcase, sell, and manage their artwork effortlessly through a streamlined online platform.  
+It automates the entire sales flow — from browsing to shipping — so artists can focus on their craft without worrying about logistics.  
+Optimized for secure transactions, dynamic gallery browsing, and scalable performance.
 
-### Avalanche AI
+**Stack highlights:** React, Next Js, Typescript, Postresql
 
-A web application designed for logging snow pit, field observation, and study plot data, providing organized avalanche operations, and offering access to weather and snowpack history. The tech stack includes JavaScript, React, Node.js, Express.js, MySQL, and APIs.
+---
 
 ### Warehouse Tracker
 
-Collaboratively developed a comprehensive full-stack Warehouse Tracker application with a team of four. This application is designed to optimize inventory management and enable real-time tracking of goods. It enhances operational efficiency by providing accurate, up-to-date information on stock levels and movement, and streamlines logistics processes through improved data visibility and reporting.
+**Smart Inventory Management**
 
-### Microsoft Hackathon
+Collaboratively developed a full-stack Warehouse Tracker application with a team of four.  
+Designed to optimize inventory management and enable real-time tracking of goods, the platform enhances operational efficiency with accurate stock visibility, streamlined logistics, and full CRUD support.  
+Security is built in at both the client and server sides.
 
-At a 24-hour Microsoft hackathon, our cross-collaborative team developed solutions to accelerate AI adoption in Canada. We built an application that enables users to learn and experiment with AI in their workflows, providing hands-on experience. Additionally, we proposed learning incentives and in-house trained Small Language Models (SLMs) to address privacy concerns and enhance trust in Microsoft's AI tools.
+**Stack highlights:** React, Node.js, Express.js, MySQL.
 
-## Technologies Used
+---
 
-- **Frontend**: HTML, CSS, SCSS, JavaScript, React
+### Solar Watch
+
+**Weather and Solar Planning at a Glance**
+
+Solar Watch is a responsive web application delivering real-time weather forecasts, visibility conditions, and detailed solar information like sunrise, sunset, and golden hour.  
+Built for adventurers, professionals, and anyone who values accuracy, it emphasizes speed, simplicity, and a seamless user experience — on both mobile and desktop.
+
+**Stack highlights:** React, Javascript, Vite, REST APIs.
+
+## Clients
+
+- Meta
+- Tek Systems
+- Luminary AI
+- Peak Stratagem
+- Louise Guay Art
+
+## About Me
+
+I’m Jonathan Sage, a full-stack developer and prompt engineer.  
+I work with a diverse range of clients to build custom websites, including e-commerce solutions, and specialize in optimizing and maintaining existing platforms.  
+My focus is on creating modern, scalable solutions tailored to the unique needs of each project.
+
+With a background in managing complex projects and solving technical challenges, I deliver clean, efficient code that drives growth and innovation.  
+Whether building from the ground up or enhancing existing platforms, I’m dedicated to providing impactful, user-focused solutions.
+
+## Let's Connect
+
+- [Email](mailto:your-email@example.com)
+- [GitHub](https://github.com/your-github)
+- [LinkedIn](https://www.linkedin.com/in/your-linkedin)
+- [Instagram](https://www.instagram.com/your-instagram)
