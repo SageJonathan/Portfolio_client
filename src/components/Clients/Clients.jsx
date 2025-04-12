@@ -19,14 +19,14 @@ const client_data = [
     link: "https://www.teksystems.com/en-ca/",
   },
   {
-    name: "Luminary AI",
-    img: luminary,
-    link: "",
-  },
-  {
     name: "Peak Stratagem",
     img: peak,
     link: "https://www.peakstratagem.com/",
+  },
+  {
+    name: "Luminary AI",
+    img: luminary,
+    link: "",
   },
   {
     name: "Louise Guay Art",
