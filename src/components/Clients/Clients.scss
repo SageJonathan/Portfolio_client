@@ -44,12 +44,15 @@
 }
 
 &__instance{
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   @include tablet{
-    padding: 2rem;
+    padding: 2rem 1rem;
+  }
+  @include desktop{
+    padding: 3rem 2rem;
   }
     &--logo{
-        height: 4rem;
+        height: 3.5rem;
         @include tablet{
           height: 6rem;
         }
