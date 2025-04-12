@@ -16,9 +16,10 @@ function Mission() {
         I am committed to redefining what is possible.
       </p>
       <p className="mission__text">
-        My goal is to deliver solutions that not only solve problems but also
-        inspire and empower users, setting new benchmarks in the industry.
+      My mission is to deliver innovative, user-centric solutions
+      <br></br>That solve real-world problems and empower businesses to scale.
       </p>
+      
     </div>
   );
 }

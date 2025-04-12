@@ -144,6 +144,11 @@
   }
 }
 
+.refLink{
+  color: inherit;
+  text-decoration: none;
+}
+
 @keyframes slideInFromLeftProj {
   from {
     transform: translateX(-100%);
