@@ -83,7 +83,7 @@ function Projects() {
             <Gallery
               images={galleries.ArtStore}
               currentIndex={currentImageIndexArtStore}
-              onPrev={handlePrev(
+              onPrev={handlePrev(                                          
                 setCurrentImageIndexArtStore,
                 galleries.ArtStore
               )}
@@ -94,8 +94,12 @@ function Projects() {
               altPrefix="Louise Guay Art Store"
             />
           </div>
+          
           <div className="project__description-container">
-            <h3 className="project__description-header">Art Commerce</h3>
+          <a href="https://www.louiseguay.ca/" className="refLink">
+          <h3 className="project__description-header">Art Commerce</h3>
+          </a>
+           
 
             <p className="project__description-text">
               This full-stack web application{" "}
@@ -117,6 +121,7 @@ function Projects() {
             </p>
           </div>
         </div>
+       
 
         {/* Warehouse Tracker */}
         <div className="project__container">
@@ -172,12 +177,13 @@ function Projects() {
                 setCurrentImageIndexSolarWatch,
                 galleries.SolarWatch
               )}
-              altPrefix="Microsoft Hackathon"
+              altPrefix="Solar Watch"
             />
           </div>
           <div className="project__description-container">
-            <h3 className="project__description-header">Solar Watch</h3>
-
+          <a href="https://www.solarwatch.ca/" className="refLink">
+          <h3 className="project__description-header">Solar Watch</h3>
+          </a>
             <p className="project__description-text">
               Solar Watch is a weather and solar data application{" "}
               <span className="project__description-text--bold">
