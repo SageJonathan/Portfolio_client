@@ -13,8 +13,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                outline: 2px solid $gold;
+                padding: 0.5rem;
             }
+        &--top{
+            border-top: 2px solid $gold;
+        }
+        &--bottom{
+            border-bottom: 2px solid $gold;
+        }
     }
     &__images-contianer__mobile{
         display: flex;

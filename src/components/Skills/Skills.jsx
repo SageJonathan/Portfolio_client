@@ -20,23 +20,30 @@ function Skills() {
   return (
     <>
       <div className="skills">
-        <div className="skills__images-container">
+        <div className="skills__images-container skills__images-container--top">
           <img className="skills__icons" src={figma} alt="" />
           <img className="skills__icons" src={html} alt="" />
           <img className="skills__icons" src={css} alt="" />
           <img className="skills__icons" src={sass} alt="" />
           <img className="skills__icons" src={tailwind} alt="" />
+        </div>
+
+        <div className="skills__images-container">
           <img className="skills__icons" src={js} alt="" />
           <img className="skills__icons" src={ts} alt="" />
           <img className="skills__icons" src={react} alt="" />
           <img className="skills__icons" src={next} alt="" />
           <img className="skills__icons" src={vue} alt="" />
+        </div>
+
+        <div className="skills__images-container skills__images-container--bottom">
           <img className="skills__icons" src={node} alt="" />
           <img className="skills__icons" src={express} alt="" />
           <img className="skills__icons" src={mysql} alt="" />
           <img className="skills__icons" src={postgres} alt="" />
           <img className="skills__icons" src={sqlite} alt="" />
         </div>
+
         <div className="skills__images-contianer__mobile">
           <img className="skills__icons" src={figma} alt="" />
           <img className="skills__icons" src={html} alt="" />
