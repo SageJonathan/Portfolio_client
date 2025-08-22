@@ -1,89 +1,213 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.mission {
-  background-color: $snow;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0 1rem 0rem;
-  position: relative;
+.services {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 
   @include tablet {
-    padding: 2rem 3rem;
+    padding: 6rem 3rem;
+  }
+
+  @include desktop {
+    padding: 8rem 4rem;
   }
 
   &__header {
-    color: $black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5rem; 
-    text-align: center; 
-    position: relative;
-    margin: 0rem 0.7rem 1rem 0.7rem;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background-color: $gold;
-      width: calc(50% - 1rem); // Adjusted to account for padding
-    }
-
-    &::before {
-      left: 1rem;
-      bottom: -0.5rem;
-    }
-
-    &::after {
-      right: 1rem;
-      bottom: -0.5rem;
-    }
-
-    &.animate::before {
-      animation: slideInFromLeftMission 2s forwards;
-    }
-
-    &.animate::after {
-      animation: slideInFromRightMission 2s forwards;
-    }
-  }
-
-  &__text {
-    font-size: 1.3rem;
-    color: $charcoal;
-    padding: 1rem 1.5rem 0.5rem 1.5rem;
-    font-weight: 400; 
-    text-align: center; 
+    text-align: center;
+    margin-bottom: 4rem;
 
     @include tablet {
-      margin: 0; 
-      max-width: 800px; 
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 3rem;
     }
 
+    @include desktop {
+      font-size: 3.5rem;
+    }
+
+    &.animate {
+      animation: fadeInUp 0.8s ease-out;
+    }
   }
-  
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: lighten($paleblack, 20%);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+
+    @include tablet {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+  }
 }
 
-@keyframes slideInFromLeftMission {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+
+  &__icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &__description {
+    color: lighten($paleblack, 20%);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: lighten($paleblack, 15%);
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+      font-size: 0.95rem;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: $gold;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+    }
   }
 }
 
-@keyframes slideInFromRightMission {
+.services__process {
+  text-align: center;
+
+  &-title {
+    font-size: 2rem;
+    color: $paleblack;
+    margin-bottom: 3rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  &-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include tablet {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+  }
+}
+
+.process-step {
+  text-align: center;
+
+  &__number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, $gold 0%, darken($gold, 10%) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 15px rgba($gold, 0.3);
+
+    @include tablet {
+      width: 70px;
+      height: 70px;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: $paleblack;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__description {
+    color: lighten($paleblack, 20%);
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes fadeInUp {
   from {
-    transform: translateX(100%);
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }

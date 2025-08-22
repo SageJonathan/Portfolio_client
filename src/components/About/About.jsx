@@ -7,30 +7,84 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="about__img-container">
-        <img className="about__img" src={Author2} alt="Author" />
-      </div>
-      <div className="about__description">
-        <h2
-          ref={headerRef}
-          className={`about__header ${isVisible ? "animate" : ""}`}
-        >
-          About Me
-        </h2>
-        <p className="about__text">
-          I’m Jonathan Sage, a full-stack developer and prompt engineer. I work
-          with a diverse range of clients to build custom websites, including
-          e-commerce solutions, and specialize in optimizing and maintaining
-          existing platforms. My focus is on creating modern, scalable solutions
-          that meet the unique needs of each project.
-        </p>
-        <p className="about__text">
-          With a background in managing complex projects and solving technical
-          challenges, I deliver clean, efficient code that drives growth and
-          innovation. Whether building from the ground up or enhancing existing
-          platforms, I’m dedicated to providing impactful, user-focused
-          solutions.
-        </p>
+      <div className="about__content">
+        <div className="about__text-section">
+          <h2
+            ref={headerRef}
+            className={`about__title ${isVisible ? "animate" : ""}`}
+          >
+            Why Choose Sage Codes?
+          </h2>
+
+          <div className="about__expertise">
+            <div className="expertise-item">
+              <h3 className="expertise-item__title">Technical Excellence</h3>
+              <p className="expertise-item__description">
+                We leverage cutting-edge technologies and industry best
+                practices to deliver robust, scalable solutions that stand the
+                test of time and evolve with your business needs.
+              </p>
+            </div>
+
+            <div className="expertise-item">
+              <h3 className="expertise-item__title">Business-First Approach</h3>
+              <p className="expertise-item__description">
+                Every technical decision we make serves a strategic business
+                purpose. We understand that technology is a powerful enabler for
+                achieving your business objectives and driving measurable
+                results.
+              </p>
+            </div>
+
+            <div className="expertise-item">
+              <h3 className="expertise-item__title">Strategic Partnership</h3>
+              <p className="expertise-item__description">
+                We operate as an extension of your team, maintaining transparent
+                communication and providing regular project updates throughout
+                the development lifecycle.
+              </p>
+            </div>
+          </div>
+
+          <div className="about__values">
+            <h3 className="about__values-title">Our Core Values</h3>
+            <div className="values-grid">
+              <div className="value-item">
+                <span className="value-item__icon">🎯</span>
+                <span className="value-item__text">Excellence First</span>
+              </div>
+              <div className="value-item">
+                <span className="value-item__icon">🤝</span>
+                <span className="value-item__text">Trust & Transparency</span>
+              </div>
+              <div className="value-item">
+                <span className="value-item__icon">🚀</span>
+                <span className="value-item__text">Innovation</span>
+              </div>
+              <div className="value-item">
+                <span className="value-item__icon">📈</span>
+                <span className="value-item__text">Results-Driven</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="about__founder">
+          <div className="about__founder-image">
+            <img src={Author2} alt="Jonathan Sage - Founder & Lead Engineer" />
+          </div>
+          <div className="about__founder-info">
+            <h3 className="about__founder-name">Jonathan Sage</h3>
+            <p className="about__founder-title">Founder & Lead Engineer</p>
+            <p className="about__founder-bio">
+              Strategic engineer with proven international leadership experience
+              across multiple continents, Jonathan excels at enabling seamless
+              global collaboration. As an accomplished alpinist and polyglot, he
+              brings strategic planning, risk management, and team coordination
+              skills to enterprise software engineering.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
