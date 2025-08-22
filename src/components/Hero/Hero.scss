@@ -6,98 +6,214 @@
   background-image: url(../../assets/images/mtnHero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  background-position: center;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  position: relative;
+
   @include tablet {
-    height: 80vh;
+    min-height: 100vh;
   }
-  @include desktop{
-    background-position:right;
-    height: 90vh;
-  }
-}
-.text {
-  background-color: $paleblack;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 12rem;
-   position: relative;
-   animation: slideInRight 1.5s forwards;
-   animation: slideInTop 1.5s forwards;
-   padding: 1rem 2rem;
-  @include tablet{
-    margin-top: 22rem;
-    margin-right: 20rem;
-  }
+
   @include desktop {
-    margin-top: 20rem;
-    margin-right: 0rem;
-    margin-left: 25rem;
+    background-position: right;
+    min-height: 100vh;
   }
 
-  &__text {
-    font-size: 1.4rem;
-    color: $snow;
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 1;
   }
-  &__header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      padding: 0 3rem;
+    }
+
+    @include desktop {
+      padding: 0 4rem;
+    }
+  }
+
+  &__text-section {
+    text-align: center;
+    max-width: 800px;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+
+    &-main {
+      display: block;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: $snow;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+
+      @include tablet {
+        font-size: 3.5rem;
+      }
+
+      @include desktop {
+        font-size: 4rem;
+      }
+    }
+
+    &-motto {
+      display: block;
+      color: $gold;
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        font-size: 1.8rem;
+      }
+
+      @include desktop {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__subtitle {
     color: $snow;
+    font-size: 1.3rem;
     font-weight: 400;
-    font-size: 2rem;
-  }
-  &__subheader {
-    color: $gold;
-    font-weight: 200;
-    font-size: 1.5rem;
-  }
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: $gold;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+
+    @include tablet {
+      font-size: 1.5rem;
     }
-    &::after {
-      // Vertical part of the L
-      height: 40px;
-      width: 2px;
-      bottom: -0.1rem;
-      right: -0.12rem;
-      animation: slideInTop 4s forwards;
+  }
+
+  &__description {
+    color: $snow;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      font-size: 1.2rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-start;
     }
 
-    &::before {
-      // Horizontal part of the L
-      height: 2px;
-      width: 40px;
-      bottom: -0.12rem;
-      right: 0;
-      animation: slideInRight 4s forwards;
+    &-primary {
+      background: linear-gradient(135deg, $gold 0%, darken($gold, 10%) 100%);
+      color: $paleblack;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba($gold, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba($gold, 0.4);
+      }
     }
-}
 
+    &-secondary {
+      background: transparent;
+      color: $snow;
+      padding: 1rem 2rem;
+      border: 2px solid $snow;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
 
-@keyframes slideInTop {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
+      &:hover {
+        background: $snow;
+        color: $paleblack;
+        transform: translateY(-2px);
+      }
+    }
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    background: rgba($paleblack, 0.9);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+
+    @include tablet {
+      padding: 2.5rem;
+    }
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+
+  &__stat {
+    text-align: center;
+
+    &-number {
+      display: block;
+      color: $gold;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+
+    &-label {
+      color: $snow;
+      font-size: 0.9rem;
+      font-weight: 400;
+      opacity: 0.8;
+      line-height: 1.3;
+
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
   }
 }

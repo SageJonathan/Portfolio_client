@@ -1,152 +1,226 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .about {
-  background-color: $black; 
-  background: linear-gradient($logoblue, $black);
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  padding: 5rem 2rem;
+  background: white;
+
+  @include tablet {
+    padding: 6rem 3rem;
+  }
+
   @include desktop {
-    flex-direction: row; 
-    align-items: center;
+    padding: 8rem 4rem;
   }
 
-  &__img-container {
-    box-shadow: 2px 3px 5px;
-    width: 80%; 
-    margin: 1rem 0rem; 
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
     @include tablet {
-      width: 60%; 
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
     }
+
     @include desktop {
-      width: 40%;
-      margin: 1rem 0.5rem 1rem 1rem;
+      gap: 6rem;
     }
   }
 
-  &__img {
-    width: 100%; 
-    height: auto;
-    max-height: 200px; 
-    object-fit: cover; 
-    display: block;
+  &__text-section {
+    @include tablet {
+      order: 1;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $paleblack;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
 
     @include tablet {
-      max-height: 300px; 
+      font-size: 3rem;
     }
-    @include desktop{
-      max-height: 430px;
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
+
+    &.animate {
+      animation: fadeInUp 0.8s ease-out;
+    }
+  }
+}
+
+.about__expertise {
+  margin-bottom: 3rem;
+}
+
+.expertise-item {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    color: $paleblack;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 1.5rem;
     }
   }
 
   &__description {
-    background-color: $snow;
-    box-shadow: 2px 3px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem; 
-    border: none;
-    margin: 1rem;
-    max-width: 90%; 
+    color: lighten($paleblack, 20%);
+    line-height: 1.6;
+    font-size: 1rem;
 
     @include tablet {
-      width: 80%; 
-      padding: 1.5rem;
-    }
-
-    @include desktop {
-      width: 65%; 
-      padding: 1rem; 
-      margin: 0;
-      margin: 2rem 1rem;
+      font-size: 1.1rem;
     }
   }
+}
 
-  &__header {
-    color: $black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.6rem; 
-    font-weight: 700;
-    position: relative;
-    margin-bottom: 1rem; 
-    text-align: center; 
+.about__values {
+  &-title {
+    font-size: 1.8rem;
+    color: $paleblack;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 
     @include tablet {
-      font-size: 1.8rem; 
-    }
-
-    @include desktop {
       font-size: 2rem;
     }
+  }
+}
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background-color: $gold;
-      width: calc(50%);
-    }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 
-    &::before {
-      left: 1rem;
-      bottom: -0.5rem;
-    }
+  @include tablet {
+    gap: 2rem;
+  }
+}
 
-    &::after {
-      right: 1rem;
-      bottom: -0.5rem;
-    }
-    
-    &.animate::before {
-      animation: slideInFromLeftAbout 2s forwards;
-    }
+.value-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 
-    &.animate::after {
-      animation: slideInFromRightAbout 2s forwards;
-    }
+  &:hover {
+    transform: translateY(-3px);
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &__icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    display: block;
   }
 
   &__text {
-    font-size: 1.2rem; 
-    color: $charcoal;
-    padding: 0.5rem 0rem; 
+    color: $paleblack;
+    font-size: 0.9rem;
+    font-weight: 500;
+
     @include tablet {
-      font-size: 1.3rem; 
+      font-size: 1rem;
     }
-
-    @include desktop {
-      font-size: 1.4rem;
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    color: inherit;
   }
 }
 
-@keyframes slideInFromLeftAbout {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
+.about__founder {
+  @include tablet {
+    order: 2;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+
+  &-image {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid $gold;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+      @include tablet {
+        width: 250px;
+        height: 250px;
+      }
+
+      @include desktop {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+
+  &-info {
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &-name {
+    font-size: 1.8rem;
+    color: $paleblack;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &-title {
+    color: $gold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-bio {
+    color: lighten($paleblack, 20%);
+    line-height: 1.6;
+    font-size: 1rem;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
   }
 }
 
-@keyframes slideInFromRightAbout {
+@keyframes fadeInUp {
   from {
-    transform: translateX(100%);
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }

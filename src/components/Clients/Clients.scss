@@ -1,97 +1,304 @@
-@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .clients {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
 
-&__header{
-    padding-top: 1rem;
-    background-color: $snow;
-    color: $black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
+  @include tablet {
+    padding: 6rem 3rem;
+  }
+
+  @include desktop {
+    padding: 8rem 4rem;
+  }
+
+  // Background decoration
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba($gold, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(circle at 80% 20%, rgba($gold, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  &__header {
+    font-size: 2.5rem;
+    color: $paleblack;
     text-align: center;
     font-weight: 600;
+    margin-bottom: 1rem;
     position: relative;
 
-    &::before,
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
+
+    &.animate {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
     &::after {
       content: "";
       position: absolute;
-      height: 2px;
-      background-color: $gold;
-      width: calc(50% - 2rem);
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, $gold, transparent);
+      border-radius: 2px;
     }
-
-    &.animate::before {
-      left: 2rem;
-      bottom: -0.5rem;
-      animation: slideInFromLeftProj 2s forwards;
-     
-    }
-
-    &.animate::after {
-      right: 2rem;
-      bottom: -0.5rem;
-      animation: slideInFromRightProj 2s forwards;
-      
-    }
-}
-&__container{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0.5rem;
-}
-
-&__instance{
-  padding: 1rem 0.5rem;
-  @include tablet{
-    padding: 2rem 1rem;
   }
-  @include desktop{
-    padding: 3rem 2rem;
-  }
-    &--logo{
-        height: 3.5rem;
-        @include tablet{
-          height: 6rem;
-        }
+
+  &__subtitle {
+    text-align: center;
+    color: lighten($paleblack, 20%);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+
+    @include tablet {
+      font-size: 1.3rem;
     }
-    &--name{
-      display: none;
-      padding-bottom: 0.2rem;
-      text-align: center;
-      @include tablet{
-        display: block;
+  }
+
+  &__category {
+    margin-bottom: 5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__category-title {
+    font-size: 2rem;
+    color: $paleblack;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+
+  &__category-description {
+    text-align: center;
+    color: lighten($paleblack, 20%);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    &--partners {
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+      }
+    }
+
+    &--built {
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
       }
 
-    }
-    &--link{
-      color: inherit;
-      text-decoration: none; 
-    }
-}
-}
-
-
-@keyframes slideInFromLeftProj {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
     }
   }
-  
-  @keyframes slideInFromRightProj {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
+
+  &__instance {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+
+    @include tablet {
+      padding: 2.5rem;
     }
-    to {
-      transform: translateX(0);
-      opacity: 1;
+
+    @include desktop {
+      padding: 3rem;
+    }
+
+    // Hover effects
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      border-color: rgba($gold, 0.3);
+
+      .clients__instance--logo {
+        transform: scale(1.1);
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+      }
+
+      .clients__instance--name {
+        color: $gold;
+        transform: translateY(-5px);
+      }
+
+      &::before {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    // Background glow effect
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        135deg,
+        rgba($gold, 0.05) 0%,
+        transparent 100%
+      );
+      border-radius: 20px;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    // Staggered animation for each client
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
     }
   }
+
+  &__instance--content {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__instance--logo {
+    height: 3rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+
+    @include tablet {
+      height: 5rem;
+    }
+
+    @include desktop {
+      height: 6rem;
+    }
+  }
+
+  &__instance--name {
+    font-size: 1rem;
+    color: $paleblack;
+    font-weight: 600;
+    margin: 0;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
+    @include desktop {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// Staggered entrance animation
+.clients__instance {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 0.6s ease-out forwards;
+
+  &.animate {
+    animation: slideInUp 0.6s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,64 +1,91 @@
-# Jonathan Sage Portfolio
+# Sage Codes - Enterprise Development Consultancy
 
-Welcome to my portfolio. I'm committed to redefining what is possible.
+**Robust. Clean. Scalable.**
 
-My mission is to deliver innovative, user-centric solutions that solve real-world problems and empower businesses to scale.
+Welcome to Sage Codes, a full-stack development consultancy that transforms business ideas into powerful digital solutions. We architect and build scalable web applications that drive measurable growth and competitive advantage.
 
-## Featured Projects
+## 🚀 **Our Services**
 
-### Louise Guay Art Store
+### **Custom Web Development**
 
-**Art Commerce, Simplified**
+Enterprise-grade applications engineered from the ground up, designed to scale with your business and exceed user expectations.
 
-A full-stack web application that empowers artists to showcase, sell, and manage their artwork effortlessly through a streamlined online platform.  
-It automates the entire sales flow — from browsing to shipping — so artists can focus on their craft without worrying about logistics.  
-Optimized for secure transactions, dynamic gallery browsing, and scalable performance.
+### **E-commerce Solutions**
 
-**Stack highlights:** React, Next Js, Typescript, Postresql
+Complete digital commerce platforms with enterprise security, advanced inventory management, and actionable business intelligence.
+
+### **Platform Optimization**
+
+Strategic enhancements that boost performance, strengthen security, and unlock new capabilities for your existing applications.
+
+### **Technical Consulting**
+
+Expert guidance on technology strategy, architecture decisions, and digital transformation initiatives that align with business objectives.
+
+## 🏗️ **Our Proven Process**
+
+1. **Discovery & Strategy** - Understanding your business goals and defining technical strategy
+2. **Architecture & Planning** - Designing system architecture and creating detailed project roadmap
+3. **Development & Testing** - Building your solution with iterative development and testing
+4. **Launch & Support** - Deploying your solution and providing ongoing support
+
+## 💼 **Trusted by Industry Leaders**
+
+### **Consultancy Partners**
+
+- **Meta** - Strategic technical consulting and development expertise
+- **Tek Systems** - Enterprise solutions and technical guidance
+
+### **Custom Solutions Delivered**
+
+- **Peak Stratagem** - Strategic business applications
+- **Luminary AI** - AI-powered platform development
+- **Louise Guay Art** - E-commerce art marketplace
+- **PeakEats** - Food delivery platform
+
+## 🎯 **Why Choose Sage Codes?**
+
+### **Technical Excellence**
+
+We leverage cutting-edge technologies and industry best practices to deliver robust, scalable solutions that stand the test of time and evolve with your business needs.
+
+### **Business-First Approach**
+
+Every technical decision we make serves a strategic business purpose. We understand that technology is a powerful enabler for achieving your business objectives and driving measurable results.
+
+### **Strategic Partnership**
+
+We operate as an extension of your team, maintaining transparent communication and providing regular project updates throughout the development lifecycle.
+
+## 👨‍💻 **About Our Founder**
+
+**Jonathan Sage** - Founder & Lead Engineer
+
+Strategic engineer with proven international leadership experience across multiple continents. Enabling seamless global collaboration. As an accomplished alpinist and polyglot, Jonathan brings strategic planning, risk management, and team coordination skills to enterprise software engineering.
+
+## 🛠️ **Technology Stack**
+
+- **Frontend**: React, Next.js, TypeScript, Vue.js
+- **Backend**: Node.js, Express.js, Python
+- **Databases**: PostgreSQL, MySQL, SQLite
+- **Cloud & DevOps**: AWS, Vercel, Docker
+- **Design & Tools**: Figma, Tailwind CSS, SCSS
+
+## 📞 **Get Started**
+
+Ready to transform your business? Let's discuss how we can architect the perfect digital solution to accelerate your growth and achieve your strategic objectives.
+
+- **Email**: dev@sagecodes.tech
+- **Response Time**: Within 24 hours
+- **Business Hours**: Mon-Fri 9AM-5PM MST
+
+## 🌟 **Core Values**
+
+- **Excellence First** - Quality in every line of code
+- **Trust & Transparency** - Open communication throughout
+- **Innovation** - Cutting-edge solutions for modern challenges
+- **Results-Driven** - Measurable business impact
 
 ---
 
-### Warehouse Tracker
-
-**Smart Inventory Management**
-
-Collaboratively developed a full-stack Warehouse Tracker application with a team of four.  
-Designed to optimize inventory management and enable real-time tracking of goods, the platform enhances operational efficiency with accurate stock visibility, streamlined logistics, and full CRUD support.  
-Security is built in at both the client and server sides.
-
-**Stack highlights:** React, Node.js, Express.js, MySQL.
-
----
-
-### Solar Watch
-
-**Weather and Solar Planning at a Glance**
-
-Solar Watch is a responsive web application delivering real-time weather forecasts, visibility conditions, and detailed solar information like sunrise, sunset, and golden hour.  
-Built for adventurers, professionals, and anyone who values accuracy, it emphasizes speed, simplicity, and a seamless user experience — on both mobile and desktop.
-
-**Stack highlights:** React, Javascript, Vite, REST APIs.
-
-## Clients
-
-- Meta
-- Tek Systems
-- Luminary AI
-- Peak Stratagem
-- Louise Guay Art
-
-## About Me
-
-I’m Jonathan Sage, a full-stack developer and prompt engineer.  
-I work with a diverse range of clients to build custom websites, including e-commerce solutions, and specialize in optimizing and maintaining existing platforms.  
-My focus is on creating modern, scalable solutions tailored to the unique needs of each project.
-
-With a background in managing complex projects and solving technical challenges, I deliver clean, efficient code that drives growth and innovation.  
-Whether building from the ground up or enhancing existing platforms, I’m dedicated to providing impactful, user-focused solutions.
-
-## Let's Connect
-
-- [Email](mailto:your-email@example.com)
-- [GitHub](https://github.com/your-github)
-- [LinkedIn](https://www.linkedin.com/in/your-linkedin)
-- [Instagram](https://www.instagram.com/your-instagram)
+_Sage Codes - Where technology meets business strategy_ 🇨🇦

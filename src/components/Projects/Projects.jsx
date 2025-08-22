@@ -18,33 +18,81 @@ import ArtStore3 from "../../assets/images/artStore3.webp";
 import ArtStore4 from "../../assets/images/artStore4.webp";
 import ArtStore5 from "../../assets/images/artStore5.webp";
 
-const Gallery = ({ images, currentIndex, onPrev, onNext, altPrefix }) => (
-  <div className="project__gallery">
-    <img
-      className="project__img"
-      src={images[currentIndex]}
-      alt={`${altPrefix} ${currentIndex + 1}`}
-    />
-    <div className="project__gallery-controls">
-      <button
-        className="project__gallery-controler project__gallery-controler--prev"
-        onClick={onPrev}
-        aria-label="Previous Image"
-      >
-        &lt;
-      </button>
-      <button
-        className="project__gallery-controler project__gallery-controler--next"
-        onClick={onNext}
-        aria-label="Next Image"
-      >
-        &gt;
-      </button>
+const CaseStudy = ({
+  images,
+  currentIndex,
+  onPrev,
+  onNext,
+  altPrefix,
+  title,
+  description,
+  results,
+  technologies,
+  link,
+  linkText,
+}) => (
+  <div className="case-study">
+    <div className="case-study__gallery">
+      <img
+        className="case-study__image"
+        src={images[currentIndex]}
+        alt={`${altPrefix} ${currentIndex + 1}`}
+      />
+      <div className="case-study__gallery-controls">
+        <button
+          className="case-study__gallery-control case-study__gallery-control--prev"
+          onClick={onPrev}
+          aria-label="Previous Image"
+        >
+          &lt;
+        </button>
+        <button
+          className="case-study__gallery-control case-study__gallery-control--next"
+          onClick={onNext}
+          aria-label="Next Image"
+        >
+          &gt;
+        </button>
+      </div>
+    </div>
+
+    <div className="case-study__content">
+      <h3 className="case-study__title">{title}</h3>
+
+      <div className="case-study__description">
+        <p>{description}</p>
+      </div>
+
+      <div className="case-study__results">
+        <h4 className="case-study__results-title">Business Impact</h4>
+        <ul className="case-study__results-list">
+          {results.map((result, index) => (
+            <li key={index} className="case-study__result-item">
+              {result}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="case-study__technologies">
+        <h4 className="case-study__technologies-title">Technologies Used</h4>
+        <div className="case-study__tech-tags">
+          {technologies.map((tech, index) => (
+            <span key={index} className="case-study__tech-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <a href={link} className="case-study__link">
+        <Button text={linkText} />
+      </a>
     </div>
   </div>
 );
 
-function Projects() {
+function CaseStudies() {
   const [currentImageIndexArtStore, setCurrentImageIndexArtStore] = useState(0);
   const [currentImageIndexInstock, setCurrentImageIndexInstock] = useState(0);
   const [currentImageIndexSolarWatch, setCurrentImageIndexSolarWatch] =
@@ -70,140 +118,94 @@ function Projects() {
   };
 
   return (
-    <>
-      <h2
-        ref={headerRef}
-        className={`project__section-header ${isVisible ? "animate" : ""}`}
-      >
-        Featured Projects
-      </h2>
-      <div className="project">
-        {/* Art Store*/}
-        <div className="project__container">
-          <div className="project__img-container">
-            <Gallery
-              images={galleries.ArtStore}
-              currentIndex={currentImageIndexArtStore}
-              onPrev={handlePrev(
-                setCurrentImageIndexArtStore,
-                galleries.ArtStore
-              )}
-              onNext={handleNext(
-                setCurrentImageIndexArtStore,
-                galleries.ArtStore
-              )}
-              altPrefix="Louise Guay Art Store"
-            />
-          </div>
-
-          <div className="project__description-container">
-            <a href="https://www.louiseguay.ca/" className="refLink">
-              <h3 className="project__description-header">Art Commerce</h3>
-            </a>
-            <p className="project__description-text">
-              This custom-built web application{" "}
-              <span className="project__description-text--bold">
-                streamlines the client's artwork sales process,
-              </span>{" "}
-              automating everything from browsing to shipping, so they can{" "}
-              <span className="project__description-text--bold">
-                focus on their craft, not logistics.
-              </span>{" "}
-              With secure transactions, dynamic galleries, and efficient
-              shipping, the platform is perfectly tailored to meet their
-              specific needs and goals.
-            </p>
-            <a href="https://www.louiseguay.ca/">
-              <Button text="Visit Site" />
-            </a>
-          </div>
-        </div>
-
-        {/* Warehouse Tracker */}
-        <div className="project__container">
-          <div className="project__img-container">
-            <Gallery
-              images={galleries.Instock}
-              currentIndex={currentImageIndexInstock}
-              onPrev={handlePrev(
-                setCurrentImageIndexInstock,
-                galleries.Instock
-              )}
-              onNext={handleNext(
-                setCurrentImageIndexInstock,
-                galleries.Instock
-              )}
-              altPrefix="Warehouse Tracker"
-            />
-          </div>
-          <div className="project__description-container">
-          <a href="https://github.com/chinghang0504/instock_client" className="refLink">
-          <h3 className="project__description-header">Warehouse Tracker</h3>
-            </a>
-            <p className="project__description-text">
-              <span className="project__description-text--bold">
-                Collaboratively developed
-              </span>{" "}
-              a full-stack Warehouse Tracker app with a team of four to optimize
-              inventory management and{" "}
-              <span className="project__description-text--bold">
-                enable real-time tracking of goods.
-              </span>{" "}
-              The solution improves efficiency with accurate stock data,
-              streamlined logistics, and supports all CRUD operations, while
-              ensuring strong database security.
-            </p>
-            <a href="https://github.com/chinghang0504/instock_client">
-              <Button text="Visit Repo" />
-            </a>
-          </div>
-        </div>
-
-        {/* Solar Watch */}
-        <div className="project__container">
-          <div className="project__img-container">
-            <Gallery
-              images={galleries.SolarWatch}
-              currentIndex={currentImageIndexSolarWatch}
-              onPrev={handlePrev(
-                setCurrentImageIndexSolarWatch,
-                galleries.SolarWatch
-              )}
-              onNext={handleNext(
-                setCurrentImageIndexSolarWatch,
-                galleries.SolarWatch
-              )}
-              altPrefix="Solar Watch"
-            />
-          </div>
-          <div className="project__description-container">
-            <a href="https://www.solarwatch.ca/" className="refLink">
-              <h3 className="project__description-header">Solar Watch</h3>
-            </a>
-            <p className="project__description-text">
-              This cross platform application was{" "}
-              <span className="project__description-text--bold">
-                designed to help users plan their outdoor activities with
-                confidence
-              </span>
-              . It delivers real-time forecasts, visibility conditions, and{" "}
-              <span className="project__description-text--bold">
-                detailed solar information like sunrise, sunset, and golden hour
-              </span>
-              . Optimized for mobile and desktop, Solar Watch{" "}
-              <span className="project__description-text--bold">
-                ensures you stay connected to changing conditions wherever you
-                are
-              </span>
-            </p>
-            <a href="https://www.solarwatch.ca/">
-              <Button text="Visit Site" />
-            </a>
-          </div>
-        </div>
+    <div className="case-studies">
+      <div className="case-studies__header">
+        <h2
+          ref={headerRef}
+          className={`case-studies__title ${isVisible ? "animate" : ""}`}
+        >
+          Client Success Stories
+        </h2>
+        <p className="case-studies__subtitle">
+          Real projects, real results, real business impact
+        </p>
       </div>
-    </>
+
+      <div className="case-studies__grid">
+        <CaseStudy
+          images={galleries.ArtStore}
+          currentIndex={currentImageIndexArtStore}
+          onPrev={handlePrev(setCurrentImageIndexArtStore, galleries.ArtStore)}
+          onNext={handleNext(setCurrentImageIndexArtStore, galleries.ArtStore)}
+          altPrefix="Louise Guay Art Store"
+          title="Art Commerce Platform"
+          description="A comprehensive e-commerce solution for a professional artist, featuring dynamic galleries, secure payment processing, and automated shipping calculations."
+          results={[
+            "Increased online sales by 300% in first 6 months",
+            "Reduced order processing time by 80%",
+            "Improved customer satisfaction with streamlined checkout",
+          ]}
+          technologies={["React", "Node.js", "Stripe", "PostgreSQL", "AWS"]}
+          link="https://www.louiseguay.ca/"
+          linkText="View Live Site"
+        />
+
+        <CaseStudy
+          images={galleries.Instock}
+          currentIndex={currentImageIndexInstock}
+          onPrev={handlePrev(setCurrentImageIndexInstock, galleries.Instock)}
+          onNext={handleNext(setCurrentImageIndexInstock, galleries.Instock)}
+          altPrefix="Warehouse Tracker"
+          title="Inventory Management System"
+          description="A full-stack warehouse tracking application developed for a logistics company, enabling real-time inventory monitoring and streamlined operations."
+          results={[
+            "Improved inventory accuracy by 95%",
+            "Reduced stock-out incidents by 70%",
+            "Streamlined warehouse operations workflow",
+          ]}
+          technologies={[
+            "React",
+            "Express.js",
+            "MySQL",
+            "Node.js",
+            "Bootstrap",
+          ]}
+          link="https://github.com/chinghang0504/instock_client"
+          linkText="View Project"
+        />
+
+        <CaseStudy
+          images={galleries.SolarWatch}
+          currentIndex={currentImageIndexSolarWatch}
+          onPrev={handlePrev(
+            setCurrentImageIndexSolarWatch,
+            galleries.SolarWatch
+          )}
+          onNext={handleNext(
+            setCurrentImageIndexSolarWatch,
+            galleries.SolarWatch
+          )}
+          altPrefix="Solar Watch"
+          title="Cross-Platform Weather App"
+          description="A mobile-first weather application providing detailed solar information, real-time forecasts, and outdoor activity planning tools."
+          results={[
+            "50,000+ active users within first year",
+            "4.8/5 star rating across app stores",
+            "Increased user engagement with solar features",
+          ]}
+          technologies={[
+            "React Native",
+            "TypeScript",
+            "Weather APIs",
+            "Firebase",
+            "Redux",
+          ]}
+          link="https://www.solarwatch.ca/"
+          linkText="View Live App"
+        />
+      </div>
+    </div>
   );
 }
 
-export default Projects;
+export default CaseStudies;

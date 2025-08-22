@@ -1,174 +1,252 @@
-@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 2rem 0rem;
-  background-color: $snow;
+.case-studies {
+  padding: 5rem 2rem;
+  background: white;
+
+  @include tablet {
+    padding: 6rem 3rem;
+  }
+
   @include desktop {
-    flex-direction: row;
+    padding: 8rem 4rem;
   }
 
-  &__section-header {
-    padding-top: 1rem;
-    background-color: $snow;
-    color: $black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
+  &__header {
     text-align: center;
+    margin-bottom: 4rem;
+
+    @include tablet {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
     font-weight: 600;
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background-color: $gold;
-      width: calc(50% - 2rem);
-    }
-
-    &.animate::before {
-      left: 2rem;
-      bottom: -0.5rem;
-      animation: slideInFromLeftProj 2s forwards;
-     
-    }
-
-    &.animate::after {
-      right: 2rem;
-      bottom: -0.5rem;
-      animation: slideInFromRightProj 2s forwards;
-      
-    }
-  }
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
 
     @include tablet {
-      padding: 0 1rem;
-      flex-direction: row;
+      font-size: 3rem;
     }
 
     @include desktop {
-      flex-direction: column;
-      flex: 1;
+      font-size: 3.5rem;
+    }
+
+    &.animate {
+      animation: fadeInUp 0.8s ease-out;
     }
   }
 
-  &__img-container {
-    position: relative;
-    width: 100%;
-    max-width: 80%;
-    height: auto;
-    overflow: hidden;
-    margin: 1rem 0rem;
-    background-color: $logoblue;
-    box-shadow: 0px 0px 5px;
+  &__subtitle {
+    font-size: 1.2rem;
+    color: lighten($paleblack, 20%);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+
     @include tablet {
-      width: 175%;
-      flex: 0 0 40%;
-    }
-    @include desktop {
-      min-width: 80%;
-      max-width: 80%;
-      margin: 0;
-      flex: none;
+      font-size: 1.3rem;
     }
   }
 
-  &__img {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    @include tablet {
+      gap: 5rem;
+    }
+
+    @include desktop {
+      gap: 6rem;
+    }
+  }
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: #f8f9fa;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__gallery {
+    position: relative;
+    background: $paleblack;
+    min-height: 300px;
+
+    @include tablet {
+      min-height: 400px;
+    }
+
+    @include desktop {
+      min-height: 450px;
+    }
+  }
+
+  &__image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__gallery-controls {
     position: absolute;
-    top: 50%;
+    bottom: 1rem;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    pointer-events: auto;
+    gap: 0.5rem;
   }
 
-  &__gallery-controler {
-    background-color: $paleblack;
+  &__gallery-control {
+    background: rgba(255, 255, 255, 0.9);
     border: none;
-    color: $gold;
-    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: $paleblack;
     cursor: pointer;
-    transition: color 0.3s;
-    padding: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+
+    &--prev {
+      left: 1rem;
+    }
+
+    &--next {
+      right: 1rem;
+    }
   }
 
-  &__description-container {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem 1.5rem 2rem;
-    align-items: center;
+  &__content {
+    padding: 2rem;
+
     @include tablet {
-      flex: 0 0 60%;
+      padding: 2.5rem;
     }
-    @include desktop{
-      flex: none;
+
+    @include desktop {
+      padding: 3rem;
     }
   }
 
-  &__description-header {
-    color: $black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    text-align: center; 
-      @include tablet{
-        font-size: 1.5rem;
+  &__title {
+    font-size: 1.8rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__description {
+    color: lighten($paleblack, 20%);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  &__results {
+    margin-bottom: 1.5rem;
+
+    &-title {
+      font-size: 1.2rem;
+      color: $paleblack;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: lighten($paleblack, 15%);
+        padding: 0.3rem 0;
+        position: relative;
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+
+        &::before {
+          content: "→";
+          position: absolute;
+          left: 0;
+          color: $gold;
+          font-weight: bold;
+        }
       }
-  }
-
-  &__description-text {
-    color: $charcoal;
-    padding-bottom: 2rem;
-    &--bold{
-      font-weight: 700;
     }
   }
+
+  &__technologies {
+    margin-bottom: 2rem;
+
+    &-title {
+      font-size: 1.1rem;
+      color: $paleblack;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &__tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tech-tag {
+    background: rgba($gold, 0.1);
+    color: $gold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba($gold, 0.2);
+  }
+
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+  }
 }
 
-.refLink{
-  color: inherit;
-  text-decoration: none;
-}
-
-@keyframes slideInFromLeftProj {
+@keyframes fadeInUp {
   from {
-    transform: translateX(-100%);
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
-
-@keyframes slideInFromRightProj {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-

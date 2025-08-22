@@ -1,77 +1,234 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.skills{
-    background-color: $snow;
-    padding-bottom: 1rem;
-        @include tablet{
-            padding-bottom: 0rem;
-        }
-    &__images-container{
-        display: none;
-            @include tablet{
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                padding: 0.5rem;
-            }
-        &--top{
-            border-top: 2px solid $gold;
-        }
-        // &--bottom{
-        //     border-bottom: 2px solid $gold;
-        // }
+.technology-expertise {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
+  @include tablet {
+    padding: 6rem 3rem;
+  }
+
+  @include desktop {
+    padding: 8rem 4rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include tablet {
+      margin-bottom: 5rem;
     }
-    &__images-contianer__mobile{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-            @include tablet{
-                display: none;
-            }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 3rem;
     }
-    &__icons{
-        width: 10%;
-        height: auto;
-        margin: 0.5rem;
-            @include tablet{
-                width: 8%;
-                margin: 0;
-            }
-            @include desktop{
-                width: 6%;
-            }
+
+    @include desktop {
+      font-size: 3.5rem;
     }
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: lighten($paleblack, 20%);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+
+    @include tablet {
+      font-size: 1.3rem;
+    }
+  }
 }
 
+.tech-stack {
+  margin-bottom: 5rem;
 
-@keyframes fadeUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px) scale(0.9);
+  &__category {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    @include tablet {
+      padding: 3rem;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+
+    @include desktop {
+      padding: 3.5rem;
     }
   }
-  
-  .skills__icons {
+
+  &__category-title {
+    font-size: 1.5rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__category-description {
+    color: lighten($paleblack, 20%);
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2.5rem;
+    }
+  }
+}
+
+.tech-stack__icon-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &.in-view {
+    animation: fadeInUp 0.6s ease-out;
+  }
+}
+
+.tech-stack__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.8rem;
+  transition: all 0.3s ease;
+
+  @include tablet {
+    width: 70px;
+    height: 70px;
+  }
+
+  @include desktop {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.tech-stack__icon-label {
+  display: block;
+  color: $paleblack;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+.expertise-areas {
+  &__title {
+    font-size: 2rem;
+    color: $paleblack;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    text-align: center;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+  }
+}
+
+.expertise-area {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    color: $paleblack;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__description {
+    color: lighten($paleblack, 20%);
+    line-height: 1.6;
+    font-size: 0.95rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    transform: translateY(20px) scale(0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  
-    &.in-view {
-      animation: fadeUp 0.8s ease forwards;
-    }
-  
-    &:nth-child(1) { animation-delay: 0.1s; }
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.3s; }
-    &:nth-child(4) { animation-delay: 0.4s; }
-    &:nth-child(5) { animation-delay: 0.5s; }
+    transform: translateY(30px);
   }
-  
-
-
-
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
