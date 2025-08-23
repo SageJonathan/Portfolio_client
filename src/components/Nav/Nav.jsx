@@ -16,7 +16,7 @@ function Nav() {
           </Link>
         </div>
         <ul className="nav__link-container">
-          <li className="nav__link nav__link--scroll">
+          <li className="nav__link nav__link--scroll nav__link--home">
             <Link to="hero" smooth={true} duration={500}>
               Home
             </Link>
