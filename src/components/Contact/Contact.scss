@@ -2,6 +2,19 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+// Screen reader only class for accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .contact {
   padding: 5rem 2rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -187,6 +200,11 @@
   &:active {
     transform: translateY(0);
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($gold, 0.3);
+  }
 }
 
 .contact__info-section {
@@ -327,7 +345,7 @@
   background: white;
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 25px rgba($gold, 0.06);
   border: 1px solid rgba($gold, 0.08);
   transition: all 0.3s ease;
 
