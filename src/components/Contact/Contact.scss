@@ -21,6 +21,7 @@
   &__content {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
   }
 
   &__header {
@@ -67,6 +68,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
+    width: 100%;
 
     @include tablet {
       grid-template-columns: 1fr 1fr;
@@ -84,6 +86,8 @@
   border-radius: 20px;
   padding: 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 
   @include tablet {
     padding: 3rem;
@@ -102,12 +106,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .contact__form-row {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  width: 100%;
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
@@ -117,6 +123,7 @@
 .contact__form-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .contact__form-label {
@@ -135,6 +142,8 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background: white;
+  width: 100%;
+  box-sizing: border-box;
 
   &:focus {
     outline: none;
@@ -164,6 +173,11 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba($gold, 0.3);
   margin-top: 1rem;
+  width: 100%;
+
+  @include tablet {
+    width: auto;
+  }
 
   &:hover {
     transform: translateY(-2px);
@@ -191,6 +205,8 @@
   border: 1px solid rgba($gold, 0.1);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 
   @include tablet {
     padding: 2.5rem;
@@ -317,7 +333,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 35px rgba($gold, 0.1);
     border-color: rgba($gold, 0.2);
   }
 
@@ -380,7 +396,7 @@
   background: white;
   border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba($gold, 0.08);
   border: 1px solid rgba($gold, 0.08);
   position: relative;
   overflow: hidden;
@@ -441,7 +457,7 @@
       background: white;
       border-radius: 50%;
       padding: 4px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba($gold, 0.1);
       font-size: 0.9rem;
     }
   }
@@ -495,64 +511,32 @@
   }
 }
 
-.contact__info-section {
-  display: flex;
-  align-items: center;
-}
-
-.contact__info-title {
-  font-size: 1.8rem;
-  color: $paleblack;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-align: center;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: $gold;
-    border-radius: 2px;
-  }
-}
-
-.contact__info-description {
-  color: lighten($paleblack, 25%);
-  line-height: 1.6;
-  margin-bottom: 0;
-  font-size: 1.1rem;
-  text-align: center;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 // Mobile-specific styles for better centering
 @media (max-width: 768px) {
+  .contact {
+    padding: 5rem 1rem;
+  }
+
   .contact__main {
-    flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .contact__form-section {
-    width: 100%;
-    max-width: 100%;
+    padding: 2rem 1.5rem;
   }
 
   .contact__info-section {
-    width: 100%;
-    text-align: center;
-    padding: 0 1rem;
+    padding: 2rem 1.5rem;
   }
 
-  .contact__info-description {
-    max-width: 100%;
-    margin: 0 auto;
+  .contact__form-input,
+  .contact__form-select,
+  .contact__form-textarea {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .contact__form-submit {
+    padding: 0.8rem 1.5rem;
   }
 }
 

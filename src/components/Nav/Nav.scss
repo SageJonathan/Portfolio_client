@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   background-color: $navlogoblue;
-  justify-content: space-between;  
+  justify-content: space-between;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -16,7 +16,7 @@
   }
   &__logo {
     height: 100%;
-    min-width:65px;
+    min-width: 65px;
     filter: drop-shadow(2px 2px 4px rgb(5, 2, 38));
     cursor: pointer;
   }
@@ -31,7 +31,7 @@
     padding: 0rem 0.5rem;
     color: $gold;
     cursor: pointer;
-    &--scroll{
+    &--scroll {
       display: none;
     }
     @include tablet {
@@ -47,54 +47,61 @@
         padding-right: 3rem;
       }
     }
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
   &__link-dash {
     display: none;
-    @include tablet{
+    @include tablet {
       display: inline;
       color: $snow;
     }
   }
-  &__blog{
+  &__blog {
     text-decoration: none;
     color: inherit;
   }
 
-  // Styles for Active scroll 
+  // Styles for Active scroll
   &.scrolled {
     height: 6vh;
     justify-content: center;
-    @include tablet{
+    @include tablet {
       justify-content: flex-end;
     }
-    .nav__logo{
+    .nav__logo {
       display: none;
     }
-    .nav__img-container{
+    .nav__img-container {
       display: none;
-      @include tablet{
+      @include tablet {
         display: inline;
       }
     }
-    .nav__link{
+    .nav__link {
       font-size: 1rem;
       padding: 0rem 1rem;
-      &--scroll{
+      &--scroll {
         display: block;
       }
-     &--writing{
-      display: none;
-      @include tablet{
-        display: inline;
-       }
+      &--writing {
+        display: none;
+        @include tablet {
+          display: inline;
+        }
       }
     }
-    .nav__link-dash{
+    .nav__link-dash {
       display: none;
+    }
+
+    // Hide Home tab on mobile when scrolled
+    .nav__link--home {
+      display: none;
+      @include tablet {
+        display: block;
+      }
     }
   }
 }
-
