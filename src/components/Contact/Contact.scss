@@ -532,6 +532,30 @@
   margin-right: auto;
 }
 
+// Mobile-specific styles for better centering
+@media (max-width: 768px) {
+  .contact__main {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contact__form-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact__info-section {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .contact__info-description {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
