@@ -77,12 +77,18 @@ const About = () => {
             <h3 className="about__founder-name">Jonathan Sage</h3>
             <p className="about__founder-title">Founder & Lead Engineer</p>
             <p className="about__founder-bio">
-              Strategic engineer with proven international leadership experience
-              across multiple continents, Jonathan excels at enabling seamless
-              global collaboration. As an accomplished alpinist and polyglot, he
-              brings strategic planning, risk management, and team coordination
-              skills to enterprise software engineering.
+              Strategic engineer with proven international leadership experience,
+              Jonathan excels at enabling seamless
+              global collaboration. With expertise in strategic planning, risk
+              management, and team coordination, he delivers enterprise software
+              solutions that drive measurable business results.
             </p>
+            <div className="about__languages">
+              <span className="about__languages-label">Languages:</span>
+              <span className="about__languages-list">
+                English, French, Spanish, Portuguese
+              </span>
+            </div>
           </div>
         </div>
       </div>

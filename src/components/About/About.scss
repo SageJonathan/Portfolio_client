@@ -92,6 +92,8 @@
 }
 
 .about__values {
+  margin-bottom: 3rem;
+
   &-title {
     font-size: 1.8rem;
     color: $paleblack;
@@ -140,6 +142,36 @@
 
     @include tablet {
       font-size: 1rem;
+    }
+  }
+}
+
+.about__languages {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  &-label {
+    color: $paleblack;
+    font-size: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+  }
+
+  &-list {
+    color: lighten($paleblack, 15%);
+    font-size: 1rem;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 1.1rem;
     }
   }
 }
