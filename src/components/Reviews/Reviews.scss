@@ -1,0 +1,252 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.reviews {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 6rem 3rem;
+  }
+
+  @include desktop {
+    padding: 8rem 4rem;
+  }
+
+  // Background decoration
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba($gold, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba($logoblue, 0.08) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+  }
+
+  &__header {
+    font-size: 2.5rem;
+    color: $paleblack;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
+
+    &.animate {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, $gold, transparent);
+      border-radius: 2px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: lighten($paleblack, 20%);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+
+    @include tablet {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
+
+  &__card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.6s ease-out forwards;
+
+    @include tablet {
+      padding: 2.5rem;
+    }
+
+    @include desktop {
+      padding: 3rem;
+    }
+
+    // Hover effects
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      border-color: rgba($gold, 0.3);
+
+      &::before {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    // Background glow effect
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        135deg,
+        rgba($gold, 0.05) 0%,
+        transparent 100%
+      );
+      border-radius: 20px;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__star {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
+
+    &--filled {
+      color: $gold;
+      text-shadow: 0 2px 4px rgba($gold, 0.3);
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: $paleblack;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+
+    @include desktop {
+      font-size: 1.15rem;
+    }
+  }
+
+  &__author {
+    position: relative;
+    z-index: 2;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__name {
+    font-size: 1.1rem;
+    color: $paleblack;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    text-transform: none;
+    letter-spacing: 0;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__position {
+    font-size: 0.9rem;
+    color: lighten($paleblack, 15%);
+    margin: 0;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

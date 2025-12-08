@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
 import Mission from "../../components/Mission/Mission";
 import Clients from "../../components/Clients/Clients";
+import Reviews from "../../components/Reviews/Reviews";
 import About from "../../components/About/About";
 import Contact from "../../components/Contact/Contact";
 
@@ -21,6 +22,9 @@ function Landing() {
       </Element>
       <Element name="clients">
         <Clients />
+      </Element>
+      <Element name="reviews">
+        <Reviews />
       </Element>
       <Element name="about">
         <About />

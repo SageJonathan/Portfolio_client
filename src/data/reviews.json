@@ -1,0 +1,21 @@
+[
+  {
+    "review": "Jonathan did a great job building our new site and transferring all the old data seamlessly. His adaptability throughout this project made everything easy and efficient.",
+    "name": "Brent Peters",
+    "position": "Founder & Director, PeakSTRAGETM & PeakEats",
+    "starCount": 5
+  },
+  {
+    "review": "Jonathan's organizational skills when mapping out what needed to be done and executing tasks made my life easier and sped up the development of our new site. This has helped me market our product better, and I can already see the results.",
+    "name": "Kyle Nelmes",
+    "position": "Operations Manager, PeakSTRAGETM & PeakEats",
+    "starCount": 5
+  },
+  {
+    "review": "As an older artist with zero tech skills, I was nervous about selling online. Jonathan set up everything to run automatically - when someone buys my art, the payment processes, I get notified, and the shipping label prints itself. I just pack and ship. No complicated steps or confusion. They explained it all in plain English and now my store runs itself while I focus on painting. Absolute lifesaver!",
+    "name": "Louise Guay",
+    "position": "Artist & Founder, Louise Guay Art",
+    "starCount": 5
+  }
+
+]
